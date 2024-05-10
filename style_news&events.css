@@ -3,6 +3,11 @@
   background-size: cover;
 }
 
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .recentnews-image {
   object-fit: cover;
   border-radius: 50%;
@@ -40,4 +45,9 @@
 .center {
   display: flex;
   align-self: center;
+}
+
+.center-button {
+  margin: 0 auto;
+  display: block;
 }
