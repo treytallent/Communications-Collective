@@ -1,0 +1,45 @@
+/* Placeholder classes until images are inserted */
+
+.header-about {
+   min-height: 447px;
+}
+
+.bg-temp {
+   background-color: rebeccapurple;
+}
+
+.about-project-img {
+   height: 250px;
+   background-color: rebeccapurple;
+}
+
+/* Spacing between section tags */
+.about-main section {
+   margin-top: 2rem;
+}
+
+/* Carousel Scrolling Classes */
+.snap-scroll {
+   scroll-snap-type: x mandatory;
+}
+
+.snap-scroll > .card {
+   scroll-snap-align: start;
+   flex-shrink: 0;
+}
+
+/* First carousel card left margin */
+.card {
+   margin-right: 30px;
+}
+
+.card:last-of-type {
+   margin-right: 0px;
+}
+
+/* Positions image on top at mobile viewport */
+@media screen and (max-width: 767px) {
+   .learn-more img {
+      order: 0;
+   }
+}
