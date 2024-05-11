@@ -13,11 +13,6 @@
    background-color: rebeccapurple;
 }
 
-/* Spacing between section tags */
-.about-main section {
-   margin-top: 2rem;
-}
-
 /* Carousel Scrolling Classes */
 .snap-scroll {
    scroll-snap-type: x mandatory;
@@ -29,6 +24,10 @@
 }
 
 /* First carousel card left margin */
+.card-border {
+   border: 1px solid gray;
+}
+
 .card {
    margin-right: 30px;
 }
@@ -39,7 +38,75 @@
 
 /* Positions image on top at mobile viewport */
 @media screen and (max-width: 767px) {
-   .learn-more img {
+   .order-media {
       order: 0;
    }
+}
+
+/* Opportunities */
+
+.opportunities-card {
+   border: 1px solid gray;
+   display: grid;
+}
+
+.opportunities-card * {
+   margin: 0;
+}
+
+.opportunities-card img {
+   padding: 0;
+   background-color: rebeccapurple;
+   aspect-ratio: 1/1;
+}
+
+.opportunities-card h3,
+.opportunities-card img {
+   grid-row: 1;
+   grid-column: 1;
+}
+
+.opportunities-card h3 {
+   align-self: end;
+}
+
+.jtc-img {
+   height: 250px;
+   aspect-ratio: 1/1;
+   background-color: rebeccapurple;
+   margin: 0 15px;
+}
+
+/* Large space Class = 90px (column gutter × 3)*/
+.mb-lg {
+   margin-bottom: 5.625rem;
+}
+/* Medium space class = 30px (column gutter) */
+.mb-md {
+   margin-bottom: 1.875rem;
+}
+
+.mr-md {
+   margin-right: 0.9375rem;
+}
+
+/* Small space class = 15px (column gutter ÷ 2) */
+.mb-sm {
+   margin-bottom: 0.9375rem;
+}
+
+.mr-sm {
+   margin-right: 0.9375rem;
+}
+
+.pb-sm {
+   padding-bottom: 0.9375rem;
+}
+
+.p-sm {
+   padding: 0.9375rem;
+}
+
+body section {
+   margin-top: 90px;
 }
