@@ -1,6 +1,17 @@
 .header-title {
-  margin-top: 5px;
   margin-bottom: 10px;
+}
+
+.header-intro {
+  margin-bottom: 50px;
+}
+
+.header-location {
+  margin-bottom: 10px;
+}
+
+.header-date {
+  margin-bottom: 50px;
 }
 
 section {
@@ -22,6 +33,10 @@ section {
 
 .title {
   margin-bottom: 5px;
+}
+
+.news-title {
+  margin-bottom: 25px;
 }
 
 .location {
