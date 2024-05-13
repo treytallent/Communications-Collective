@@ -1,17 +1,57 @@
-.bg-news {
-  background-image: url(images/placeholder_image.webp);
-  background-size: cover;
+.header-title {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section1-row {
+  padding-bottom: 100px;
+}
+
+.date {
+  margin-bottom: 0px;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+.location {
+  margin-bottom: 25px;
+}
+
+.section1-intro {
+  margin-bottom: 30px;
+}
+
+.article-title {
+  margin-bottom: 10px;
+}
+
+.article-p {
+  margin-bottom: 0px;
+}
+
+.section2-row {
+  padding-bottom: 20px;
+}
+
+.vertical-center {
+  align-self: center;
 }
 
 .recentnews-image {
   object-fit: cover;
   border-radius: 50%;
-  width: 350px;
+  width: 325px;
   aspect-ratio: 1/1;
   margin-left: auto;
   margin-right: auto;
@@ -48,6 +88,7 @@ section {
 }
 
 .center-button {
-  margin: 0 auto;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
