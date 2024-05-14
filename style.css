@@ -1,34 +1,92 @@
 .container-fluid {
-   padding: 0;
+  padding: 0;
 }
 
 .arrow-effect-image {
-   height: 100%;
-   aspect-ratio: 1/1;
-   border-radius: 50%;
-   object-fit: cover;
-   border: 1vh solid #d91853;
-   position: relative;
-   z-index: 2;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1vh solid #d91853;
+  position: relative;
+  z-index: 2;
 }
 
 .arrow-effect-container {
-   width: 250px;
-   aspect-ratio: 1/1;
-   position: relative;
-   display: inline-block;
+  width: 250px;
+  aspect-ratio: 1/1;
+  position: relative;
+  display: inline-block;
 }
 
 .arrow-effect-container::before {
-   content: "";
-   background-image: url("Images/Arrow-Effect.svg");
-   background-size: contain;
-   background-repeat: no-repeat;
-   position: absolute;
-   height: 25%;
-   aspect-ratio: 1/1;
-   transform: rotate(135deg);
-   top: 78%;
-   left: 75%;
-   z-index: 1;
+  content: "";
+  background-image: url("Images/Arrow-Effect.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 25%;
+  aspect-ratio: 1/1;
+  transform: rotate(135deg);
+  top: 78%;
+  left: 75%;
+  z-index: 1;
+}
+
+/* Embed code in the <head> of your html 
+Nunito Bold, Nunito Sans Extra Bold Italic, Montserrat Regular
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@1,6..12,800&family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+*/
+.H1-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.H2-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.H3-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.subheader1-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-style: italic;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+.subheader2-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 800;
+  font-style: italic;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+.subheader2-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+.body-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
 }
