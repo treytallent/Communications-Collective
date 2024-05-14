@@ -80,21 +80,21 @@ Nunito Bold, Nunito Sans Extra Bold Italic, Montserrat Regular
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@1,6..12,800&family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 */
-.H1-text {
+h1 {
   font-family: "Nunito", sans-serif;
   font-size: 4rem;
   font-weight: 700;
   font-style: normal;
 }
 
-.H2-text {
+h2 {
   font-family: "Nunito", sans-serif;
   font-size: 3rem;
   font-weight: 700;
   font-style: normal;
 }
 
-.H3-text {
+h3 {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
   font-weight: 700;
