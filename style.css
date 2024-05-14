@@ -12,8 +12,24 @@
   z-index: 2;
 }
 
-.red-border{
-  border: 1vh solid #d91853;
+.image-border-pink {
+  border: 4px solid #d91853;
+}
+
+.image-border-orange1 {
+  border: 4px solid #eb5120;
+}
+
+.image-border-orange2 {
+  border: 4px solid #eb7e20;
+}
+
+.image-border-orange3 {
+  border: 4px solid #f8a918;
+}
+
+.image-border-yellow {
+  border: 4px solid #f8c718;
 }
 
 .arrow-effect-container-right {
@@ -57,7 +73,6 @@
   scroll-margin-right: 75%;
   z-index: 1;
 }
-
 
 /* Embed code in the <head> of your html 
 Nunito Bold, Nunito Sans Extra Bold Italic, Montserrat Regular
