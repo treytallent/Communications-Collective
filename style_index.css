@@ -3,18 +3,23 @@
     color: #D91853;
 }
 
-.red-orange{
+.orange1{
     color: #EB5120;
 }
 
-.orange{
+.orange2{
     color: #EB7E20;
 }
 
-.yellow-orange{
+.orange3{
     color: #F8A918;
 }
 
 .yellow{
     color: #F8C718;
+}
+
+.section{
+    padding-left: 110px;
+    padding-right: 110px;
 }
