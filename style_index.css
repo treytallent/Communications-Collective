@@ -24,3 +24,15 @@
     padding-right: 110px;
     padding-top:110px;
 }
+
+. {
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
+}
+
+.align-right {
+    display: flex;
+    justify-content: right;
+    padding-right: 50px;
+}
