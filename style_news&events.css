@@ -1,17 +1,92 @@
-.bg-news {
-  background-image: url(images/placeholder_image.webp);
-  background-size: cover;
+.header-title {
+  margin-bottom: 10px;
+}
+
+.header-intro {
+  margin-bottom: 50px;
+}
+
+.header-location {
+  margin-bottom: 10px;
+}
+
+.header-date {
+  margin-bottom: 50px;
 }
 
 section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section1-row {
+  padding-bottom: 100px;
+}
+
+.date {
+  margin-bottom: 0px;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+.news-title {
+  margin-bottom: 25px;
+}
+
+.location {
+  margin-bottom: 25px;
+}
+
+.section1-intro {
+  margin-bottom: 30px;
+}
+
+.article-title {
+  margin-bottom: 10px;
+}
+
+.article-p {
+  margin-bottom: 0px;
+}
+
+.post-image {
+  margin-bottom: 15px;
+}
+
+.post-title {
+  margin-bottom: 5px;
+}
+
+.post-location {
+  margin-bottom: 10px;
+}
+
+.post-date {
+  margin-bottom: 25px;
+}
+
+.post-row {
+  padding-bottom: 80px;
+}
+
+.section2-row {
+  padding-bottom: 25px;
+}
+
+.vertical-center {
+  align-self: center;
 }
 
 .recentnews-image {
   object-fit: cover;
   border-radius: 50%;
-  width: 350px;
+  width: 325px;
   aspect-ratio: 1/1;
   margin-left: auto;
   margin-right: auto;
@@ -42,12 +117,22 @@ section {
   margin-right: auto;
 }
 
+.pastevents-image {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 300px;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center {
   display: flex;
   align-self: center;
 }
 
 .center-button {
-  margin: 0 auto;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
