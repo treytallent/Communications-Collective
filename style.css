@@ -101,6 +101,13 @@ h3 {
   font-style: normal;
 }
 
+h4 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .subheader1-text {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1.5rem;
