@@ -1,5 +1,4 @@
 /* header */
-
 .header-events-title {
   margin-bottom: 10px;
 }
@@ -61,7 +60,7 @@
 }
 
 .article-row {
-  padding-bottom: 25px;
+  padding-bottom: 40px;
 }
 
 /* section 2 events */
@@ -87,8 +86,7 @@
 }
 
 /* other */
-
-section {
+.section-padding {
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -106,6 +104,16 @@ section {
 }
 
 .pastevents-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.6vh solid #f8c718;
+  position: relative;
+  z-index: 2;
+}
+
+.pastevents-image3 {
   object-fit: cover;
   border-radius: 50%;
   width: 300px;
