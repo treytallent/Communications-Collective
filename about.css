@@ -1,16 +1,37 @@
-/* Placeholder classes until images are inserted */
-
 .header-about {
-   min-height: 447px;
+   min-height: 30vh;
+   background-image: url(Images/about_1.webp);
+   background-size: contain;
+   background-position: right center;
+   background-repeat: no-repeat;
 }
 
-.bg-temp {
-   background-color: rebeccapurple;
+.header-opportunities {
+   min-height: 30vh;
+   background-image: url(Images/opportunities_1.webp);
+   background-size: contain;
+   background-position: right center;
+   background-repeat: no-repeat;
 }
 
-.about-project-img {
-   height: 250px;
-   background-color: rebeccapurple;
+.ar-1 {
+   aspect-ratio: 1/1;
+}
+
+.object-fit-cover {
+   object-fit: cover;
+}
+
+.pos-left {
+   object-position: left;
+}
+
+.pos-top {
+   object-position: top;
+}
+
+.pos-center {
+   object-position: center;
 }
 
 /* Carousel Scrolling Classes */
@@ -46,7 +67,6 @@
 /* Opportunities */
 
 .opportunities-card {
-   border: 1px solid gray;
    display: grid;
 }
 
@@ -56,8 +76,6 @@
 
 .opportunities-card img {
    padding: 0;
-   background-color: rebeccapurple;
-   aspect-ratio: 1/1;
 }
 
 .opportunities-card h3,
@@ -68,13 +86,6 @@
 
 .opportunities-card h3 {
    align-self: end;
-}
-
-.jtc-img {
-   height: 250px;
-   aspect-ratio: 1/1;
-   background-color: rebeccapurple;
-   margin: 0 15px;
 }
 
 /* Large space Class = 90px (column gutter × 3)*/
