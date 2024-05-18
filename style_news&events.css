@@ -1,22 +1,22 @@
 /* header */
 .header-events-title {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .header-news-title {
-  margin-bottom: 25px;
+  margin-bottom: 1.563rem;
 }
 
 .header-intro {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .header-location {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .header-events-date {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .header-news-date {
@@ -30,19 +30,19 @@
 }
 
 .title {
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
 }
 
 .news-title {
-  margin-bottom: 25px;
+  margin-bottom: 1.563rem;
 }
 
 .location {
-  margin-bottom: 25px;
+  margin-bottom: 1.563rem;
 }
 
 .section1-intro {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 /* section 2 news */
@@ -52,7 +52,7 @@
 }
 
 .article-title {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .article-p {
@@ -60,43 +60,43 @@
 }
 
 .article-row {
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
 }
 
 /* section 2 events */
 
 .post-image {
-  margin-bottom: 15px;
+  margin-bottom: 0.938rem;
 }
 
 .post-title {
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
 }
 
 .post-location {
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
 }
 
 .post-date {
-  margin-bottom: 25px;
+  margin-bottom: 1.563rem;
 }
 
 .post-row {
-  padding-bottom: 80px;
+  padding-bottom: 5rem;
 }
 
 /* other */
 .section-padding {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .section1-row {
-  padding-bottom: 100px;
+  padding-bottom: 6.25rem;
 }
 
 .vertical-center {
