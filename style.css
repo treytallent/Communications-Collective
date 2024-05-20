@@ -1,140 +1,91 @@
 .container-fluid {
-  padding: 0;
+   padding: 0;
 }
 
-.arrow-effect-image {
-  height: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  border: 4px solid black;
-  object-fit: cover;
-  position: relative;
-  z-index: 2;
-}
+/**************/
+/* Typography */
+/**************/
 
-.image-border-pink {
-  border-color: #d91853;
-}
-
-.image-border-orange1 {
-  border-color: #eb5120;
-}
-
-.image-border-orange2 {
-  border-color: #eb7e20;
-}
-
-.image-border-orange3 {
-  border-color: #f8a918;
-}
-
-.image-border-yellow {
-  border-color: #f8c718;
-}
-
-.arrow-effect-container-right {
-  width: 250px;
-  aspect-ratio: 1/1;
-  position: relative;
-  display: inline-block;
-}
-
-.arrow-effect-container-right::before {
-  content: "";
-  background-image: url("Images/Arrow-Effect.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 25%;
-  aspect-ratio: 1/1;
-  transform: rotate(135deg);
-  top: 78%;
-  left: 75%;
-  z-index: 1;
-}
-
-.arrow-effect-container-left {
-  width: 250px;
-  aspect-ratio: 1/1;
-  position: relative;
-  display: inline-block;
-}
-
-.arrow-effect-container-left::before {
-  content: "";
-  background-image: url("Images/Arrow-Effect.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 25%;
-  aspect-ratio: 1/1;
-  transform: rotate(225deg);
-  top: 78%;
-  scroll-margin-right: 75%;
-  z-index: 1;
-}
-
-/* Embed code in the <head> of your html 
-Nunito Bold, Nunito Sans Extra Bold Italic, Montserrat Regular
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@1,6..12,800&family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-*/
-h1 {
-  font-family: "Nunito", sans-serif;
-  font-size: 4rem;
-  font-weight: 700;
-  font-style: normal;
-}
-
-h2 {
-  font-family: "Nunito", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  font-style: normal;
-}
-
-h3 {
-  font-family: "Nunito", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  font-style: normal;
+body {
+   font-family: "Nunito", sans-serif;
+   font-style: normal;
+   font-weight: 400;
 }
 
 h4 {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  font-style: normal;
+   font-size: 1.75rem;
+   font-weight: 700;
+}
+
+h1,
+.H1-text {
+   font-size: 4rem;
+   font-weight: 700;
+}
+
+h2,
+.H2-text {
+   font-size: 3rem;
+   font-weight: 700;
+}
+
+h3,
+.H3-text {
+   font-size: 2rem;
+   font-weight: 700;
+}
+
+.p-text {
+   font-weight: 400;
 }
 
 .subheader1-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.5rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .subheader2-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.125rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .subheader3-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+   font-family: "Nunito Sans", sans-serif;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
-.body-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
+.subheader2-text {
+   font-family: "Nunito Sans", sans-serif;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+@media screen and (max-width: 767px) {
+   body {
+      font-size: 0.875rem;
+   }
+
+   h1,
+   .H1-text {
+      font-size: 2.5rem;
+   }
+
+   h2,
+   .H2-text {
+      font-size: 2.25rem;
+   }
+
+   h3,
+   .H3-text {
+      font-size: 1.5rem;
+   }
 }
