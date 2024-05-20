@@ -36,3 +36,11 @@
     justify-content: right;
     padding-right: 50px;
 }
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-image: url("Images/header.webp");
+    background-size: cover;
+    height: 100vh;
+}

@@ -93,6 +93,13 @@ h3,
 }
 
 /* Navbar */
+header {
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 70px;
+}
+
 .navbar-logo {
     height: 50px;
     aspect-ratio: 1/1;
@@ -105,11 +112,11 @@ h3,
     color: #1a1a1a;
 }
 
-.nav-link {
+.nav-link:hover {
     color: #007ac3;
 }
 
 .nav-social {
-    size: 24px;
+    height: 24px;
     aspect-ratio: 1/1;
 }
