@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <meta name="Description" content="Enter your description here" />
+      <!-- Bootstrap -->
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
@@ -13,18 +14,24 @@
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+         rel="stylesheet"
+      />
+      <!-- Custom CSS -->
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="about.css" />
-      <title>Title</title>
+      <link rel="stylesheet" href="image-arrow.css" />
+      <title>About</title>
    </head>
    <body>
-      <header class="header-about">
-         <div class="container h-100 mt-auto">
-            <div
-               class="row col-md-12 h-100 mt-auto flex-column justify-content-end align-items-start"
-            >
+      <header class="sm-header header-about">
+         <div class="container">
+            <div class="row align-content-end test">
                <h1 class="H1-text mb-sm">About</h1>
-               <p class="mb-md">Creating Community within Communications</p>
                <p class="mb-sm">
                   A place for students and members to connect. Whether you're
                   studying in Perth, Singapore or Dubai we want to welcome you
@@ -56,10 +63,12 @@
                         simply come to one of our events and see for yourself.
                      </p>
                   </div>
-                  <div class="col-md-6 d-flex order-media order-2 mb-sm">
+                  <div
+                     class="col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center"
+                  >
                      <img
                         src="Images/about_2.webp"
-                        class="ar-1 object-fit-cover w-100"
+                        class="ar-1 object-fit-cover"
                         alt="Image"
                      />
                   </div>
@@ -100,7 +109,7 @@
                            <img
                               src="Images/about_3.webp"
                               alt="#"
-                              class="ar-1 object-fit-cover pos-left order-0 mb-4"
+                              class="ar-1 object-fit-cover pos-left order-0 sm-img mb-4"
                            />
                         </div>
                      </div>
@@ -123,7 +132,7 @@
                            <img
                               src="Images/about_4.webp"
                               alt="#"
-                              class="ar-1 object-fit-cover pos-top order-0 mb-4"
+                              class="ar-1 object-fit-cover pos-top order-0 sm-img mb-4"
                            />
                         </div>
                      </div>
@@ -253,10 +262,12 @@
                      </p>
                      <a href="">Explore your future</a>
                   </div>
-                  <div class="col-md-6 d-flex order-media order-2 mb-sm">
+                  <div
+                     class="col-md-6 d-flex order-media order-2 sm-img arrow-container-left-orange2"
+                  >
                      <img
                         src="Images/about_9999.webp"
-                        class="ar-1 object-fit-cover pos-left w-100"
+                        class="ar-1 object-fit-cover pos-left"
                         alt="Image"
                      />
                   </div>

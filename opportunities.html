@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <meta name="Description" content="Enter your description here" />
+      <!-- Bootstrap -->
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
@@ -13,17 +14,24 @@
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+         rel="stylesheet"
+      />
+      <!-- Custom CSS -->
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="about.css" />
-      <title>Title</title>
+      <link rel="stylesheet" href="image-arrow.css" />
+      <title>Opportunities</title>
    </head>
    <body>
-      <header class="header-opportunities">
-         <div class="container h-100 mt-auto">
-            <div
-               class="row col-md-12 h-100 mt-auto flex-column justify-content-end align-items-start"
-            >
-               <h1 class="mb-sm">Opportunities</h1>
+      <header class="sm-header header-opportunities">
+         <div class="container">
+            <div class="row align-content-end test">
+               <h1 class="H1-text mb-sm">Opportunities</h1>
                <p class="mb-sm">
                   Joining The Communications Collective provides you with
                   friendship and exchange with like-minded peers and internship
@@ -37,11 +45,12 @@
       <main class="about-main container">
          <div class="row">
             <div class="col-md-10 offset-md-1">
-               <!-- History of the Communication Collective -->
+               <!-- Available Opportunities -->
+
                <section class="row">
                   <div class="col-md-6 order-1">
-                     <h2 class="mb-sm">Available Opportunities</h2>
-                     <p>
+                     <h2 class="H2-text mb-sm">Available Opportunities</h2>
+                     <p class="mb-sm">
                         Keep up to date with our Facebook and Instagram pages
                         where we post updates with the latest and greatest
                         internship and work opportunities across a range of
@@ -52,10 +61,13 @@
                         <a href="#">Instagram</a>
                      </div>
                   </div>
-                  <div class="col-md-6 d-flex order-media order-2 mb-sm">
+
+                  <div
+                     class="col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center"
+                  >
                      <img
-                        src="Images/opportunities_2.webp"
-                        class="ar-1 object-fit-cover pos-left w-100"
+                        src="Images/about_2.webp"
+                        class="ar-1 object-fit-cover"
                         alt="Image"
                      />
                   </div>
@@ -291,20 +303,22 @@
                   </div>
                </section>
 
-               <!-- Join The Collective More -->
+               <!-- Join The Collective -->
                <section class="row">
                   <div class="col-md-6 order-1">
-                     <h2 class="mb-sm">Join the Collective</h2>
-                     <p>
+                     <h2 class="H2-text mb-sm">Join the Collective</h2>
+                     <p class="mb-sm">
                         Join us as part of the Communications Collective at
                         Murdoch University to make the most of your degree and
                         your University experience.
                      </p>
                   </div>
-                  <div class="col-md-6 d-flex order-media order-2 mb-sm">
+                  <div
+                     class="col-md-6 d-flex order-media order-2 sm-img arrow-container-left-orange2"
+                  >
                      <img
                         src="Images/opportunities_999.webp"
-                        class="ar-1 object-fit-cover pos-top w-100"
+                        class="ar-1 object-fit-cover pos-mid"
                         alt="Image"
                      />
                   </div>

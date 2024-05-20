@@ -1,16 +1,31 @@
-.header-about {
+.sm-header div {
+   align-content: flex-start;
    min-height: 30vh;
-   background-image: url(Images/about_1.webp);
-   background-size: contain;
-   background-position: right center;
+}
+
+.sm-header * {
+   max-width: 75ch;
+}
+
+.header-about {
+   background-image: linear-gradient(
+         rgba(248, 199, 24, 0.25),
+         rgba(235, 81, 32, 0.25)
+      ),
+      url(Images/about_1.webp);
+   background-size: cover;
+   background-position: center center;
    background-repeat: no-repeat;
 }
 
 .header-opportunities {
-   min-height: 30vh;
-   background-image: url(Images/opportunities_1.webp);
-   background-size: contain;
-   background-position: right center;
+   background-image: linear-gradient(
+         rgba(248, 199, 24, 0.25),
+         rgba(235, 81, 32, 0.25)
+      ),
+      url(Images/opportunities_1.webp);
+   background-size: cover;
+   background-position: center center;
    background-repeat: no-repeat;
 }
 
@@ -120,4 +135,19 @@
 
 body section {
    margin-top: 90px;
+}
+
+@media screen and (max-width: 767px) {
+   /* Image resize on small screens */
+   .sm-img {
+      max-width: 60%;
+      margin: auto auto;
+      align-self: center;
+      margin-bottom: 0.9375rem;
+   }
+
+   /* Header heigth on small screens */
+   .header-about div {
+      min-height: 45vh;
+   }
 }
