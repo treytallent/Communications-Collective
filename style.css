@@ -57,13 +57,7 @@ h3,
 
 .subheader3-text {
   font-family: "Nunito Sans", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
-}
-
-.subheader2-text {
-  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
   font-weight: 800;
   font-style: italic;
   font-variation-settings: "wdth" 100, "YTLC" 500;
