@@ -1,4 +1,4 @@
-/* Text Colours */
+/* Start of Text Colours */
 .red {
     color: #d91853;
 }
@@ -18,7 +18,9 @@
 .yellow {
     color: #f8c718;
 }
+/* End of Text Colours */
 
+/* Start of Section Formatting */
 .section {
     padding-left: 110px;
     padding-right: 110px;
@@ -36,7 +38,9 @@
     justify-content: right;
     padding-right: 50px;
 }
+/* End of Section Formatting */
 
+/* Start of Header */
 .header {
     display: flex;
     flex-direction: row;
@@ -44,3 +48,29 @@
     background-size: cover;
     height: 100vh;
 }
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.1)
+    );
+    z-index: 1;
+}
+
+.index-heading {
+    color: white;
+}
+.index-subtitle {
+    color: white;
+}
+.index-header-social {
+    height: 48px;
+}
+/* End of Header */
