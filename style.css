@@ -71,6 +71,21 @@ h3,
     color: #1a1a1a;
 }
 
+.btn {
+    position: relative;
+    display: inline-block; /* Allows the button to shrink-wrap its content */
+    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: #007ac3; /* Example button color, change as needed */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+    border-radius: 500px; /* High border-radius value to create the pill shape */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    z-index: 10;
+}
+
 @media screen and (max-width: 767px) {
     body {
         font-size: 0.875rem;
@@ -118,6 +133,7 @@ header {
 
 .nav-link:hover {
     color: #007ac3;
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
 .nav-social {

@@ -44,15 +44,38 @@
     justify-content: right;
     padding-right: 50px;
 }
+
+.pill-button:hover {
+    background-color: #0056b3; /* Darker shade when hovered for visual feedback */
+}
 /* End of Section Formatting */
 
 /* Start of Header */
+.index-heading {
+    position: relative;
+    color: white;
+    z-index: 5;
+}
+.index-subtitle {
+    position: relative;
+    color: white;
+    z-index: 5;
+}
+.index-header-social {
+    position: relative;
+    height: 48px;
+    padding-left: 48px;
+    padding-right: 48px;
+    z-index: 5;
+}
+
 .header {
     display: flex;
     flex-direction: row;
     background-image: url("Images/header.webp");
     background-size: cover;
     height: 100vh;
+    padding-top: 55vh;
 }
 
 .header::before {
@@ -68,16 +91,6 @@
         rgba(0, 0, 0, 0.1)
     );
     z-index: 1;
-}
-
-.index-heading {
-    color: white;
-}
-.index-subtitle {
-    color: white;
-}
-.index-header-social {
-    height: 48px;
 }
 /* End of Header */
 
