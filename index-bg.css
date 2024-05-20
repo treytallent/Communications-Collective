@@ -2,40 +2,40 @@
 /* Apply index-bg and bg-SECTIONNAME to the container-fluid parent */
 
 .index-bg {
-   background-size: cover;
-   min-height: 563px;
-   background-position: 100% 100%;
-   background-repeat: no-repeat;
+    background-size: auto 100%;
+    min-height: 563px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .bg-about {
-   background-image: url("Images/IndexBackgrounds/Index-About2.svg");
-   background-size: cover;
-   background-position: 100% 100%;
+    background-image: url("Images/IndexBackgrounds/Index-About2.svg");
+    background-size: cover;
+    background-position: 100% 100%;
 }
 
 @media screen and (max-width: 991px) {
-   .bg-about {
-      background-size: contain;
-      background-position: top right;
-   }
+    .bg-about {
+        background-size: contain;
+        background-position: top right;
+    }
 }
 
 .bg-opportunities {
-   background-image: url("Images/IndexBackgrounds/Index-Opportunities.svg");
-   background-position: top center;
+    background-image: url("Images/IndexBackgrounds/Index-Opportunities.svg");
+    background-position: top center;
 }
 
 .bg-news {
-   background-image: url("Images/IndexBackgrounds/Index-News.svg");
+    background-image: url("Images/IndexBackgrounds/Index-News.svg");
 }
 
 .bg-events {
-   width: 98%;
-   background-image: url("Images/IndexBackgrounds/Index-Events.svg");
-   background-position: center center;
+    width: 98%;
+    background-image: url("Images/IndexBackgrounds/Index-Events.svg");
+    background-position: center center;
 }
 
 .index-content {
-   background-image: url("Images/IndexBackgrounds/Index-Content.svg");
+    background-image: url("Images/IndexBackgrounds/Index-Content.svg");
 }
