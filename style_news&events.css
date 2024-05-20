@@ -25,6 +25,10 @@
   height: 2.1875rem;
   border-radius: 1.25rem;
   align-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .btn-primary {
