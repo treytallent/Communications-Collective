@@ -36,6 +36,7 @@
 .align-center {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .align-right {
@@ -81,13 +82,41 @@
 /* End of Header */
 
 /* Events */
-.event-img {
-    width: 75%;
+.events-body {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .event-image-frame {
+    position: relative; /* Establishes a positioning context */
     background-image: url("Images/indexbg/events.svg");
     background-size: cover;
-    background-position: 100% 30%;
-    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center; /* Adjusted to center the background image */
+    height: 375px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the .event-img inside */
+}
+
+.event-img-frame {
+    width: 100%;
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    z-index: 1;
+}
+
+.event-img {
+    position: absolute;
+    width: 70%; /* Adjust based on your needs */
+    aspect-ratio: 1/1;
+    border-radius: 50%; /* Creates the circular frame */
+    object-fit: cover; /* Ensures the image covers the frame without distortion */
+    display: flex;
+    overflow: hidden; /* Ensures no part of the image spills outside the circular frame */
+    border: 0.6vh solid #f8a918;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
 }

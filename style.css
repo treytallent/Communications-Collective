@@ -112,6 +112,10 @@ header {
     color: #1a1a1a;
 }
 
+.nav-active {
+    color: #007ac3;
+}
+
 .nav-link:hover {
     color: #007ac3;
 }
