@@ -68,6 +68,7 @@ h3,
     font-size: 1rem;
     font-weight: 400;
     font-style: normal;
+    color: #1a1a1a;
 }
 
 @media screen and (max-width: 767px) {
@@ -94,5 +95,21 @@ h3,
 /* Navbar */
 .navbar-logo {
     height: 50px;
+    aspect-ratio: 1/1;
+}
+
+.nav-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.nav-link {
+    color: #007ac3;
+}
+
+.nav-social {
+    size: 24px;
     aspect-ratio: 1/1;
 }
