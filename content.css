@@ -52,8 +52,20 @@
     border: 5px solid #d91853;
 }
 
-0056b3
-
+.content-btn {
+    position:absolute;
+    top:15px;
+    right:5px;
+    padding: 10px 10px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: #007ac3; /* Example button color, change as needed */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+    border-radius: 200px; /* High border-radius value to create the pill shape */
+    z-index: 10;
+}
 .dropbtn {
     background-color: #0056b3;
     color: white;
