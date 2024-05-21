@@ -197,7 +197,7 @@
 
 /* other */
 .section-padding {
-  padding-top: 4.375rem;
+  padding-top: 6rem;
   padding-bottom: 4.375rem;
 }
 
@@ -256,7 +256,7 @@
   .pastevents-image {
     width: 100%;
   }
-  .button {
-    width: 100%;
+  .section1-padding {
+    margin-top: 50px;
   }
 }
