@@ -1,3 +1,12 @@
+/*
+Theme Name: Murdoch Communiation's Collective Theme URI: https://murdochcommunicationcollective.com/
+Description: Communication's Collective Theme.
+Author: Me
+Author URI: https://murdochcommunicationcollective.com/
+Version: 1
+*/
+
+
 .container-fluid {
   padding: 0;
 }
@@ -208,7 +217,15 @@ footer img {
   padding-right: 24px;
 }
 
-.index-footer-social {
-  display: flex;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  .index-footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo{
+    padding: 1.5rem;
+  }
 }
+
