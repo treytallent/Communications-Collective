@@ -74,6 +74,7 @@ h3,
 .btn {
     position: relative;
     display: inline-block; /* Allows the button to shrink-wrap its content */
+    margin-top: 50px;
     padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
     background-color: #007ac3; /* Example button color, change as needed */
     color: white; /* Text color */
@@ -82,8 +83,13 @@ h3,
     text-align: center; /* Centers the text inside the button */
     text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
     border-radius: 500px; /* High border-radius value to create the pill shape */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
     z-index: 10;
+}
+
+.btn:hover {
+    background-color: #00649e;
+    transition: background-color 0.3s;
+    color: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -112,12 +118,28 @@ header {
     position: fixed;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.9);
-    height: 70px;
 }
 
 .navbar-logo {
     height: 50px;
     aspect-ratio: 1/1;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-logo-wordmark {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.navbar-logo-wordmark:hover {
+    text-decoration: none;
+    color: #1a1a1a;
 }
 
 .nav-link {
@@ -125,6 +147,7 @@ header {
     font-size: 1.1rem;
     font-weight: 800;
     color: #1a1a1a;
+    margin: 0;
 }
 
 .nav-active {
@@ -134,9 +157,48 @@ header {
 .nav-link:hover {
     color: #007ac3;
     cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: color 0.3s;
 }
 
 .nav-social {
     height: 24px;
     aspect-ratio: 1/1;
+}
+
+/* Footer */
+footer {
+    background-color: #007ac3;
+}
+
+footer .body-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+footer .container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+footer img {
+    height: 55px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.index-footer-social-icon {
+    position: relative;
+    height: 36px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.index-footer-social {
+    display: flex;
+    align-items: center;
 }

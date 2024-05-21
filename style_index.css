@@ -24,7 +24,8 @@
 .section {
     padding-left: 110px;
     padding-right: 110px;
-    padding-top: 110px;
+    padding-top: 55px;
+    padding-bottom: 55px;
 }
 
 .align-left {
@@ -34,9 +35,11 @@
 }
 
 .align-center {
-    display: flex;
+    display: block;
     justify-content: center;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .align-right {
@@ -45,9 +48,13 @@
     padding-right: 50px;
 }
 
-.pill-button:hover {
-    background-color: #0056b3; /* Darker shade when hovered for visual feedback */
+.center-button {
+    display: inline-block; /* Makes the margin auto applicable */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
 }
+
 /* End of Section Formatting */
 
 /* Start of Header */
@@ -87,6 +94,7 @@
     bottom: 0;
     background-image: linear-gradient(
         to right,
+
         rgba(0, 0, 0, 0.6),
         rgba(0, 0, 0, 0.1)
     );
@@ -133,3 +141,36 @@
     left: 50%;
     transform: translate(-50%, 20%);
 }
+/* End of Events */
+
+/* Start of Backgrounds */
+.bg-about {
+    position: relative;
+    background-image: url("Images/indexbg/about.svg");
+    background-repeat: no-repeat;
+    background-position: right -50vh;
+}
+
+.bg-opportunities {
+    position: relative;
+    background-image: url("Images/indexbg/opportunities.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 10vw;
+}
+
+.bg-news {
+    position: relative;
+    background-image: url("Images/indexbg/news.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: calc(100% - 10vw);
+}
+
+.bg-content {
+    position: relative;
+    background-image: url("Images/indexbg/content.svg");
+    background-repeat: no-repeat;
+    background-position: left 10vh;
+}
+/* End of Backgrounds */
