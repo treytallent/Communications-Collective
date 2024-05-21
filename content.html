@@ -6,112 +6,176 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+<!-- GSAP CDN -->
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@1,6..12,800&family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
-
-<link rel="stylesheet" href="style.css">
-
-
+<!-- Custom CSS and JS -->
+<link rel="stylesheet" href="content.css"> 
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="image-arrow.css" />
+<script defer src="script.js"></script>
 <title>Title</title>
+
 </head>
+
 <body>
 
-    <header class="container-fluid bg1"> <!-- div for the main image the stretches to the edge of the page -->
-        <div class="container"> <!-- div that holds the content in the middle of the page  -->
+<!-- Navbar Start -->
+<header class="container-fluid">
+        <div class="container">
             <nav class="navbar navbar-expand-md navbar-fixed-top">
+                <!-- Logo -->
+                <a class="navbar-logo" href="/index.html"
+                    ><img src="Images/ccmu_logo.svg" alt="Communication Collective at Murdoch University Logo"></a>
 
-                    <a class="navbar-logo" href="#"><img src="#" alt="Communication Collective at Murdoch University Logo"></a><!-- Logo -->
-  
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" aria-label="toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a> 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a> 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Content</a> 
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a> 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Socials</a> 
-                    </li>
-                </ul>
-            </div>
-        </nav>
-<div class="tag">
-    <a class="btn btn-secondary" href="#">Feature</a>
-      <h1>#supporting local businesses</h1>
-      <div class="container">
-        <p class="authorname">Jordanreincastle</p>
-        <p class="header-intro">
-            With the spread of coronavirus around the world, the Australian Government has implemented a new restriction on businesses in the hospitality industry, of strictly take-away and no dine-in. This means many businesses, who make a majority of their income from walk-ins and bookings, have had to close their doors from their primary source of income for the greater good of slowing the virus’ spread.
-        </p>
-        <a class="btn btn-secondary" href="#">Continue Reading</a>
-      </div><!-- container -->
-    </div>
-    </div> <!-- container -->
-</header>
+                <!-- Hamburger Menu -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapsibleNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"
+                        ><em class="fa fa-bars" aria-hidden="true"></em
+                    ></span>
+                </button>
+
+<!-- Navbar links -->
+ <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link nav-active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#">Events</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#">Content</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="https://www.instagram.com/comm.collective/?hl=en">
+                                <img class="nav-social" src="Images/Socials/instagram_black.svg" alt="Instagram Logo">
+                            </a>
+                        </li>
+
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="https://www.facebook.com/groups/2413338638950508/?paipv=0&eav=Afb0yvIPTNRsQtnThMPgrJHl1fW4iQvv0IVTPq2lnxkdyxQS3pXuuCUQAmC9RYzm0ts&_rdr/">
+                                <img class="nav-social" src="Images/Socials/facebook_black.svg" alt="Facebook">
+                            </a>
+                        </li>
+
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="https://www.linkedin.com/groups/10440200/">
+                                <img class="nav-social" src="Images/Socials/linkedin_black.svg" alt="LinkedIn Logo"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+ <!-- Header Start -->
+    <div class="container-fluid header header-gradient">
+        <div class="container">
+            <div class="row front-page"></div><!-- row -->
+        <a class="btn btn-secondary" href="#">Feature</a>
+        <h1 class="content-heading">#supporting local businesses</h1>
+            <h4 class="authorname">Jordanreincastle</h4>
+            <a href="#"><img class="index-header-social" src="Images/Socials/instagram_white.svg" alt="Instagram icon link to Instagram account"></a>
+            <a href="#"><img class="index-header-social" src="Images/Socials/facebook_white.svg" alt="Facebook icon link to Facebook account"></a>
+            <a href="#"><img class="index-header-social" src="Images/Socials/linkedin_white.svg"alt="LinkedIn icon link to LinkedIn account"></a> 
+
+            <p class="header-intro">
+                With the spread of coronavirus around the world, the Australian Government has implemented a new restriction on businesses in the hospitality industry, of strictly take-away and no dine-in. This means many businesses, who make a majority of their income from walk-ins and bookings, have had to close their doors from their primary source of income for the greater good of slowing the virus’ spread.
+            </p>
+
+            <a class="btn btn-secondary" href="#">Continue Reading</a>
+        </div><!-- container -->
+    </div><!-- container-fluid -->
 
 
-<section class="container-fluid">
+<section class="container-fluid content-section">
 <div class="container">
 <h2 class="text-center">visit our content</h2>
 
               <!-- Navbar links -->
-              <div class="collapse navbar-collapse" id="navbar-second">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">All post</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Feature</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Recommendation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a> 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Study</a> 
-                    </li>
-                </ul>
-            </div>
+              <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <ul class="nav">
+                        <li class="nav-item">
+                  <a class="navbar-brand" href="#">All posts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Featured</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recommendation</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Study</a>
+                  </li>
+                  </ul>
+
+                  <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                    <ul class="nav">
+                      <li class="nav-item">
+                        <button class="dropbtn dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> recent news</button>
+                        <ul class="dropdown-menu dropdown-menu-light">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
 
 
-<div class="row visit-our-content row-1">
-<div class="col-md-4">
- <img class="content-image" src="#" alt="#">
- <p class="author-name">Steph Dawson</p>
+<div class="row content-row-1">
+<div class="col-md-4"> 
+ <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+ <a class="btn btn-fluid" href="#">News</a>
+ <h4 class="content-author">Steph Dawson</h4>
  <h3 class="article-title">Coronavirus & Mental Health</h3>
- <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
+ <p class="body-text">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
  </p>
- <a class="continuereading" href="#">Continue Reading</a>
+ <a class="continuereading align-right" href="#">Continue Reading</a>
 </div>
 
 <div class="col-md-4">
-     <img class="content-image" src="#" alt="#">
-     <p class="author-name">Steph Dawson</p>
+     <img class="content-image" src="Images/content/content-image-1.svg" alt="#">
+     <a class="btn btn-fluid" href="#">News</a>
+     <p class="content-author">Steph Dawson</p>
      <h3 class="article-title">Coronavirus & Mental Health</h3>
      <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
      </p>
@@ -119,8 +183,9 @@
     </div>
 
 <div class="col-md-4">
-         <img class="content-image" src="#" alt="#">
-         <p class="author-name">Steph Dawson</p>
+         <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+         <a class="btn btn-fluid" href="#">News</a>
+         <p class="content-author">Steph Dawson</p>
          <h3 class="article-title">Coronavirus & Mental Health</h3>
          <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
          </p>
@@ -128,10 +193,11 @@
         </div>
 </div>
 
-<div class="row visit-our-content row-2">
+<div class="row content-row-2">
     <div class="col-md-4">
-     <img class="content-image" src="#" alt="#">
-     <p class="author-name">Steph Dawson</p>
+        <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+        <a class="btn btn-fluid" href="#">News</a>
+     <p class="content-author">Steph Dawson</p>
      <h3 class="article-title">Coronavirus & Mental Health</h3>
      <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
      </p>
@@ -139,8 +205,9 @@
     </div>
     
     <div class="col-md-4">
-         <img class="content-image" src="#" alt="#">
-         <p class="author-name">Steph Dawson</p>
+        <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+        <a class="btn btn-fluid" href="#">News</a>
+         <p class="content-author">Steph Dawson</p>
          <h3 class="article-title">Coronavirus & Mental Health</h3>
          <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
          </p>
@@ -148,8 +215,9 @@
         </div>
     
     <div class="col-md-4">
-             <img class="content-image" src="#" alt="#">
-             <p class="author-name">Steph Dawson</p>
+        <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+        <a class="btn btn-fluid" href="#">News</a>
+             <p class="content-author">Steph Dawson</p>
              <h3 class="article-title">Coronavirus & Mental Health</h3>
              <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
              </p>
@@ -157,10 +225,11 @@
             </div>
     </div>
 
-    <div class="row visit-our-content row-3">
+    <div class="row content-row-3">
         <div class="col-md-4">
-         <img class="content-image" src="#" alt="#">
-         <p class="author-name">Steph Dawson</p>
+            <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+            <a class="btn btn-fluid" href="#">News</a>
+         <p class="content-author">Steph Dawson</p>
          <h3 class="article-title">Coronavirus & Mental Health</h3>
          <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
          </p>
@@ -168,8 +237,9 @@
         </div>
         
         <div class="col-md-4">
-             <img class="content-image" src="#" alt="#">
-             <p class="author-name">Steph Dawson</p>
+            <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+            <a class="btn btn-fluid" href="#">News</a>
+             <p class="content-author">Steph Dawson</p>
              <h3 class="article-title">Coronavirus & Mental Health</h3>
              <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
              </p>
@@ -177,8 +247,9 @@
             </div>
         
         <div class="col-md-4">
-                 <img class="content-image" src="#" alt="#">
-                 <p class="author-name">Steph Dawson</p>
+            <img class="content-image" src="images/content/content-image-1.svg" alt="#">
+            <a class="btn btn-fluid" href="#">News</a>
+                 <p class="content-author">Steph Dawson</p>
                  <h3 class="article-title">Coronavirus & Mental Health</h3>
                  <p class="article">With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories ...
                  </p>
@@ -188,7 +259,7 @@
 </div>
 </section>
 
-<section class="container-fluid postbg">
+<section class="container-fluid make-post postbg">
 <div class="container">
     <h4 class="text-center">post your content</h4>
     <p class="text-center">"Now! It's your turn to post a blog!"</p>
@@ -199,3 +270,4 @@
 
 
 </section>
+</body>
