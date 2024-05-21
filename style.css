@@ -86,6 +86,10 @@ h3,
     z-index: 10;
 }
 
+.btn-sm {
+   z-index: initial;
+}
+
 .btn:hover {
     background-color: #00649e;
     transition: background-color 0.3s;
