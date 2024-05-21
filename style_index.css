@@ -58,6 +58,8 @@
 /* End of Section Formatting */
 
 /* Start of Header */
+/* Screen Size > 767px */
+@media only screen and (min-width:767.98px){
 .index-heading {
     position: relative;
     color: white;
@@ -99,6 +101,7 @@
         rgba(0, 0, 0, 0.1)
     );
     z-index: 1;
+}
 }
 /* End of Header */
 
@@ -174,3 +177,140 @@
     background-position: left 10vh;
 }
 /* End of Backgrounds */
+
+/* Screen Size < 576px */
+
+@media only screen and (max-width:575.98px){
+    header {
+        position: fixed;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .navbar-logo {
+        height: 50px;
+        aspect-ratio: 1/1;
+        margin-right: 10px;
+        display: flex;
+    }
+    
+    .navbar-logo-wordmark {
+        font-family: "Nunito", sans-serif;
+        font-style: normal; 
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-left: 10px;
+        color: #1a1a1a;
+      
+    }
+    .navbar{
+        justify-content: flex-start;
+    }
+
+
+    .navbar-logo-wordmark:hover {
+        text-decoration: none;
+        color: #1a1a1a;
+    }
+    
+    .nav-link {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin: 0;
+    }
+    
+    .nav-active {
+        color: #007ac3;
+    }
+    
+    .nav-link:hover {
+        color: #007ac3;
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+        transition: color 0.3s;
+    }
+    
+    .nav-social {
+        height: 24px;
+        aspect-ratio: 1/1;
+    }
+}
+
+/* Button */
+@media only screen and (max-width:575.98px){
+.btn {
+    position: relative;
+    display: block; /* Allows the button to shrink-wrap its content */
+    margin-top: 50px;
+    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: #007ac3; /* Example button color, change as needed */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+    border-radius: 500px; /* High border-radius value to create the pill shape */
+    z-index: 2;
+}
+
+.btn-sm {
+   z-index: initial;
+}
+
+.btn:hover {
+    background-color: #00649e;
+    transition: background-color 0.3s;
+    color: white;
+}
+}
+
+/* Header */
+@media only screen and (max-width:575.98px) {
+    .row{
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+    .index-heading {
+        position: relative;
+        color: white;
+        z-index: 5;
+    }
+    .index-subtitle {
+        position: relative;
+        color: white;
+        z-index: 5;
+    }
+    .index-header-social {
+        position: relative;
+        width: 48px;
+        margin-top: 24px;
+        margin-right: 48px;
+        z-index: 5;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: row;
+        background-image: url("Images/header.webp");
+        background-size: cover;
+        height: 100vh;
+        padding-top: 55vh;
+    }
+    
+    .header::before {
+        content: "";
+        position: absolute;
+        top: 50vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            to right,
+    
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        );
+        z-index: 1;
+}
+}
