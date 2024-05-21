@@ -1,3 +1,8 @@
+.container-fluid {
+    padding: 0;
+  }
+
+
 /* Start of Text Colours */
 .red {
     color: #d91853;
@@ -21,6 +26,7 @@
 /* End of Text Colours */
 
 /* Start of Section Formatting */
+@media only screen and (min-width:767.98px){
 .section {
     padding-left: 110px;
     padding-right: 110px;
@@ -54,7 +60,7 @@
     margin-right: auto;
     margin-bottom: 75px;
 }
-
+}
 /* End of Section Formatting */
 
 /* Start of Header */
@@ -180,13 +186,17 @@
 
 /* Screen Size < 576px */
 
+/* Navbar */
 @media only screen and (max-width:575.98px){
     header {
         position: fixed;
         z-index: 10;
         background-color: rgba(255, 255, 255, 0.9);
     }
-    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(26,26,26, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
     .navbar-logo {
         height: 50px;
         aspect-ratio: 1/1;
@@ -205,6 +215,9 @@
     }
     .navbar{
         justify-content: flex-start;
+        margin: 0%;
+        padding: 0%;
+        ;
     }
 
 
@@ -312,5 +325,21 @@
             rgba(0, 0, 0, 0.1)
         );
         z-index: 1;
+}
+}
+
+/* Sections */
+@media only screen and (max-width:575.98px){
+section{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    margin-top: 5vh;
 }
 }
