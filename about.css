@@ -85,6 +85,16 @@
    display: grid;
 }
 
+.career-img {
+   min-height: 20vh;
+   object-fit: cover;
+   object-position: center;
+}
+
+.br-sm {
+   border-radius: 0.25rem;
+}
+
 .opportunities-card * {
    margin: 0;
 }
@@ -137,6 +147,11 @@ body section {
    margin-top: 90px;
 }
 
+.sm-heading {
+   font-size: 1rem;
+   font-weight: 800;
+}
+
 @media screen and (max-width: 767px) {
    /* Image resize on small screens */
    .sm-img {
@@ -150,4 +165,59 @@ body section {
    .header-about div {
       min-height: 45vh;
    }
+}
+
+.testimonial-img {
+   width: 5rem;
+   aspect-ratio: 1/1;
+   object-fit: cover;
+   border-radius: 100%;
+   border: 0.4vh solid black;
+}
+
+.card-pink {
+   border: 0;
+   background-color: rgba(217, 24, 83, 0.3);
+}
+
+.quote-pink {
+   color: #d91853;
+   margin-right: 7.5px;
+}
+
+.testimonial-img-pink {
+   border-color: #d91853;
+}
+
+.card-orange {
+   border: 0;
+   background-color: rgba(235, 126, 32, 0.3);
+}
+
+.quote-orange {
+   color: #eb7e20;
+   margin-right: 7.5px;
+}
+
+.testimonial-img-orange {
+   border-color: #eb7e20;
+}
+
+.card-yellow {
+   border: 0;
+   background-color: rgba(248, 199, 24, 0.3);
+}
+
+.quote-yellow {
+   color: #f8c718;
+   margin-right: 7.5px;
+}
+
+.testimonial-img-yellow {
+   border-color: #f8c718;
+}
+
+.accent-link {
+   color: inherit;
+   text-decoration: underline;
 }
