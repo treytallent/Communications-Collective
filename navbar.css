@@ -1,0 +1,19 @@
+.navbar-brand-container {
+   display: flex;
+}
+.navbar-brand {
+   width: 44px;
+   aspect-ratio: 1/1;
+}
+
+.navbar-brand-title {
+   align-self: center;
+   margin-bottom: 0;
+   max-width: 24ch;
+   font-size: 0.9375rem;
+   white-space: wrap;
+}
+
+.dropdown-menu {
+   left: -4rem;
+}
