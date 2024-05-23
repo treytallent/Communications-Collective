@@ -40,6 +40,12 @@
     left: -4rem;
 }
 
+/* Centering to fix chat bubble triangle */
+.vertical-center {
+    display: flex;
+    align-self: center;
+}
+
 /* Global Text Colour */
 .text-pink {
     color: #d91853;
