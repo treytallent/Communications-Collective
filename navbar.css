@@ -14,6 +14,43 @@
    white-space: wrap;
 }
 
-.dropdown-menu {
-   left: -4rem;
+/* Social Nav Links */
+.facebook,
+.instagram,
+.linkedin {
+   /* Space between */
+   margin: 0 8px;
+}
+
+.facebook a,
+.instagram a,
+.linkedin a {
+   visibility: hidden;
+}
+
+.facebook {
+   cursor: pointer;
+   width: 32px;
+   aspect-ratio: 1/1;
+   background-repeat: no-repeat;
+   background-image: url(Images/Socials/facebook_black.svg);
+   background-position: center;
+}
+
+.instagram {
+   cursor: pointer;
+   width: 32px;
+   aspect-ratio: 1/1;
+   background-repeat: no-repeat;
+   background-image: url(Images/Socials/instagram_black.svg);
+   background-position: center;
+}
+
+.linkedin {
+   cursor: pointer;
+   width: 32px;
+   aspect-ratio: 1/1;
+   background-repeat: no-repeat;
+   background-image: url(Images/Socials/linkedin_black.svg);
+   background-position: center;
 }
