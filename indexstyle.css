@@ -1,70 +1,77 @@
 /* Global CSS */
+body {
+   font-family: "Nunito", sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   font-style: normal;
+   color: #1a1a1a;
+}
 
 /*  Global Navbar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.9);
+   background-color: rgba(255, 255, 255, 0.9);
 }
 .nav-link {
-    color: #1a1a1a;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1em;
-    font-style: normal;
-    font-weight: 400;
+   color: #1a1a1a;
+   font-family: "Montserrat", sans-serif;
+   font-size: 1.1em;
+   font-style: normal;
+   font-weight: 400;
 }
 
 .nav-link:hover {
-    color: #007ac3 !important;
-    cursor: pointer;
-    transition: color 0.3s;
+   color: #007ac3 !important;
+   cursor: pointer;
+   transition: color 0.3s;
 }
 
 .navbar-brand-container {
-    display: flex;
+   display: flex;
 }
 .navbar-brand {
-    width: 44px;
-    aspect-ratio: 1/1;
+   width: 44px;
+   aspect-ratio: 1/1;
 }
 
 .navbar-brand-title {
-    align-self: center;
-    margin-bottom: 0;
-    max-width: 24ch;
-    font-size: 1.2rem;
-    white-space: wrap;
-    font-family: "Nunito";
-    font-style: normal;
+   align-self: center;
+   margin-bottom: 0;
+   max-width: 24ch;
+   font-size: 1.2rem;
+   white-space: wrap;
+   font-family: "Nunito";
+   font-style: normal;
 }
 
 .dropdown-menu {
-    left: -4rem;
+   left: -4rem;
 }
 
 /* Centering to fix chat bubble triangle */
 .vertical-center {
-    display: flex;
-    align-self: center;
+   display: flex;
+   align-self: center;
 }
 
 /* Global Text Colour */
 .text-pink {
-    color: #d91853;
+   color: #d91853;
 }
 
 .text-orange1 {
-    color: #eb5120;
+   color: #eb5120;
 }
 
 .text-orange2 {
-    color: #eb7e20;
+   color: #eb7e20;
 }
 
 .text-orange3 {
-    color: #f8a918;
+   color: #f8a918;
 }
 
 .text-yellow {
-    color: #f8c718;
+   color: #f8c718;
 }
 /* ///////////////////////////////////// */
 /* Screen Size > 767px */
@@ -75,115 +82,145 @@
 
 /* Typography */
 h1 {
-    position: relative;
-    font-family: "Nunito", sans-serif;
-    font-size: 4rem;
-    font-weight: 700;
-    color: white;
+   position: relative;
+   font-family: "Nunito", sans-serif;
+   font-size: 4rem;
+   font-weight: 700;
+   color: white;
 }
 
 .index-header-subtitle {
-    position: relative;
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    font-style: italic;
-    font-variation-settings: "wdth" 100, "YTLC" 500;
-    color: white;
+   position: relative;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.5rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
+   color: white;
 }
 
 h2 {
-    font-family: "Nunito";
-    font-size: 3rem;
-    font-weight: 700;
+   font-family: "Nunito";
+   font-size: 3rem;
+   font-weight: 700;
 }
 
 .section-pull-quote {
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 1.125rem;
-    font-weight: 800;
-    font-style: italic;
-    font-variation-settings: "wdth" 100, "YTLC" 500;
-}
-
-.body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    font-style: normal;
-    color: #1a1a1a;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.125rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 /* Images */
 .chat-bubble-image {
-    width: 80%;
+   width: 80%;
 }
 
 /* Buttons */
 .btn {
-    position: relative;
-    display: inline-block;
-    padding: 0.75rem 4rem;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
-    color: white;
-    background-color: #007ac3;
-    border: none;
-    border-radius: 5rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+   position: relative;
+   display: inline-block;
+   padding: 0.75rem 4rem;
+   font-family: "Montserrat", sans-serif;
+   font-size: 1rem;
+   font-weight: 800;
+   color: white;
+   background-color: #007ac3;
+   border: none;
+   border-radius: 5rem;
+   cursor: pointer;
+   transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #00649e;
-    text-decoration: none !important;
-    color: white;
+   background-color: #00649e;
+   text-decoration: none !important;
+   color: white;
 }
 
 /* Header */
 /* Header background image */
 .header-bg {
-    background-image: url("Images/header.webp");
-    background-size: cover;
-    height: 100vh;
-    padding-top: 55vh;
+   background-image: url("Images/header.webp");
+   background-size: cover;
+   height: 100vh;
+   padding-top: 55vh;
+}
+
+/* Small Header */
+.small-header-bg {
+   background-image: linear-gradient(
+         to right,
+         rgba(0, 0, 0, 0.6),
+         rgba(0, 0, 0, 0.1)
+      ),
+      url("Images/header.webp");
+   background-size: cover;
+   min-height: 33vh;
+   /* padding-top: 10vh; */
+}
+
+.small-header-bg div {
+   min-height: 33vh;
+}
+
+.white {
+   color: white;
 }
 
 /* Gradient overlay on header image */
 .header-bg::before {
-    content: "";
-    position: absolute;
-    top: 50vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-        to right,
+   content: "";
+   position: absolute;
+   top: 50vh;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-image: linear-gradient(
+      to right,
 
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.1)
-    );
-    z-index: 0;
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.1)
+   );
+   z-index: 0;
 }
+
+/* Gradient overlay on small header */
+/* .small-header-bg::before {
+   content: "";
+   position: absolute;
+   top: 10vh;
+   left: 0;
+   right: 0;
+   bottom: 66.3vh;
+   background-image: linear-gradient(
+      to right,
+
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.1)
+   );
+   z-index: 0;
+} */
 
 /* Spacing for social media icons on header */
 .index-header-social {
-    position: relative;
-    width: 48px;
-    margin-left: 64px;
+   position: relative;
+   width: 48px;
+   margin-left: 64px;
 }
 
 /* Section */
 .left-space {
-    padding-left: 5vw;
+   padding-left: 5vw;
 }
 .right-space {
-    padding-right: 5vw;
+   padding-right: 5vw;
 }
 /* About */
 .about-bg {
-    padding: 100px;
+   padding: 100px;
 }
 
 /* Opportunities */
