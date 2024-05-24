@@ -1,77 +1,7 @@
-/* Global CSS */
-body {
-   font-family: "Nunito", sans-serif;
-   font-size: 1rem;
-   font-weight: 400;
-   font-style: normal;
-   color: #1a1a1a;
-}
-
-/* Centering to fix chat bubble triangle */
-.vertical-center {
-   display: flex;
-   align-self: center;
-}
-
-/* Global Text Colour */
-.text-pink {
-   color: #d91853;
-}
-
-.text-orange1 {
-   color: #eb5120;
-}
-
-.text-orange2 {
-   color: #eb7e20;
-}
-
-.text-orange3 {
-   color: #f8a918;
-}
-
-.text-yellow {
-   color: #f8c718;
-}
 /* ///////////////////////////////////// */
 /* Screen Size > 767px */
 /* @media only screen and (min-width:767.98px) */
 /* ///////////////////////////////////// */
-
-/* Navbar */
-
-/* Typography */
-h1 {
-   position: relative;
-   font-family: "Nunito", sans-serif;
-   font-size: 4rem;
-   font-weight: 700;
-   color: white;
-}
-
-.index-header-subtitle {
-   position: relative;
-   font-family: "Nunito Sans", sans-serif;
-   font-size: 1.5rem;
-   font-weight: 800;
-   font-style: italic;
-   font-variation-settings: "wdth" 100, "YTLC" 500;
-   color: white;
-}
-
-h2 {
-   font-family: "Nunito";
-   font-size: 3rem;
-   font-weight: 700;
-}
-
-.section-pull-quote {
-   font-family: "Nunito Sans", sans-serif;
-   font-size: 1.125rem;
-   font-weight: 800;
-   font-style: italic;
-   font-variation-settings: "wdth" 100, "YTLC" 500;
-}
 
 /* Images */
 .chat-bubble-image {
@@ -83,7 +13,6 @@ h2 {
    position: relative;
    display: inline-block;
    padding: 0.75rem 4rem;
-   font-family: "Montserrat", sans-serif;
    font-size: 1rem;
    font-weight: 800;
    color: white;
@@ -107,26 +36,6 @@ h2 {
    background-size: cover;
    height: 100vh;
    padding-top: 55vh;
-}
-
-/* Small Header */
-.small-header-bg {
-   background-image: linear-gradient(
-         to right,
-         rgba(0, 0, 0, 0.6),
-         rgba(0, 0, 0, 0.1)
-      ),
-      url("Images/header.webp");
-   background-size: cover;
-   min-height: 33vh;
-}
-
-.small-header-bg div {
-   min-height: 33vh;
-}
-
-.white {
-   color: white;
 }
 
 /* Gradient overlay on header image */
@@ -153,13 +62,6 @@ h2 {
    margin-left: 64px;
 }
 
-/* Section */
-.left-space {
-   padding-left: 5vw;
-}
-.right-space {
-   padding-right: 5vw;
-}
 /* About */
 .about-bg {
    padding: 100px;

@@ -1,5 +1,15 @@
+/**********************************************************************/
+/* This file contains typography, text colour, buttons,  navbar and footer styling */
+/**********************************************************************/
+
 .container-fluid {
    padding: 0;
+}
+
+/* Centering to fix chat bubble triangle */
+.vertical-center {
+   display: flex;
+   align-self: center;
 }
 
 /**************/
@@ -8,8 +18,12 @@
 
 body {
    font-family: "Nunito", sans-serif;
-   font-style: normal;
+   font-size: 1rem;
+   line-height: 1.5;
    font-weight: 400;
+   font-style: normal;
+   color: #1a1a1a;
+   min-height: 100vh;
 }
 
 h4 {
@@ -63,6 +77,14 @@ h3,
    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
+.section-pull-quote {
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.125rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
 .body-text {
    font-family: "Montserrat", sans-serif;
    font-size: 1rem;
@@ -70,6 +92,59 @@ h3,
    font-style: normal;
    color: #1a1a1a;
 }
+
+@media screen and (max-width: 767px) {
+   body {
+      font-size: 0.875rem;
+   }
+
+   h1,
+   .H1-text {
+      font-size: 2.5rem;
+   }
+
+   h2,
+   .H2-text {
+      font-size: 2.25rem;
+   }
+
+   h3,
+   .H3-text {
+      font-size: 1.5rem;
+   }
+}
+
+/**************/
+/* Text colour */
+/**************/
+
+.text-white {
+   color: white;
+}
+
+.text-pink {
+   color: #d91853;
+}
+
+.text-orange1 {
+   color: #eb5120;
+}
+
+.text-orange2 {
+   color: #eb7e20;
+}
+
+.text-orange3 {
+   color: #f8a918;
+}
+
+.text-yellow {
+   color: #f8c718;
+}
+
+/**************/
+/* Buttons    */
+/**************/
 
 .btn {
    position: relative;
@@ -96,86 +171,114 @@ h3,
    color: white;
 }
 
-@media screen and (max-width: 767px) {
-   body {
-      font-size: 0.875rem;
-   }
-
-   h1,
-   .H1-text {
-      font-size: 2.5rem;
-   }
-
-   h2,
-   .H2-text {
-      font-size: 2.25rem;
-   }
-
-   h3,
-   .H3-text {
-      font-size: 1.5rem;
-   }
-}
-
 @media screen and (max-width: 576px) {
    .btn {
       width: 100%;
    }
 }
 
-/* Navbar */
-header {
-   position: fixed;
-   z-index: 10;
+/**************/
+/* Navbar     */
+/**************/
+
+.navbar {
    background-color: rgba(255, 255, 255, 0.9);
 }
-
-.navbar-logo {
-   height: 50px;
-   aspect-ratio: 1/1;
-   margin-right: 20px;
-   display: flex;
-   justify-content: center;
-}
-
-.navbar-logo-wordmark {
-   font-family: "Nunito", sans-serif;
-   font-style: normal;
-   font-size: 1.1rem;
-   font-weight: 700;
-   margin: 0;
-   color: #1a1a1a;
-}
-
-.navbar-logo-wordmark:hover {
-   text-decoration: none;
-   color: #1a1a1a;
-}
-
 .nav-link {
-   font-family: "Montserrat", sans-serif;
-   font-size: 1.1rem;
-   font-weight: 800;
    color: #1a1a1a;
-   margin: 0;
-}
-
-.nav-active {
-   color: #007ac3;
+   font-family: "Montserrat", sans-serif;
+   font-size: 1.1em;
+   font-style: normal;
+   font-weight: 400;
 }
 
 .nav-link:hover {
-   color: #007ac3;
-   cursor: pointer; /* Changes the cursor to a pointer on hover */
+   color: #007ac3 !important;
+   cursor: pointer;
    transition: color 0.3s;
 }
 
-.nav-social {
-   height: 24px;
+.navbar-brand-container {
+   display: flex;
+}
+.navbar-brand {
+   width: 44px;
    aspect-ratio: 1/1;
 }
 
-/* Footer */
+.navbar-brand-title {
+   align-self: center;
+   margin-bottom: 0;
+   max-width: 24ch;
+   font-size: 0.9375rem;
+   white-space: wrap;
+}
+
+/* Social Nav Links */
+.facebook,
+.instagram,
+.linkedin {
+   /* Space between */
+   margin: 0 8px;
+}
+
+.facebook a,
+.instagram a,
+.linkedin a {
+   visibility: hidden;
+}
+
+.facebook {
+   cursor: pointer;
+   width: 32px;
+   aspect-ratio: 1/1;
+   background-repeat: no-repeat;
+   background-image: url(Images/Socials/facebook_black.svg);
+   background-position: center;
+}
+
+.instagram {
+   cursor: pointer;
+   width: 32px;
+   aspect-ratio: 1/1;
+   background-repeat: no-repeat;
+   background-image: url(Images/Socials/instagram_black.svg);
+   background-position: center;
+}
+
+.linkedin {
+   cursor: pointer;
+   width: 32px;
+   aspect-ratio: 1/1;
+   background-repeat: no-repeat;
+   background-image: url(Images/Socials/linkedin_black.svg);
+   background-position: center;
+}
+/**********************/
+/* Small Page Header  */
+/**********************/
+
+.small-header-bg {
+   background-image: linear-gradient(
+         to right,
+         rgba(0, 0, 0, 0.6),
+         rgba(0, 0, 0, 0.1)
+      ),
+      url("Images/header.webp");
+   background-size: cover;
+   min-height: 33vh;
+   /* Large space Class = 90px (column gutter × 3)*/
+   margin-bottom: 5.625rem;
+}
+
+.small-header-bg div {
+   min-height: 33vh;
+}
+
+/**************/
+/* Footer     */
+/**************/
+
 footer {
    background-color: #007ac3;
 }
