@@ -5,7 +5,20 @@ Template Name: About
 ?>
 
 <?php get_header(); ?>
-
+<section class="container-fluid small-header-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 align-content-end pb-4 text-white">
+                <h1 class="">About</h1>
+                <p class="p-width">
+                    A place for students and members to connect. Whether you're
+                    studying in Perth, Singapore or Dubai we want to welcome
+                    you to our collective.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 <main class="about-main container">
     <div class="row">
         <div class="col-md-10 offset-md-1">
@@ -13,10 +26,20 @@ Template Name: About
             <section class="row">
                 <div class="col-md-6 order-1">
                     <h2 class="H2-text mb-sm">
-                        <?php the_field("about-subheading1"); ?>
+                        History of the Communication Collective
                     </h2>
                     <p class="mb-sm">
-                        <?php the_field("about-subheading1-paragraph"); ?>
+                        Formerly PURE, The Communication Collective was founded
+                        in 2018. The intention behind the Communication
+                        Collective was to create a platform for student
+                        networking and foster a greater connection between
+                        peers. With our new re-launch strategy we want to
+                        provide building connections between like-minded peers
+                        as well as allowing members to connect with industry
+                        professionals. The Communication Collective is open to
+                        welcoming new members and hosting many different events.
+                        So if you're interested in joining write us an e-mail or
+                        simply come to one of our events and see for yourself.
                     </p>
                 </div>
                 <div class="col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
@@ -37,7 +60,7 @@ Template Name: About
                     </div>
                 </div>
                 <div class="row">
-                    <!-- About Card 1 -->
+                    <!-- About Card -->
                     <div class="col-md-6 mb-md">
                         <div class="card card-pink d-flex flex-column">
                             <h3 class="H3-text m-0 order-1 p-sm py-0">
@@ -56,13 +79,15 @@ Template Name: About
                                 years old), children (5-14 years old), teenagers
                                 (15-19), and young adults (20-24 years old).
                             </p>
-                            <img src="Images/about_3.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-left order-0  mb-4" />
+                            <img src="Images/about_3.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-left order-0 sm-img mb-4" />
                         </div>
                     </div>
-                    <!-- About Card 2-->
+                    <!-- About Card -->
                     <div class="col-md-6 mb-md">
                         <div class="card-orange d-flex flex-column">
-                            <h3 class="H3-text m-0 order-1 p-sm py-0">Murdoch Sports</h3>
+                            <h3 class="H3-text m-0 order-1 p-sm py-0">
+                                Murdoch Sports
+                            </h3>
                             <h4 class="subheader2-text order-2 mb-sm p-sm py-0">
                                 Strategic Communications
                             </h4>
@@ -75,7 +100,7 @@ Template Name: About
                                 a higher health and wellness culture on Murdoch
                                 Universities campus.
                             </p>
-                            <img src="Images/about_4.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-top order-0 mb-4" />
+                            <img src="Images/about_4.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-top order-0 sm-img mb-4" />
                         </div>
                     </div>
                 </div>
@@ -211,9 +236,13 @@ Template Name: About
                             internships, the strategic communications course
                             offers so much experience and builds the essential
                             skills you'll need in any communications job, no
-                            matter where you work. The course broadened my skillset and experience
+                            matter where you work. Topics like crisis
+                            communication, stakeholder consultation, media
+                            liaison and interviewing, and the importance of
+                            social media have been so incredibly helpful in my
+                            role. The course broadened my skillset and experience
                             so I can find job opportunities in many different
-                            areas.
+                            areas
                         </p>
                     </div>
                     <!-- Testimonial Card 7 -->
@@ -340,7 +369,7 @@ Template Name: About
                         offer? Visit the official Murdoch University handbook
                         for our Bachelor of Communications degree.
                     </p>
-                    <a href="" class="btn btn-sm mt-0 px-3">Explore your future</a>
+                    <a href="https://www.murdoch.edu.au/course/undergraduate/b1342" class="btn btn-sm mt-0 px-3">Explore your future</a>
                 </div>
                 <div class="col-md-6 d-flex order-media order-2 sm-img arrow-container-left-orange2">
                     <img src="Images/about_9999.webp" class="ar-1 object-fit-cover pos-left" alt="Image" />

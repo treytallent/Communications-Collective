@@ -8,6 +8,9 @@ function load_my_scripts()
   wp_enqueue_script('boot3', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js', array('jquery'));
 
   wp_enqueue_style('style-css', get_template_directory_uri() . '/style.css');
+  wp_enqueue_style('test', get_template_directory_uri() . '/image-arrow.css');
+  wp_enqueue_style('test1', get_template_directory_uri() . '/indexstyle.css');
+  wp_enqueue_style('test2', get_template_directory_uri() . '/about.css');
 }
 add_action('wp_enqueue_scripts', 'load_my_scripts');
 

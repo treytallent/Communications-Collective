@@ -1,3 +1,11 @@
+/*
+Theme Name: Murdoch Communiation's Collective Theme URI: https://murdochcommunicationcollective.com/
+Description: Communication's Collective Theme.
+Author: Me
+Author URI: https://murdochcommunicationcollective.com/
+Version: 1
+*/
+
 /**********************************************************************/
 /* This file contains typography, text colour, buttons,  navbar and footer styling */
 /**********************************************************************/
@@ -91,6 +99,11 @@ h3,
    font-weight: 400;
    font-style: normal;
    color: #1a1a1a;
+}
+
+/* Limits the width of a text container to 70 characters, an optimal reading length */
+.p-width {
+   max-width: 70ch;
 }
 
 @media screen and (max-width: 767px) {
