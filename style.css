@@ -1,14 +1,5 @@
-/*
-Theme Name: Murdoch Communiation's Collective Theme URI: https://murdochcommunicationcollective.com/
-Description: Communication's Collective Theme.
-Author: Me
-Author URI: https://murdochcommunicationcollective.com/
-Version: 1
-*/
-
-
 .container-fluid {
-  padding: 0;
+   padding: 0;
 }
 
 /**************/
@@ -16,216 +7,215 @@ Version: 1
 /**************/
 
 body {
-  font-family: "Nunito", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+   font-family: "Nunito", sans-serif;
+   font-style: normal;
+   font-weight: 400;
 }
 
 h4 {
-  font-size: 1.75rem;
-  font-weight: 700;
+   font-size: 1.75rem;
+   font-weight: 700;
 }
 
 h1,
 .H1-text {
-  font-size: 4rem;
-  font-weight: 700;
+   font-size: 4rem;
+   font-weight: 700;
 }
 
 h2,
 .H2-text {
-  font-size: 3rem;
-  font-weight: 700;
+   font-size: 3rem;
+   font-weight: 700;
 }
 
 h3,
 .H3-text {
-  font-size: 2rem;
-  font-weight: 700;
+   font-size: 2rem;
+   font-weight: 700;
 }
 
 .p-text {
-  font-weight: 400;
+   font-weight: 400;
 }
 
 .subheader1-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.5rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .subheader2-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.125rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .subheader3-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1rem;
+   font-weight: 800;
+   font-style: italic;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .body-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #1a1a1a;
+   font-family: "Montserrat", sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   font-style: normal;
+   color: #1a1a1a;
 }
 
 .btn {
-  position: relative;
-  display: inline-block; /* Allows the button to shrink-wrap its content */
-  margin-top: 50px;
-  padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-  background-color: #007ac3; /* Example button color, change as needed */
-  color: white; /* Text color */
-  border: none; /* Removes the default border */
-  cursor: pointer; /* Changes the cursor to a pointer on hover */
-  text-align: center; /* Centers the text inside the button */
-  text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-  border-radius: 500px; /* High border-radius value to create the pill shape */
-  z-index: 10;
+   position: relative;
+   display: inline-block; /* Allows the button to shrink-wrap its content */
+   margin-top: 50px;
+   padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+   background-color: #007ac3; /* Example button color, change as needed */
+   color: white; /* Text color */
+   border: none; /* Removes the default border */
+   cursor: pointer; /* Changes the cursor to a pointer on hover */
+   text-align: center; /* Centers the text inside the button */
+   text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+   border-radius: 500px; /* High border-radius value to create the pill shape */
+   z-index: 10;
 }
 
 .btn-sm {
-  z-index: initial;
+   z-index: initial;
 }
 
 .btn:hover {
-  background-color: #00649e;
-  transition: background-color 0.3s;
-  color: white;
+   background-color: #00649e;
+   transition: background-color 0.3s;
+   color: white;
 }
 
 @media screen and (max-width: 767px) {
-  body {
-    font-size: 0.875rem;
-  }
+   body {
+      font-size: 0.875rem;
+   }
 
-  h1,
-  .H1-text {
-    font-size: 2.5rem;
-  }
+   h1,
+   .H1-text {
+      font-size: 2.5rem;
+   }
 
-  h2,
-  .H2-text {
-    font-size: 2.25rem;
-  }
+   h2,
+   .H2-text {
+      font-size: 2.25rem;
+   }
 
-  h3,
-  .H3-text {
-    font-size: 1.5rem;
-  }
+   h3,
+   .H3-text {
+      font-size: 1.5rem;
+   }
 }
 
 @media screen and (max-width: 576px) {
-  .btn {
-    width: 100%;
-  }
+   .btn {
+      width: 100%;
+   }
 }
 
 /* Navbar */
 header {
-  position: fixed;
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.9);
+   position: fixed;
+   z-index: 10;
+   background-color: rgba(255, 255, 255, 0.9);
 }
 
 .navbar-logo {
-  height: 50px;
-  aspect-ratio: 1/1;
-  margin-right: 20px;
-  display: flex;
-  justify-content: center;
+   height: 50px;
+   aspect-ratio: 1/1;
+   margin-right: 20px;
+   display: flex;
+   justify-content: center;
 }
 
 .navbar-logo-wordmark {
-  font-family: "Nunito", sans-serif;
-  font-style: normal;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0;
-  color: #1a1a1a;
+   font-family: "Nunito", sans-serif;
+   font-style: normal;
+   font-size: 1.1rem;
+   font-weight: 700;
+   margin: 0;
+   color: #1a1a1a;
 }
 
 .navbar-logo-wordmark:hover {
-  text-decoration: none;
-  color: #1a1a1a;
+   text-decoration: none;
+   color: #1a1a1a;
 }
 
 .nav-link {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin: 0;
+   font-family: "Montserrat", sans-serif;
+   font-size: 1.1rem;
+   font-weight: 800;
+   color: #1a1a1a;
+   margin: 0;
 }
 
 .nav-active {
-  color: #007ac3;
+   color: #007ac3;
 }
 
 .nav-link:hover {
-  color: #007ac3;
-  cursor: pointer; /* Changes the cursor to a pointer on hover */
-  transition: color 0.3s;
+   color: #007ac3;
+   cursor: pointer; /* Changes the cursor to a pointer on hover */
+   transition: color 0.3s;
 }
 
 .nav-social {
-  height: 24px;
-  aspect-ratio: 1/1;
+   height: 24px;
+   aspect-ratio: 1/1;
 }
 
 /* Footer */
 footer {
-  background-color: #007ac3;
+   background-color: #007ac3;
 }
 
 footer .body-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #ffffff;
+   font-family: "Montserrat", sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   font-style: normal;
+   color: #ffffff;
 }
 
 footer .container {
-  padding-top: 55px;
-  padding-bottom: 55px;
+   padding-top: 55px;
+   padding-bottom: 55px;
 }
 footer img {
-  height: 55px;
+   height: 55px;
 }
 
 .footer-logo {
-  display: flex;
-  justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 
 .index-footer-social-icon {
-  position: relative;
-  height: 36px;
-  padding-left: 24px;
-  padding-right: 24px;
+   position: relative;
+   height: 36px;
+   padding-left: 24px;
+   padding-right: 24px;
 }
 
 @media screen and (max-width: 767px) {
-  .index-footer-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+   .index-footer-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
 
-  .footer-logo{
-    padding: 1.5rem;
-  }
+   .footer-logo {
+      padding: 1.5rem;
+   }
 }
-

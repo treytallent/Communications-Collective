@@ -5,18 +5,7 @@ Template Name: About
 ?>
 
 <?php get_header(); ?>
-<!-- <header class="sm-header header-about">
-         <div class="container">
-            <div class="row align-content-end test">
-               <h1 class="H1-text mb-sm">About</h1>
-               <p class="mb-sm">
-                  A place for students and members to connect. Whether you're
-                  studying in Perth, Singapore or Dubai we want to welcome you
-                  to our collective.
-               </p>
-            </div>
-         </div>
-      </header> -->
+
 <main class="about-main container">
     <div class="row">
         <div class="col-md-10 offset-md-1">
