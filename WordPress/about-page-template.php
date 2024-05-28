@@ -4,21 +4,7 @@ Template Name: About
 */
 ?>
 
-<?php get_header(); ?>
-<section class="container-fluid small-header-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 align-content-end pb-4 text-white">
-                <h1 class="">About</h1>
-                <p class="p-width">
-                    A place for students and members to connect. Whether you're
-                    studying in Perth, Singapore or Dubai we want to welcome
-                    you to our collective.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+<?php require_once('small-header.php'); ?>
 <main class="about-main container">
     <div class="row">
         <div class="col-md-10 offset-md-1">
@@ -26,24 +12,14 @@ Template Name: About
             <section class="row">
                 <div class="col-md-6 order-1">
                     <h2 class="H2-text mb-sm">
-                        History of the Communication Collective
+                        <?php the_field("section_1_title"); ?>
                     </h2>
                     <p class="mb-sm">
-                        Formerly PURE, The Communication Collective was founded
-                        in 2018. The intention behind the Communication
-                        Collective was to create a platform for student
-                        networking and foster a greater connection between
-                        peers. With our new re-launch strategy we want to
-                        provide building connections between like-minded peers
-                        as well as allowing members to connect with industry
-                        professionals. The Communication Collective is open to
-                        welcoming new members and hosting many different events.
-                        So if you're interested in joining write us an e-mail or
-                        simply come to one of our events and see for yourself.
+                        <?php the_field("section_1_paragraph"); ?>
                     </p>
                 </div>
                 <div class="col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
-                    <img src="Images/about_2.webp" class="ar-1 object-fit-cover" alt="Image" />
+                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="Image" />
                 </div>
             </section>
 
@@ -51,11 +27,10 @@ Template Name: About
             <section>
                 <div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
-                        <h2 class="H2-text mb-sm">What We Do</h2>
-                        <p class="H3-text mb-md">Class Work</p>
+                        <h2 class="H2-text mb-sm"><?php the_field("section_2_title"); ?></h2>
+                        <p class="H3-text mb-md"><?php the_field("section_2_subheading"); ?></p>
                         <p class="mb-md">
-                            Members of the Collective have worked on a range of
-                            diverse projects during their studies.
+                            <?php the_field("section_2_paragraph"); ?>
                         </p>
                     </div>
                 </div>
@@ -79,7 +54,7 @@ Template Name: About
                                 years old), children (5-14 years old), teenagers
                                 (15-19), and young adults (20-24 years old).
                             </p>
-                            <img src="Images/about_3.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-left order-0 sm-img mb-4" />
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/about_3.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-left order-0 sm-img mb-4" />
                         </div>
                     </div>
                     <!-- About Card -->
@@ -100,7 +75,7 @@ Template Name: About
                                 a higher health and wellness culture on Murdoch
                                 Universities campus.
                             </p>
-                            <img src="Images/about_4.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-top order-0 sm-img mb-4" />
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/about_4.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-top order-0 sm-img mb-4" />
                         </div>
                     </div>
                 </div>
@@ -109,9 +84,9 @@ Template Name: About
             <!-- Student Carousel -->
             <section>
                 <div class="row flex-column ml-0 mb-md">
-                    <h2 class="H2-text mb-sm">Student Testimonials</h2>
+                    <h2 class="H2-text mb-sm"> <?php the_field("section_3_title"); ?></h2>
                     <p class="H3-text">
-                        What our members and alumni have to say
+                        <?php the_field("section_3_subheading"); ?>
                     </p>
                 </div>
                 <!-- Testimonial Carousel -->
@@ -126,7 +101,7 @@ Template Name: About
                                     Department of the Premier and Cabinet
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="Images/Testimonials/g_earnshaw.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/g_earnshaw.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-pink">"</span>I had the
@@ -147,7 +122,7 @@ Template Name: About
                                 <p class="m-0">Marketing Officer</p>
                                 <p class="m-0">Cockburn ARC</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="Images/Testimonials/k_lambert.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/k_lambert.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-orange">"</span>Through
@@ -169,7 +144,7 @@ Template Name: About
                                 </p>
                                 <p class="m-0">Rio Tinto Iron Ore</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="Images/Testimonials/l_brady.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_brady.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-yellow">"</span>The
@@ -186,7 +161,7 @@ Template Name: About
                                 <p class="m-0">Senior Consultant</p>
                                 <p class="m-0">Cannings Purple</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="Images/Testimonials/l_mclean.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_mclean.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-pink">"</span> This course
@@ -207,7 +182,7 @@ Template Name: About
                                 <p class="m-0">Digital Communications Officer</p>
                                 <p class="m-0">Public Transport Authority</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="Images/Testimonials/s_afzaal.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_afzaal.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-orange">"</span> The
@@ -228,7 +203,7 @@ Template Name: About
                                 </p>
                                 <p class="m-0">Murdoch University</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="Images/Testimonials/s_dawson.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_dawson.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-yellow">"</span>From
@@ -255,7 +230,7 @@ Template Name: About
                                     West Australian Newspaper at Seven West Media
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="Images/Testimonials/a_deceglie.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/a_deceglie.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-pink">"</span> We are
@@ -277,7 +252,7 @@ Template Name: About
                                     British GQ, Vogue, Conde Nast Publications
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="Images/Testimonials/e_holley.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_holley.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-orange">"</span> The
@@ -304,7 +279,7 @@ Template Name: About
                                     The West Australian and PerthNow
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="Images/Testimonials/e_conway.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_conway.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-yellow">"</span>
@@ -322,7 +297,7 @@ Template Name: About
                                 <h3 class="sm-heading m-0">Rachel Ingram</h3>
                                 <p class="m-0">Retail Manager</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="Images/Testimonials/r_ingram.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/r_ingram.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-pink">"</span> The Global
@@ -342,7 +317,7 @@ Template Name: About
                                 <p class="m-0">Digital Experience Designer</p>
                                 <p class="m-0">Murdoch University</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="Images/Testimonials/j_threfall.webp" alt="Portrait" />
+                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/j_threfall.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-md mt-auto">
                             <span class="H3-text quote-orange">"</span> The web
@@ -363,16 +338,14 @@ Template Name: About
             <!-- Learn More -->
             <section class="row">
                 <div class="col-md-6 order-1">
-                    <h2 class="H2-text mb-sm">Learn More</h2>
+                    <h2 class="H2-text mb-sm"><?php the_field("section_4_title"); ?></h2>
                     <p class="mb-sm">
-                        Want to learn more about what Murdoch University can
-                        offer? Visit the official Murdoch University handbook
-                        for our Bachelor of Communications degree.
+                        <?php the_field("section_4_paragraph"); ?>
                     </p>
                     <a href="https://www.murdoch.edu.au/course/undergraduate/b1342" class="btn btn-sm mt-0 px-3">Explore your future</a>
                 </div>
                 <div class="col-md-6 d-flex order-media order-2 sm-img arrow-container-left-orange2">
-                    <img src="Images/about_9999.webp" class="ar-1 object-fit-cover pos-left" alt="Image" />
+                    <img src="<?php the_field("section_4_image"); ?>" class="ar-1 object-fit-cover pos-left" alt="Image" />
                 </div>
             </section>
         </div>
