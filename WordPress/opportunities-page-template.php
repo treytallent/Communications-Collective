@@ -12,12 +12,10 @@ Template Name: Opportunities
 
             <section class="row">
                 <div class="col-md-6 order-1">
-                    <h2 class="H2-text mb-sm">Available Opportunities</h2>
+                    <h2 class="H2-text mb-sm"><?php the_field("section_1_title"); ?></h2>
                     <p class="mb-sm">
-                        Keep up to date with our Facebook and Instagram pages
-                        where we post updates with the latest and greatest
-                        internship and work opportunities across a range of
-                        industries and roles.
+                        <?php the_field("section_1_paragraph"); ?>
+
                     </p>
                     <div class="d-flex justify-content-center">
                         <a href="https://www.facebook.com/" class="btn px-3 mt-0 btn-sm mr-md">Facebook</a>
@@ -26,7 +24,7 @@ Template Name: Opportunities
                 </div>
 
                 <div class="col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
-                    <img src="Images/opportunities_2.webp" class="ar-1 object-fit-cover" alt="Image" />
+                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="Image" />
                 </div>
             </section>
 
@@ -34,11 +32,10 @@ Template Name: Opportunities
             <section>
                 <div class="row">
                     <div class="col-md-6 offset-md-3 text-center spacing-md">
-                        <h2 class="mb-sm">What We Do</h2>
-                        <h3 class="mb-md">Internship Experiences</h3>
+                        <h2 class="mb-sm"><?php the_field("section_2_title"); ?></h2>
+                        <h3 class="mb-md"><?php the_field("section_2_subheading"); ?></h3>
                         <p class="mb-md">
-                            Members of the Collective have worked on a range of
-                            diverse projects during their internships.
+                            <?php the_field("section_2_paragraph"); ?>
                         </p>
                     </div>
                 </div>
@@ -56,7 +53,7 @@ Template Name: Opportunities
                             <a href="https://elliswanson.wixsite.com/portfolio" class="p-sm mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="Images/opportunities_3.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_3.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
                             <p class="order-0 mb-md mt-auto p-sm">
                                 <span class="H3-text quote-pink">"</span>Working
                                 on behalf of MESH Consultancy, I landed the
@@ -89,7 +86,7 @@ Template Name: Opportunities
                             <a href="https://www.linkedin.com/in/junita-nathania/" class="p-sm mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="Images/opportunities_4.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_4.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
                             <p class="order-0 mb-md mt-auto p-sm">
                                 <span class="H3-text quote-orange">"</span>
                                 Collaborating with MESH Consultancy. and Perth
@@ -120,7 +117,7 @@ Template Name: Opportunities
                             <a href="https://www.linkedin.com/in/britney-coulson-79b4161a0/" class="p-sm mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="Images/opportunities_5.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_5.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
                             <p class="order-0 mb-md mt-auto p-sm">
                                 <span class="H3-text quote-yellow">"</span>
                                 Britney worked as a writer for The West Australian
@@ -146,7 +143,7 @@ Template Name: Opportunities
                             <a href="https://www.linkedin.com/in/jaspreet-sidhu-b78718193/" class="p-sm mt-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="Images/opportunities_6.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-right w-100 p-0 br-sm" />
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_6.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-right w-100 p-0 br-sm" />
                             <p class="order-0 mb-md mt-auto p-sm">
                                 <span class="H3-text quote-pink">"</span>
                                 Murdoch Radio's long standing relationship with
@@ -164,8 +161,8 @@ Template Name: Opportunities
             <!-- Career Paths -->
             <section>
                 <div class="row flex-column ml-0 mb-md">
-                    <h2 class="mb-sm">Career paths</h2>
-                    <h3>What roles you can fill by studying communications</h3>
+                    <h2 class="mb-sm"><?php the_field("section_3_title"); ?></h2>
+                    <h3><?php the_field("section_3_paragraph"); ?></h3>
                 </div>
                 <!-- Carousel -->
                 <div class="row flex-nowrap overflow-auto snap-scroll ml-0">
@@ -181,7 +178,7 @@ Template Name: Opportunities
                             world of opportunity both in the media industry and
                             beyond.
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="Images/Careers/journalism.webp" alt="Career" />
+                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/journalism.webp" alt="Career" />
                     </div>
                     <!-- Career Card 2 -->
                     <div class="card card-orange col-8 col-md-5 border-0 p-0">
@@ -196,7 +193,7 @@ Template Name: Opportunities
                             industries. It is accredited by Public Relations
                             Institute of Australia (PRIA).
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="Images/Careers/stratcom.webp" alt="Career" />
+                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/stratcom.webp" alt="Career" />
                     </div>
                     <!-- Career Card 3 -->
                     <div class="card card-yellow col-8 col-md-5 border-0 p-0">
@@ -208,7 +205,7 @@ Template Name: Opportunities
                             combines an exciting mix of web design, digital
                             marketing, and public relations.
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="Images/Careers/webcom.webp" alt="Career" />
+                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/webcom.webp" alt="Career" />
                     </div>
                     <!-- Career Card 4 -->
                     <div class="card card-pink col-8 col-md-5 border-0 p-0">
@@ -224,24 +221,22 @@ Template Name: Opportunities
                             rewarding and successful career in the dynamic world
                             of communication.
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img pos-left" src="Images/Careers/mcom.webp" alt="Career" />
+                        <img class="order-0 about-project-img mb-sm br-sm career-img pos-left" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/mcom.webp" alt="Career" />
                     </div>
                     <!-- End of carousel -->
                 </div>
             </section>
 
             <!-- Join The Collective -->
-            <section class="row">
+            <section class="row mb-md">
                 <div class="col-md-6 order-1">
-                    <h2 class="H2-text mb-sm">Join the Collective</h2>
+                    <h2 class="H2-text mb-sm"><?php the_field("section_4_title"); ?></h2>
                     <p class="mb-sm">
-                        Join us as part of the Communications Collective at
-                        Murdoch University to make the most of your degree and
-                        your University experience.
+                        <?php the_field("section_4_paragraph"); ?>
                     </p>
                 </div>
                 <div class="col-md-6 d-flex order-media order-2 sm-img arrow-container-left-orange2">
-                    <img src="Images/opportunities_999.webp" class="ar-1 object-fit-cover pos-mid" alt="Image" />
+                    <img src="<?php the_field("section_4_image"); ?>" class="ar-1 object-fit-cover pos-mid" alt="Image" />
                 </div>
             </section>
         </div>
