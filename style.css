@@ -228,10 +228,9 @@ h3,
 }
 
 /* Social Nav Links */
-.facebook,
+/* .facebook,
 .instagram,
 .linkedin {
-   /* Space between */
    margin: 0 8px;
 }
 
@@ -266,7 +265,7 @@ h3,
    background-repeat: no-repeat;
    background-image: url(Images/Socials/linkedin_black.svg);
    background-position: center;
-}
+} */
 /**********************/
 /* Small Page Header  */
 /**********************/
