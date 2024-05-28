@@ -3,20 +3,7 @@
 Template Name: Opportunities
 */
 ?>
-<?php get_header(); ?>
-<header class="sm-header header-opportunities">
-    <div class="container">
-        <div class="row align-content-end test">
-            <h1 class="H1-text mb-sm">Opportunities</h1>
-            <p class="mb-sm">
-                Joining The Communications Collective provides you with
-                friendship and exchange with like-minded peers and internship
-                opportunities. Check out if there are any openings right now
-                and read about the experience other members had in the past.
-            </p>
-        </div>
-    </div>
-</header>
+<?php require_once('small-header.php'); ?>
 
 <main class="about-main container">
     <div class="row">

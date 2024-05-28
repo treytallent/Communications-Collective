@@ -69,5 +69,15 @@
             ?>
 
         </nav>
+        <section class="container-fluid small-header-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 align-content-end pb-4 text-white">
+                        <h1 class="">small header title</h1>
+                        <p class="">Page description</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <?php wp_head(); ?>
     </header>
