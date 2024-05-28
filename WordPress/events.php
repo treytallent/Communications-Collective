@@ -3,21 +3,7 @@
 Template Name: Events
 */
 ?>
-<?php get_header(); ?>
-<div class="container-fluid header-events header-gradient">
-      <div class="container">
-        <p class="header-news-date subheader1-text">Upcoming:</p>
-        <h1 class="header-news-title">welcome event for semester 2!</h1>
-        <p class="header-intro body-text">
-          Join us on the 5th of August for our first meeting of the semester.
-          Get to know us better over some coffee and meet our members, involved
-          faculty and meet likeminded peers. Weʼre excited to meet you! Donʼt
-          forget to tag us in content from the event!
-        </p>
-        <a href="#" class="btn body-text">Learn More</a>
-      </div>
-      <!-- container -->
-</div>
+<?php require_once('small-header.php'); ?>
 <section class="container-fluid section-padding">
       <div class="container">
         <h2 class="section-title offset-md-1 pink">current events</h2>

@@ -3,24 +3,63 @@
 Template Name: News
 */
 ?>
-<?php get_header(); ?>
-<div class="container-fluid header-news header-gradient">
-      <div class="container">
-        <p class="header-news-date subheader1-text">August 12th, 2024</p>
-        <h1 class="header-news-title">
-          explore the latest in communication trends and innovations
-        </h1>
-        <p class="header-intro body-text">
-          Stay Ahead of the Curve: A Dive into Recent Developments Shaping the
-          Communication Landscape<br />
-          published by: Tan Jun Jie, Communications student in Singapore
-        </p>
-        <a href="#" class="btn body-text">Learn More</a>
-      </div>
-      <!-- container -->
-    </div>
+<?php require_once('small-header.php'); ?>
 
-    <section class="container-fluid section-padding">
+<div class="container-fluid section-padding">
+     <div class="container">
+        <div class="row">
+             <section class="maintext">             
+             <?php 
+$args = array(
+  'category_name' =>  'News',
+  // 'posts_per_page'    =>   1
+);
+// the query
+$the_query = new WP_Query( $args ); ?>
+ 
+<?php if ( $the_query->have_posts() ) : ?>
+ 
+    <!-- pagination here -->
+ 
+    <!-- the loop -->
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<div class="thepost">
+<h2 class="section-title offset-md-1 pink">recent news</h2>
+
+<div class="row section1-row">
+<div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img">
+<!-- <img class="arrow-effect-image image-border-pink"  -->
+<?php
+                if ( has_post_thumbnail() ) { 
+                    the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink'));
+                } ?>
+                  </div>
+                  <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
+                  <p class="date subheader2-text"><?php echo date ('F j,Y'); ?></p>
+
+                  <h2 class= "section-title offset-md-1 pink"><?php the_title(); ?></h2> 
+                  <p class="date subheader3-text"><?php echo get_the_author(); ?></p>
+                  <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
+
+                  <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
+    <!-- <a class="readmore" href="<?php the_permalink(); ?>"> CONTINUE READING</a> -->
+</div>
+</div>    <?php endwhile; ?>
+    <!-- end of the loop -->
+ 
+    <!-- pagination here -->
+ 
+    <?php wp_reset_postdata(); ?>
+ 
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+</section>
+
+      </div>
+     </div>
+  </div>
+<!--     <section class="container-fluid section-padding">
       <div class="container">
         <h2 class="section-title offset-md-1 pink">recent news</h2>
         <div class="row section1-row">
@@ -52,7 +91,7 @@ Template Name: News
             <a class="btn body-text" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
+
 
         <div class="row section1-row">
           <div
@@ -83,7 +122,7 @@ Template Name: News
             <a class="btn body-text" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
+
 
         <div class="row">
           <div
@@ -114,9 +153,9 @@ Template Name: News
             <a class="btn body-text" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
+
       </div>
-      <!-- container -->
+
     </section>
 
     <section class="container-fluid section-padding">
@@ -180,7 +219,7 @@ Template Name: News
             </div>
           </div>
         </div>
-        <!-- row -->
+
 
         <div class="row">
           <div class="col-md-6 col-sm-12 article-padding">
@@ -240,7 +279,7 @@ Template Name: News
             </div>
           </div>
         </div>
-        <!-- row -->
+
 
         <div class="row">
           <div class="col-md-6 col-sm-12 article-padding">
@@ -300,12 +339,12 @@ Template Name: News
             </div>
           </div>
         </div>
-        <!-- row -->
+
 
         <div class="text-center">
           <a class="btn body-text" href="#">More</a>
         </div>
       </div>
-      <!-- container -->
-    </section>
+
+    </section> -->
 <?php get_footer(); ?>
