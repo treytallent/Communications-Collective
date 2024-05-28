@@ -1,105 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@1,6..12,800&family=Nunito:ital,wght@0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="image-arrow.css" />
-    <link rel="stylesheet" href="style_news&events.css" />
-    <title>Title</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="navbar-brand-container">
-          <a class="navbar-brand navbar-brand-title" href="/index.html"
-            ><img
-              src="Images/ccmu_logo.svg"
-              alt="Communication Collective at Murdoch University Logo"
-          /></a>
-          <p class="navbar-brand-title">
-            the communication collective at murdoch university
-          </p>
-        </div>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav text-right">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Content</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Socials
-              </a>
-              <div
-                class="dropdown-menu text-right"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <a class="dropdown-item" href="#">Facebook</a>
-                <a class="dropdown-item" href="#">Instagram</a>
-                <a class="dropdown-item" href="#">LinkedIn</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <div class="container-fluid header-events header-gradient">
+<?php
+/*
+Template Name: Events
+*/
+?>
+<?php get_header(); ?>
+<div class="container-fluid header-events header-gradient">
       <div class="container">
         <p class="header-news-date subheader1-text">Upcoming:</p>
         <h1 class="header-news-title">welcome event for semester 2!</h1>
@@ -112,29 +17,8 @@
         <a href="#" class="btn body-text">Learn More</a>
       </div>
       <!-- container -->
-    </div>
-
-    <!--     <div class="container-fluid header header-gradient">
-      <div class="container">
-        <h1 class="header-events-title H1-text">
-          welcome event for semester 2!
-        </h1>
-                <p class="header-location subheader1-text">
-          MU Geoffrey Bolton Library
-        </p>
-        <p class="header-events-date subheader2-text">4 Apr 24, 10am - 3pm</p>
-        <p class="header-intro body-text">
-          Join us on the 5th of August for our first meeting of the semester.
-          Get to know us better over some coffee and meet our members, involved
-          faculty and meet likeminded peers. Weʼre excited to meet you! Donʼt
-          forget to tag us in content from the event!
-        </p>
-        <a class="btn body-text" href="#">Learn More</a>
-      </div>
-
-    </div> -->
-
-    <section class="container-fluid section-padding">
+</div>
+<section class="container-fluid section-padding">
       <div class="container">
         <h2 class="section-title offset-md-1 pink">current events</h2>
         <div class="row section1-row">
@@ -315,52 +199,5 @@
         </div>
       </div>
       <!-- container -->
-    </section>
-
-    <footer class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="index-footer-social col-md-5">
-            <a href="#"
-              ><img
-                class="index-footer-social-icon"
-                src="Images/Socials/instagram_white.svg"
-                alt="Instagram icon link to Instagram account"
-            /></a>
-            <a href="#"
-              ><img
-                class="index-footer-social-icon"
-                src="Images/Socials/facebook_white.svg"
-                alt="Facebook icon link to Facebook account"
-            /></a>
-            <a href="#"
-              ><img
-                class="index-footer-social-icon"
-                src="Images/Socials/linkedin_white.svg"
-                alt="LinkedIn icon link to LinkedIn account"
-            /></a>
-          </div>
-          <div class="col-md-2 footer-logo">
-            <a href="/index.html"
-              ><img
-                src="Images/ccmu_logo.svg"
-                alt="Communication Collective at Murdoch University Logo"
-            /></a>
-          </div>
-          <div class="col-md-5">
-            <p class="body-text text-center text-md-right">
-              Say hi! Write us an email:
-            </p>
-            <p class="mb-0 body-text text-center text-md-right">
-              murdoch.commcollective@gmail.com
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-  </body>
-</html>
+</section>
+<?php get_footer(); ?>
