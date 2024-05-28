@@ -1,7 +1,6 @@
 .container-fluid {
     padding: 0;
-  }
-
+}
 
 /* Start of Text Colours */
 .red {
@@ -26,88 +25,88 @@
 /* End of Text Colours */
 
 /* Start of Section Formatting */
-@media only screen and (min-width:767.98px){
-.section {
-    padding-left: 110px;
-    padding-right: 110px;
-    padding-top: 55px;
-    padding-bottom: 55px;
-}
+@media only screen and (min-width: 767.98px) {
+    .section {
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
 
-.align-left {
-    display: flex;
-    justify-content: left;
-    padding-left: 50px;
-}
+    .align-left {
+        display: flex;
+        justify-content: left;
+        padding-left: 50px;
+    }
 
-.align-center {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .align-center {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.align-right {
-    display: flex;
-    justify-content: right;
-    padding-right: 50px;
-}
+    .align-right {
+        display: flex;
+        justify-content: right;
+        padding-right: 50px;
+    }
 
-.center-button {
-    display: inline-block; /* Makes the margin auto applicable */
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 75px;
-}
+    .center-button {
+        display: inline-block; /* Makes the margin auto applicable */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 75px;
+    }
 }
 /* End of Section Formatting */
 
 /* Start of Header */
 /* Screen Size > 767px */
-@media only screen and (min-width:767.98px){
-.index-heading {
-    position: relative;
-    color: white;
-    z-index: 5;
-}
-.index-subtitle {
-    position: relative;
-    color: white;
-    z-index: 5;
-}
-.index-header-social {
-    position: relative;
-    height: 48px;
-    padding-left: 48px;
-    padding-right: 48px;
-    z-index: 5;
-}
+@media only screen and (min-width: 767.98px) {
+    .index-heading {
+        position: relative;
+        color: white;
+        z-index: 5;
+    }
+    .index-subtitle {
+        position: relative;
+        color: white;
+        z-index: 5;
+    }
+    .index-header-social {
+        position: relative;
+        height: 48px;
+        padding-left: 48px;
+        padding-right: 48px;
+        z-index: 5;
+    }
 
-.header {
-    display: flex;
-    flex-direction: row;
-    background-image: url("Images/header.webp");
-    background-size: cover;
-    height: 100vh;
-    padding-top: 55vh;
-}
+    .header {
+        display: flex;
+        flex-direction: row;
+        background-image: url("Images/header.webp");
+        background-size: cover;
+        height: 100vh;
+        padding-top: 55vh;
+    }
 
-.header::before {
-    content: "";
-    position: absolute;
-    top: 50vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-        to right,
+    .header::before {
+        content: "";
+        position: absolute;
+        top: 50vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            to right,
 
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.1)
-    );
-    z-index: 1;
-}
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        );
+        z-index: 1;
+    }
 }
 /* End of Header */
 
@@ -187,7 +186,7 @@
 /* Screen Size < 576px */
 
 /* Navbar */
-@media only screen and (max-width:575.98px){
+@media only screen and (max-width: 575.98px) {
     header {
         position: fixed;
         z-index: 10;
@@ -195,7 +194,7 @@
     }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(26,26,26, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-        }
+    }
 
     .navbar-logo {
         height: 50px;
@@ -203,29 +202,26 @@
         margin-right: 10px;
         display: flex;
     }
-    
+
     .navbar-logo-wordmark {
         font-family: "Nunito", sans-serif;
-        font-style: normal; 
+        font-style: normal;
         font-size: 1.1rem;
         font-weight: 700;
         margin-left: 10px;
         color: #1a1a1a;
-      
     }
-    .navbar{
+    .navbar {
         justify-content: flex-start;
         margin: 0%;
         padding: 0%;
-        ;
     }
-
 
     .navbar-logo-wordmark:hover {
         text-decoration: none;
         color: #1a1a1a;
     }
-    
+
     .nav-link {
         font-family: "Montserrat", sans-serif;
         font-size: 1.1rem;
@@ -233,17 +229,17 @@
         color: #1a1a1a;
         margin: 0;
     }
-    
+
     .nav-active {
         color: #007ac3;
     }
-    
+
     .nav-link:hover {
         color: #007ac3;
         cursor: pointer; /* Changes the cursor to a pointer on hover */
         transition: color 0.3s;
     }
-    
+
     .nav-social {
         height: 24px;
         aspect-ratio: 1/1;
@@ -251,39 +247,39 @@
 }
 
 /* Button */
-@media only screen and (max-width:575.98px){
-.btn {
-    position: relative;
-    display: block; /* Allows the button to shrink-wrap its content */
-    margin-top: 50px;
-    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-    background-color: #007ac3; /* Example button color, change as needed */
-    color: white; /* Text color */
-    border: none; /* Removes the default border */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    text-align: center; /* Centers the text inside the button */
-    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-    border-radius: 500px; /* High border-radius value to create the pill shape */
-    z-index: 2;
-}
+@media only screen and (max-width: 575.98px) {
+    .btn {
+        position: relative;
+        display: block; /* Allows the button to shrink-wrap its content */
+        margin-top: 50px;
+        padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+        background-color: #007ac3; /* Example button color, change as needed */
+        color: white; /* Text color */
+        border: none; /* Removes the default border */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+        text-align: center; /* Centers the text inside the button */
+        text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+        border-radius: 500px; /* High border-radius value to create the pill shape */
+        z-index: 2;
+    }
 
-.btn-sm {
-   z-index: initial;
-}
+    .btn-sm {
+        z-index: initial;
+    }
 
-.btn:hover {
-    background-color: #00649e;
-    transition: background-color 0.3s;
-    color: white;
-}
+    .btn:hover {
+        background-color: #00649e;
+        transition: background-color 0.3s;
+        color: white;
+    }
 }
 
 /* Header */
-@media only screen and (max-width:575.98px) {
-    .row{
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
+@media only screen and (max-width: 575.98px) {
+    .row {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
     .index-heading {
         position: relative;
         color: white;
@@ -301,7 +297,7 @@
         margin-right: 48px;
         z-index: 5;
     }
-    
+
     .header {
         display: flex;
         flex-direction: row;
@@ -310,7 +306,7 @@
         height: 100vh;
         padding-top: 55vh;
     }
-    
+
     .header::before {
         content: "";
         position: absolute;
@@ -320,26 +316,26 @@
         bottom: 0;
         background-image: linear-gradient(
             to right,
-    
+
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.1)
         );
         z-index: 1;
-}
+    }
 }
 
 /* Sections */
-@media only screen and (max-width:575.98px){
-section{
-    margin: 0;
-    padding: 0;
-}
-.container{
-    margin: 0;
-    padding: 0;
-}
+@media only screen and (max-width: 575.98px) {
+    section {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        margin: 0;
+        padding: 0;
+    }
 
-h2{
-    margin-top: 5vh;
-}
+    h2 {
+        margin-top: 5vh;
+    }
 }
