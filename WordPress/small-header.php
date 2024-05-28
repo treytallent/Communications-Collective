@@ -69,7 +69,7 @@
             ?>
 
         </nav>
-        <section class="container-fluid small-header-bg">
+        <section class="container-fluid small-header-bg mt-0">
             <div class="container">
                 <div class="row">
                     <div class="col-12 align-content-end pb-4 text-white">

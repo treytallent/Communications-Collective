@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main>
-    <section class="container-fluid header-bg">
+    <section class="container-fluid header-bg mt-0">
         <div class="container">
             <div class="row">
                 <h1>the communication collective at murdoch university</h1>
