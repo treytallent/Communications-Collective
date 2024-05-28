@@ -73,8 +73,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 align-content-end pb-4 text-white">
-                        <h1 class="">small header title</h1>
-                        <p class="">Page description</p>
+                        <h1 class=""><?php the_field("smallheadertitle"); ?></h1>
+                        <p class=""><?php the_field("smallheaderbody"); ?></p>
                     </div>
                 </div>
             </div>
