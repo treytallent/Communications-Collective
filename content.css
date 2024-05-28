@@ -1,14 +1,20 @@
 /* Start of Header */
-.index-heading {
+.contentheading {
     position: relative;
     color: white;
     z-index: 5;
 }
-.index-subtitle {
+.authorname {
     position: relative;
-    color: rgb(255, 255, 255);
+    color: white;
     z-index: 5;
 }
+.header-intro {
+    position: relative;
+    color: white;
+    z-index: 5;
+}
+
 .index-header-social {
     position: relative;
     height: 48px;
@@ -16,6 +22,7 @@
     padding-right: 48px;
     z-index: 5;
 }
+
 
 .header {
     display: flex;
@@ -40,22 +47,72 @@
     );
     z-index: 1;
 }
+
+.headerbtn{
+position: relative;
+  display: inline-block; /* Allows the button to shrink-wrap its content */
+  padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+  background-color: #007ac3; /* Example button color, change as needed */
+  color: white; /* Text color */
+  border: none; /* Removes the default border */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  text-align: center; /* Centers the text inside the button */
+  text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+  border-radius: 500px; /* High border-radius value to create the pill shape */
+  z-index: 10;  
+}
+
+.headerbtn-1{
+    position: relative;
+      padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+      background-color: #007ac3; /* Example button color, change as needed */
+      color: white; /* Text color */
+      border: none; /* Removes the default border */
+      cursor: pointer; /* Changes the cursor to a pointer on hover */
+      text-align: center; /* Centers the text inside the button */
+      text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+      border-radius: 500px; /* High border-radius value to create the pill shape */
+      z-index: 10;  
+    }
 /* End of Header */
 
-/* Start of visit content */
+/* Start of visit content  */
+.visitcontent{
+    color:#DE3569;
+    padding-top:4rem;
+    padding-bottom:1rem;
+}
+.postcontent{
+    color:#F8C718;
+    padding-top:4rem;
+    padding-bottom:1rem;
+}
+.post-content{
+    padding-bottom:2rem;
+}
 
-
+.nav-link:hover {
+    color: #007ac3 !important;
+    cursor: pointer;
+    transition: color 0.3s;
+ }
+.secondary-nav{
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
 
 .content-image  {
-    border-radius: 10%;
+    min-height: 20vh;
     object-fit: cover;
-    border: 5px solid #d91853;
+    object-position: center;
+    border-radius: 0%;
+    object-fit: cover;
 }
 
 .content-btn {
     position:absolute;
-    top:15px;
-    right:5px;
+    top:10px;
+    right:25px;
     padding: 10px 10px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
     background-color: #007ac3; /* Example button color, change as needed */
     color: white; /* Text color */
@@ -66,12 +123,65 @@
     border-radius: 200px; /* High border-radius value to create the pill shape */
     z-index: 10;
 }
+
+.card-deck .card {
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+.card{
+    border:0;
+    border-radius:0;
+    padding: 0;
+    margin:20px;
+}
+.card-pink {
+background-color:#FFE1EA;
+}
+.card-orange {
+    background-color:#FFF1E1;
+}
+
+.card-blue {
+    background-color:#E1F8FF;
+}
+      
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding-top:0.5rem;
+    padding-bottom: 1.25rem;
+}
+
+.content-author{
+    margin-left:0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-title{
+    margin-left:0.5rem;
+}
+
+.short-para{
+    margin-left:0.5rem;
+}
+
+dl, ol, ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .dropbtn {
     background-color: #0056b3;
     color: white;
-    padding: 16px;
+    padding: 10px;
     font-size: 16px;
     border: none;
+    border-radius: 200px;
     cursor: pointer;
   }
   
@@ -80,8 +190,46 @@
   }
   
   .dropdown {
-    float: right;
+    display: float right;
     position: relative;
     display: inline-block;
   }
 
+  .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -50px;
+        margin-left: -50px;
+    }
+
+    /* @media for 767px  */
+ @media only screen and (min-width: 767.98px) {
+        .headerbtn-1 {
+          width: 100%;
+        }
+
+        .content-btn {
+            position:absolute;
+            top:10px;
+            padding: 10px 10px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+            background-color: #007ac3; /* Example button color, change as needed */
+            color: white; /* Text color */
+            border: none; /* Removes the default border */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
+            text-align: center; /* Centers the text inside the button */
+            text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+            border-radius: 200px; /* High border-radius value to create the pill shape */
+            z-index: 10;
+        }
+      }
+
+@media (min-width: 576px) {
+        .card-deck {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+    }
