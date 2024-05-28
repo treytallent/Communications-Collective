@@ -228,7 +228,7 @@ Template Name: Opportunities
             </section>
 
             <!-- Join The Collective -->
-            <section class="row mb-md">
+            <section class="row mb-lg">
                 <div class="col-md-6 order-1">
                     <h2 class="H2-text mb-sm"><?php the_field("section_4_title"); ?></h2>
                     <p class="mb-sm">
