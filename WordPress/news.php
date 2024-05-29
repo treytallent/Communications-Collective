@@ -11,7 +11,7 @@ Template Name: News
              <section class="maintext">             
              <?php 
 $args = array(
-  'category_name' =>  'News',
+  'category_name' =>  'Recent News',
   // 'posts_per_page'    =>   1
 );
 // the query
@@ -37,7 +37,7 @@ $the_query = new WP_Query( $args ); ?>
                   <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
                   <p class="date subheader2-text"><?php echo date ('F j,Y'); ?></p>
 
-                  <h2 class= "section-title offset-md-1 pink"><?php the_title(); ?></h2> 
+                  <h3 class= "news-title pink"><?php the_title(); ?></h3> 
                   <p class="date subheader3-text"><?php echo get_the_author(); ?></p>
                   <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
 
@@ -59,6 +59,7 @@ $the_query = new WP_Query( $args ); ?>
       </div>
      </div>
   </div>
+
 <!--     <section class="container-fluid section-padding">
       <div class="container">
         <h2 class="section-title offset-md-1 pink">recent news</h2>
