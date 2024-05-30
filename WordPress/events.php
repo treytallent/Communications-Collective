@@ -4,7 +4,64 @@ Template Name: Events
 */
 ?>
 <?php require_once('small-header.php'); ?>
-<section class="container-fluid section-padding">
+
+<div class="container-fluid section-padding">
+     <div class="container">
+        <div class="row">
+             <section class="maintext">             
+             <?php 
+$args = array(
+  'category_name' =>  'Current Events',
+  // 'posts_per_page'    =>   1
+);
+// the query
+$the_query = new WP_Query( $args ); ?>
+ 
+<?php if ( $the_query->have_posts() ) : ?>
+ 
+    <!-- pagination here -->
+ 
+    <!-- the loop -->
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<div class="thepost">
+<h2 class="section-title offset-md-1 pink">recent news</h2>
+
+<div class="row section1-row">
+<div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img">
+<!-- <img class="arrow-effect-image image-border-pink"  -->
+<?php
+                if ( has_post_thumbnail() ) { 
+                    the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink'));
+                } ?>
+                  </div>
+                  <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
+                  <p class="date subheader2-text"><?php echo date ('F j,Y'); ?></p>
+
+                  <h3 class= "title pink"><?php the_title(); ?></h3> 
+                  <p class="location subheader3-text"><?php echo get_post_meta(get_the_ID(), 'location', true); ?></p>
+                  <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
+
+                  <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
+    <!-- <a class="readmore" href="<?php the_permalink(); ?>"> CONTINUE READING</a> -->
+</div>
+</div>    <?php endwhile; ?>
+    <!-- end of the loop -->
+ 
+    <!-- pagination here -->
+ 
+    <?php wp_reset_postdata(); ?>
+ 
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+</section>
+
+      </div>
+     </div>
+  </div>
+
+  
+<!-- <section class="container-fluid section-padding">
       <div class="container">
         <h2 class="section-title offset-md-1 pink">current events</h2>
         <div class="row section1-row">
@@ -34,7 +91,7 @@ Template Name: Events
             <a class="btn body-text btn-sm" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
+
 
         <div class="row section1-row">
           <div
@@ -64,7 +121,6 @@ Template Name: Events
             <a class="btn body-text btn-sm" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
 
         <div class="row">
           <div
@@ -91,9 +147,9 @@ Template Name: Events
             <a class="btn body-text btn-sm" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
+
       </div>
-      <!-- container -->
+
     </section>
 
     <section class="container-fluid section-padding">
@@ -138,7 +194,7 @@ Template Name: Events
             <a class="btn body-text btn-sm" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
+
         <div class="row">
           <div class="col-md-4 col-sm-4 text-center post-padding">
             <img
@@ -178,12 +234,12 @@ Template Name: Events
             <a class="btn body-text btn-sm" href="#">Learn More</a>
           </div>
         </div>
-        <!-- row -->
+
 
         <div class="text-center">
           <a class="btn body-text btn-sm" href="#">More</a>
         </div>
-      </div>
-      <!-- container -->
+      </div> -->
+
 </section>
 <?php get_footer(); ?>
