@@ -4,26 +4,29 @@ Template Name: Contents with pag
 */
 ?>
 
-<?php require_once('small-header.php'); 
-?>
+<?php get_header(); ?>
+<div class="container-fluid header header-gradient">
+        <div class="container">
+            <a href="#" class="headerbtn body-text">Featured</a>
+            <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
+            <h4 class="authorname">Jordanreincastle</h4>
+            <p class="header-intro">
+                With the spread of coronavirus around the world, the Australian Government has implemented a new restriction on businesses in the hospitality industry, of strictly take-away and no dine-in. This means many businesses, who make a majority of their income from walk-ins and bookings, have had to close their doors from their primary source of income for the greater good of slowing the virus’ spread.
+            </p>
+            <a href="#" class="headerbtn-1 body-text">Continue Reading</a>
+    
+        </div><!-- container -->
+    </div><!-- containe-fluid -->
 
 <div class="container-fluid maincontainer">
     <div class="container">
-        <?php
-        // Get the category object by slug
-        $category = get_category_by_slug('content');
-        if ($category) {
-            // Display the category name as an h1 heading
-            echo '<h1>' . esc_html($category->name) . '</h1>';
-        }
-        ?>
-        
+        <h2 class="text-center visitcontent">visit our content</h2>
         <div class="row">
         <?php
         // Query the latest posts from the 'content' category
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
-            'posts_per_page' => 3,
+            'posts_per_page' => 9,
             'category_name' => 'content', // The slug of the category
             'paged' => $paged
         );
@@ -33,7 +36,6 @@ Template Name: Contents with pag
         if ($query->have_posts()) :
             while ($query->have_posts()) : $query->the_post();
         ?>
-
             <div class="col-md-4">
                 <div class="card mb-4 card-pink">
 <?php if (has_post_thumbnail()) : ?>
@@ -68,5 +70,16 @@ Template Name: Contents with pag
         <?php wpbeginner_numeric_posts_nav($query); ?>
     </div>
 </div>
+
+<section class="container-fluid make-post postbg">
+<div class="container">
+    <h3 class="text-center postcontent">post your content</h3>
+    <p class="text-center section-pull-quote">"Now! It's your turn to post a blog!"</p>
+    <p class="text-center post-content ">Find what’s you interested and post it to us through the email provided below:
+        murdoch.commcollective@gmail.com
+       </p>
+    
+</div>
+</section>
 
 <?php get_footer(); ?>
