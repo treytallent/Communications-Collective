@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Events
+Template Name: Content
 */
 ?>
 <?php get_header(); 
@@ -54,7 +54,9 @@ Template Name: Events
             </nav>
 
               <!-- content section  -->
-
+              <div class="content-category-posts">
+    <?php display_content_category_posts(); ?>
+</div>
 
               <div class="card-deck">
                 <div class="card card-pink">
