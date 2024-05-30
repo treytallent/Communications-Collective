@@ -357,18 +357,18 @@ footer img {
    border-color: #007bff;
 }    
 /*   for the pagination           */
-    .navigation ul {
+.navigation ul {
    display: flex;
-align-items: center;
-        justify-content: center;
+   align-items: center;
+   justify-content: center;
    
 }
 
 .navigation ul li {
    margin: 10px;
-list-style-type:none;
+   list-style-type:none;
 }       
-           
+      
  .container-fluid.maincontainer {
- padding-top: 5%;
+   padding-top:0;
 }    
