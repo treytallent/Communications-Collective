@@ -340,3 +340,35 @@ footer img {
       padding: 1.5rem;
    }
 }
+
+/*       css for the cards in the content page       */
+.card-img-top {
+   height: 200px;
+   object-fit: cover;
+}
+.card-title {
+   font-size: 1.25rem;
+}
+.card-text {
+   font-size: 1rem;
+}
+.btn-primary {
+   background-color: #007bff;
+   border-color: #007bff;
+}    
+/*   for the pagination           */
+    .navigation ul {
+   display: flex;
+align-items: center;
+        justify-content: center;
+   
+}
+
+.navigation ul li {
+   margin: 10px;
+list-style-type:none;
+}       
+           
+ .container-fluid.maincontainer {
+ padding-top: 5%;
+}    
