@@ -15,13 +15,15 @@ function load_my_scripts()
 	wp_enqueue_style('test4', get_template_directory_uri() . '/content.css');
 }
 add_action('wp_enqueue_scripts', 'load_my_scripts');
-
+?>
+<?php
 function register_navwalker()
 {
   require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action('after_setup_theme', 'register_navwalker');
-
+?>
+<?php
 register_nav_menus(array(
   'primary' => __('CCMU Primary Menu', 'ccmu-top-menu'),
 ));
@@ -146,13 +148,16 @@ function wpbeginner_numeric_posts_nav($query = null) {
         printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)), $max);
     }
 
-    // Always show next link
-    if (get_next_posts_link()) {
-        printf('<li>%s</li>' . "\n", get_next_posts_link());
-    } else {
-        printf('<li class="disabled"><a href="#">%s</a></li>' . "\n", __('Next'));
+   // Show next link only if not on the last page
+   if ($paged < $max) {
+    $next_page_link = get_next_posts_page_link();
+    if ($next_page_link) {
+        printf('<li><a href="%s">%s</a></li>' . "\n", esc_url($next_page_link), __('Next'));
     }
+} else {
+    printf('<li class="disabled"><a href="#">%s</a></li>' . "\n", __('Next'));
+}
 
-    echo '</ul></div>' . "\n";
+echo '</ul></div>' . "\n";
 }
 ?>
