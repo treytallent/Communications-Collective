@@ -5,15 +5,13 @@ Template Name: Contents with pag
 ?>
 
 <?php get_header(); ?>
-<div class="container-fluid header header-gradient">
+<div class="container-fluid header header-gradient" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
         <div class="container">
-            <a href="#" class="headerbtn body-text">Featured</a>
+            <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
-            <h4 class="authorname">Jordanreincastle</h4>
-            <p class="header-intro">
-                With the spread of coronavirus around the world, the Australian Government has implemented a new restriction on businesses in the hospitality industry, of strictly take-away and no dine-in. This means many businesses, who make a majority of their income from walk-ins and bookings, have had to close their doors from their primary source of income for the greater good of slowing the virus’ spread.
-            </p>
-            <a href="#" class="headerbtn-1 body-text">Continue Reading</a>
+            <h4 class="authorname"><?php the_field("content-header-author"); ?></h4>
+            <p class="header-intro"><?php the_field("content-header-article"); ?></p>
+            <a href="<?php the_field("continues-reading-featured-article"); ?>" class="headerbtn-1 body-text">Continue Reading</a>
     
         </div><!-- container -->
     </div><!-- containe-fluid -->
@@ -67,16 +65,42 @@ Template Name: Contents with pag
 <div class="row">
     <div class="col-12">
         <!-- Pagination links -->
-        <?php wpbeginner_numeric_posts_nav($query); ?>
+        <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$data = new WP_Query(array(
+      'posts_per_page' => 9,
+    'paged' => $paged,
+'orderby' => 'date',
+    'order' => 'DESC'
+));
+
+if ($data->have_posts()) :
+    while ($data->have_posts()) : $data->the_post();
+        // Your code to display the post
+        ?>
+<!--         <h2><?php the_title(); ?></h2>
+        <div><?php the_content(); ?></div> -->
+        <?php
+    endwhile;
+
+    wpbeginner_numeric_posts_nav($data);
+
+else :
+    echo '<h3>' . __('404 Error: Not Found', '') . '</h3>';
+endif;
+
+wp_reset_postdata(); ?>
     </div>
 </div>
+
+
 
 <section class="container-fluid make-post postbg">
 <div class="container">
     <h3 class="text-center postcontent">post your content</h3>
     <p class="text-center section-pull-quote">"Now! It's your turn to post a blog!"</p>
-    <p class="text-center post-content ">Find what’s you interested and post it to us through the email provided below:
-        murdoch.commcollective@gmail.com
+    <p class="text-center post-content ">Find what’s you interested and post it to us through the email provided below:<br><strong>
+        murdoch.commcollective@gmail.com</strong><br>
        </p>
     
 </div>
