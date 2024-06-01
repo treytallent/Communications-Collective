@@ -1,19 +1,19 @@
 /* Start of Header */
 .contentheading {
-    position: absolute;
-    top:310px;
+    position: relative;
+    top:-80px;
     color: white;
     z-index: 5;
 }
 .authorname {
-    position: absolute;
-    top:400px;
+    position: relative;
+    top:-70px;
     color: white;
     z-index: 5;
 }
 .header-intro {
-    position: absolute;
-    top: 450px;
+    position: relative;
+    top: -60px;
     color: white;
     padding-right: 170px;
     z-index: 5;
@@ -33,7 +33,6 @@
     background-image: url("Images/content/content-header.svg");
     background-size:cover;
     background-position: center center;
-    height: 100vh;
     padding-top: 55vh;
 }
 
@@ -53,8 +52,8 @@
 }
 
 .headerbtn{
-position: absolute;
-top:260px;
+position: relative;
+top:-100px;
   display: inline-block; /* Allows the button to shrink-wrap its content */
   padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
   background-color: #007ac3; /* Example button color, change as needed */
@@ -68,8 +67,8 @@ top:260px;
 }
 
 .headerbtn-1{
-    position: absolute;
-    top:600px;
+    position: relative;
+    top:-60px;
     display: inline-block;
     padding: 10px 50px;
     margin-top: 15px;
@@ -98,10 +97,17 @@ top:260px;
 .post-content{
     padding-bottom:2rem;
 }
+.postcontent{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #1a1a1a;
+}
 .content-dropdown{
     width: fit-content;
     border: none;
-    background-color: #d91853;
+    background-color: #007ac3;
     border-radius: 500px;
  }
 
@@ -202,6 +208,87 @@ dl, ol, ul {
     }
 /* End of visit content  */
 
+/* single page template   */  
+.maintext{
+    display: flex;
+        flex-wrap: wrap;
+        margin-right: -50px;
+        margin-left: -50px;
+        padding-left:100px;
+        padding-right:100px;
+
+}
+
+/* previous and next button for single page */
+    .page-navigation {
+        display: flex;
+        justify-content: space-between; /* Distribute items evenly along the main axis */
+        align-items: center; /* Center items vertically */
+        margin-top: 20px;
+    }
+    
+    .page-navigation .nav-previous a,
+    .page-navigation .nav-next a {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #007ac3;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size:1.5rem;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+    
+    .page-navigation .nav-previous a:hover,
+    .page-navigation .nav-next a:hover {
+        background-color: #007ac3;
+        color: #fff;
+    }
+    
+    .page-navigation .nav-previous i,
+    .page-navigation .nav-next i {
+        margin: 0 5px;
+    }
+
+    /* Share button */
+.share-this-links{
+    content: "";
+    display: block;
+    width: 32.3%;
+    min-width: 30px;
+    border-top: 7px solid #007ac3;
+    padding-top: 10px;
+    margin-bottom: 1em;
+    margin-top: 3rem;
+}
+
+.share-buttons {
+    margin-bottom: 20px;
+}
+
+.share-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b5998; /* Facebook blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.share-button.twitter {
+    background-color: #55acee; /* Twitter blue */
+}
+
+.share-button:hover {
+    background-color: #4a77bd; /* Darker shade of blue on hover */
+}
+
+
+
 /*start of page-smaller-header */
 .small-content-header-bg {
         background-image: linear-gradient(
@@ -245,10 +332,24 @@ dl, ol, ul {
 
 }
     /* @media for 767px  */
- @media only screen and (min-width: 767.98px) {
+ @media only screen and (min-width: 767.20px) {
 .header{
         background-position: center center;
     }
+.header::before {
+        content: "";
+        position: absolute;
+        top: 30vh;
+        left: 0;
+        right: 0;
+        bottom: -2vh;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        );
+        z-index: 1;
+ }
 
 .small-content-header-bg::before {
         content: "";
@@ -256,7 +357,7 @@ dl, ol, ul {
         top: 0;
         left: 0;
         right: 0;
-        bottom: 38vh;
+        bottom: 40vh;
         background-image: linear-gradient(
             to right,
 
@@ -283,7 +384,15 @@ dl, ol, ul {
             border-radius: 200px; /* High border-radius value to create the pill shape */
             z-index: 10;
         }
-      }
+
+        .postcontent{
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            font-style: normal;
+            color: #1a1a1a;
+        }
+}
 
       /* @media for 576px  */
 @media only screen and (min-width: 576px) {
@@ -296,4 +405,26 @@ dl, ol, ul {
             margin-right: -15px;
             margin-left: -15px;
         }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 30vh;
+            left: 0;
+            right: 0;
+            bottom: -2vh;
+            background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.1)
+            );
+            z-index: 1;
+     }
+
+     .postcontent{
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-style: normal;
+        color: #1a1a1a;
+    }
     }
