@@ -21,7 +21,7 @@ Template Name: Contents with pag
         <h2 class="text-center visitcontent">visit our content</h2>
         <button class="dropdown content-dropdown">
                         <a
-                           class="nav-link dropdown-toggle"
+                           class="nav-link dropdown-toggle text-white"
                            href="#"
                            id="navbarDropdownMenuLink"
                            data-toggle="dropdown"
@@ -117,7 +117,7 @@ wp_reset_postdata(); ?>
 
 <section class="container-fluid make-post postbg">
 <div class="container">
-    <h3 class="text-center postcontent">post your content</h3>
+    <h3 class="text-center post-your-content">post your content</h3>
     <p class="text-center section-pull-quote">"Now! It's your turn to post a blog!"</p>
     <p class="text-center post-content ">Find what’s you interested and post it to us through the email provided below:<br><strong>
         murdoch.commcollective@gmail.com</strong><br>
