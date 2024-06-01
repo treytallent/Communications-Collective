@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: row;
     background-image: url("Images/content/content-header.svg");
-    background-size:cover cover;
+    background-size:cover;
     background-position: center center;
     height: 100vh;
     padding-top: 55vh;
@@ -98,6 +98,12 @@ top:260px;
 .post-content{
     padding-bottom:2rem;
 }
+.content-dropdown{
+    width: fit-content;
+    border: none;
+    background-color: #d91853;
+    border-radius: 500px;
+ }
 
 .nav-link:hover {
     color: #007ac3 !important;
@@ -195,13 +201,6 @@ dl, ol, ul {
         margin-left: -50px;
     }
 /* End of visit content  */
-
-    .content-dropdown{
-        width: fit-content;
-        border: none;
-        background-color: #d91853;
-        border-radius: 500px;
-     }
 
 /*start of page-smaller-header */
 .small-content-header-bg {
