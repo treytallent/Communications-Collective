@@ -19,6 +19,27 @@ Template Name: Contents with pag
 <div class="container-fluid maincontainer">
     <div class="container">
         <h2 class="text-center visitcontent">visit our content</h2>
+        <button class="dropdown content-dropdown">
+                        <a
+                           class="nav-link dropdown-toggle"
+                           href="#"
+                           id="navbarDropdownMenuLink"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                        >
+                           All Posts
+                        </a>
+                        <div
+                           class="dropdown-menu text-right"
+                        >
+                           <a class="dropdown-item" href="#">Featured</a>
+                           <a class="dropdown-item" href="#">Recommended</a>
+                           <a class="dropdown-item" href="#">News</a>
+                           <a class="dropdown-item" href="#">Study</a>
+                        </div>
+                     </button>
+       
         <div class="row">
         <?php
         // Query the latest posts from the 'content' category

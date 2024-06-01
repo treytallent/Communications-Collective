@@ -196,6 +196,12 @@ dl, ol, ul {
     }
 /* End of visit content  */
 
+    .content-dropdown{
+        width: fit-content;
+        border: none;
+        background-color: #d91853;
+        border-radius: 500px;
+     }
 
 /*start of page-smaller-header */
 .small-content-header-bg {
