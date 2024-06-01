@@ -1,4 +1,5 @@
-<?php require_once('small-header.php'); ?>
+<?php require_once('page_header.php'); 
+?>
 <div class="container-fluid maincontainer">
     <div class="container">
         <div class="row">
