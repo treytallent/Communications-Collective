@@ -37,9 +37,9 @@ Template Name: Contents with pag
             <div class="col-md-4">
                 <div class="card mb-4 card-pink">
 <?php if (has_post_thumbnail()) : ?>
+                    <a href="<?php the_field("content_tag"); ?>" class="content-btn btn-fluid">News</a>
                         <img class="card-img-top" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
                     <?php endif; ?>
-                    <a href="<?php the_permalink(); ?>" class="content-btn btn-fluid">News</a>
                     <div class="card-body">
                     <p class="content-author"><?php echo get_the_author(); ?></p>
                         <h5 class="article-title"><?php the_title(); ?></h5>
