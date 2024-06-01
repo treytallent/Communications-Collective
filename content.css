@@ -27,7 +27,6 @@
     z-index: 5;
 }
 
-
 .header {
     display: flex;
     flex-direction: row;
@@ -92,7 +91,7 @@ top:260px;
     padding-top:3.5rem;
     padding-bottom:1rem;
 }
-.postcontent{
+.post-your-content{
     color:#F8C718;
     padding-bottom:1rem;
 }
@@ -189,15 +188,50 @@ dl, ol, ul {
 }
 
 
-
-  .row {
+.row {
         display: flex;
         flex-wrap: wrap;
         margin-right: -50px;
         margin-left: -50px;
     }
+/* End of visit content  */
 
 
+/*start of page-smaller-header */
+.small-content-header-bg {
+        background-image: linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.1)
+           ),
+           url("Images/content/content-header.svg");
+        background-size: cover;
+        /* min-height: 33vh; */
+        /* Large space Class = 90px (column gutter × 3)*/
+}
+
+.small-content-header-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 24vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.1)
+    );
+    z-index: 1;
+}
+     
+.small-content-header-bg div {
+        min-height: 76vh;
+}
+    
+/*start of page-smaller-header */
+
+/* @media for 1290px  */
 @media only screen and (min-width: 1290.98px) {
       .header{
         background-size:cover;
@@ -210,6 +244,26 @@ dl, ol, ul {
 .header{
         background-position: center center;
     }
+
+.small-content-header-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 38vh;
+        background-image: linear-gradient(
+            to right,
+
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        );
+        z-index: 1;
+}
+
+.small-content-header-bg div {
+    min-height: 60vh;
+ }
 
 .content-btn {
             position:absolute;
@@ -226,6 +280,7 @@ dl, ol, ul {
         }
       }
 
+      /* @media for 576px  */
 @media only screen and (min-width: 576px) {
 
         .card-deck {
