@@ -43,9 +43,9 @@
         <!-- Bootstrap Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="navbar-brand-container">
-                <a class="navbar-brand navbar-brand-title" href="/index.html"><img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/ccmu_logo.svg" alt="Communication Collective at Murdoch University Logo" /></a>
+                <a class="navbar-brand navbar-brand-title" href="http://170.187.231.66/~mesh20/sub/home/"><img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/ccmu_logo.svg" alt="Communication Collective at Murdoch University Logo" /></a>
                 <p class="navbar-brand-title">
-
+                the communication collective at murdoch university
                 </p>
             </div>
             <!-- Toggler/collapsibe Button -->
