@@ -197,6 +197,12 @@ dl, ol, ul {
         margin-left: -50px;
     }
 
+    .content-dropdown{
+        width: fit-content;
+        border: none;
+        background-color: #d91853;
+        border-radius: 500px;
+     }
 
 @media only screen and (min-width: 1290.98px) {
       .header{
