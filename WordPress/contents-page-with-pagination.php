@@ -59,7 +59,9 @@ Template Name: Contents with pag
 <?php if (has_post_thumbnail()) : ?>
                         <img class="card-img-top" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
                     <?php endif; ?>                   
-                    <a href="<?php the_field("content_tag"); ?>" class="content-btn btn-fluid">News</a>
+                    <a href="<?php echo get_post_meta(get_the_ID(), 'button_link', true) ?: the_permalink(); ?>" class="content-btn btn-fluid">
+            <?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?>
+        </a>
                     <div class="card-body">
                     <p class="content-author"><?php echo get_the_author(); ?></p>
                         <h5 class="article-title"><?php the_title(); ?></h5>
