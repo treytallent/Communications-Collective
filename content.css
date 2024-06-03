@@ -82,6 +82,21 @@ top:-100px;
       border-radius: 500px; /* High border-radius value to create the pill shape */
       z-index: 10;  
     }
+    .headerbtn-2{
+        position: relative;
+        display: inline-block;
+        padding: 10px 50px;
+        margin-top: 15px;
+          padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+          background-color: #007ac3; /* Example button color, change as needed */
+          color: white; /* Text color */
+          border: none; /* Removes the default border */
+          cursor: pointer; /* Changes the cursor to a pointer on hover */
+          text-align: center; /* Centers the text inside the button */
+          text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+          border-radius: 500px; /* High border-radius value to create the pill shape */
+          z-index: 10;  
+        }
 /* End of Header */
 
 /* Start of visit content  */
