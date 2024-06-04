@@ -1,13 +1,13 @@
 /* Start of Header */
 .contentheading {
     position: relative;
-    top:-80px;
+    top: -80px;
     color: white;
     z-index: 5;
 }
 .authorname {
     position: relative;
-    top:-70px;
+    top: -70px;
     color: white;
     z-index: 5;
 }
@@ -22,8 +22,8 @@
 .index-header-social {
     position: relative;
     height: 48px;
-    padding-left: 48px;
-    padding-right: 48px;
+    /*     padding-left: 48px;
+    padding-right: 48px; */
     z-index: 5;
 }
 
@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: row;
     background-image: url("Images/content/content-header.svg");
-    background-size:cover;
+    background-size: cover;
     background-position: center center;
     padding-top: 55vh;
 }
@@ -51,92 +51,92 @@
     z-index: 1;
 }
 
-.headerbtn{
-position: relative;
-top:-100px;
-  display: inline-block; /* Allows the button to shrink-wrap its content */
-  padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-  background-color: #007ac3; /* Example button color, change as needed */
-  color: white; /* Text color */
-  border: none; /* Removes the default border */
-  cursor: pointer; /* Changes the cursor to a pointer on hover */
-  text-align: center; /* Centers the text inside the button */
-  text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-  border-radius: 500px; /* High border-radius value to create the pill shape */
-  z-index: 10;  
+.headerbtn {
+    position: relative;
+    top: -100px;
+    display: inline-block; /* Allows the button to shrink-wrap its content */
+    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: #007ac3; /* Example button color, change as needed */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+    border-radius: 500px; /* High border-radius value to create the pill shape */
+    z-index: 10;
 }
 
-.headerbtn-1{
+.headerbtn-1 {
     position: relative;
-    top:-60px;
+    top: -60px;
     display: inline-block;
     padding: 10px 50px;
     margin-top: 15px;
-      padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-      background-color: #007ac3; /* Example button color, change as needed */
-      color: white; /* Text color */
-      border: none; /* Removes the default border */
-      cursor: pointer; /* Changes the cursor to a pointer on hover */
-      text-align: center; /* Centers the text inside the button */
-      text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-      border-radius: 500px; /* High border-radius value to create the pill shape */
-      z-index: 10;  
-    }
-    .headerbtn-2{
-        position: relative;
-        display: inline-block;
-        padding: 10px 50px;
-        margin-top: 15px;
-          padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-          background-color: #007ac3; /* Example button color, change as needed */
-          color: white; /* Text color */
-          border: none; /* Removes the default border */
-          cursor: pointer; /* Changes the cursor to a pointer on hover */
-          text-align: center; /* Centers the text inside the button */
-          text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-          border-radius: 500px; /* High border-radius value to create the pill shape */
-          z-index: 10;  
-        }
+    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: #007ac3; /* Example button color, change as needed */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+    border-radius: 500px; /* High border-radius value to create the pill shape */
+    z-index: 10;
+}
+.headerbtn-2 {
+    position: relative;
+    display: inline-block;
+    padding: 10px 50px;
+    margin-top: 15px;
+    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: #007ac3; /* Example button color, change as needed */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+    border-radius: 500px; /* High border-radius value to create the pill shape */
+    z-index: 10;
+}
 /* End of Header */
 
 /* Start of visit content  */
-.visitcontent{
-    color:#DE3569;
-    padding-top:3.5rem;
-    padding-bottom:1rem;
+.visitcontent {
+    color: #de3569;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
 }
-.post-your-content{
-    color:#F8C718;
-    padding-bottom:1rem;
+.post-your-content {
+    color: #f8c718;
+    padding-bottom: 1rem;
 }
-.post-content{
-    padding-bottom:2rem;
+.post-content {
+    padding-bottom: 2rem;
 }
-.postcontent{
+.postcontent {
     font-family: "Montserrat", sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     font-style: normal;
     color: #1a1a1a;
 }
-.content-dropdown{
+.content-dropdown {
     width: fit-content;
     border: none;
     background-color: #007ac3;
     border-radius: 500px;
- }
+}
 
 .nav-link:hover {
     color: #007ac3 !important;
     cursor: pointer;
     transition: color 0.3s;
- }
-.secondary-nav{
-    padding-top:2rem;
-    padding-bottom:2rem;
+}
+.secondary-nav {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.content-image  {
+.content-image {
     min-height: 20vh;
     object-fit: cover;
     object-position: center;
@@ -145,9 +145,9 @@ top:-100px;
 }
 
 .content-btn {
-    position:absolute;
-    top:10px;
-    right:25px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
     padding: 10px 10px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
     background-color: #007ac3; /* Example button color, change as needed */
     color: white; /* Text color */
@@ -166,109 +166,109 @@ top:-100px;
     margin-bottom: 0px;
     margin-left: 15px;
 }
-.card{
-    border:0;
-    border-radius:0;
+.card {
+    border: 0;
+    border-radius: 0;
     padding: 0;
-    margin:20px;
+    margin: 20px;
 }
 .card-pink {
-background-color:#FFE1EA;
+    background-color: #ffe1ea;
 }
 .card-orange {
-    background-color:#FFF1E1;
+    background-color: #fff1e1;
 }
 
 .card-blue {
-    background-color:#E1F8FF;
+    background-color: #e1f8ff;
 }
-      
+
 .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     min-height: 1px;
-    padding-top:0.5rem;
+    padding-top: 0.5rem;
     padding-bottom: 1.25rem;
 }
 
-.content-author{
-    margin-left:0;
+.content-author {
+    margin-left: 0;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-.article-title{
-    margin-left:0;
+.article-title {
+    margin-left: 0;
 }
 
-.short-para{
-    margin-left:0.5rem;
+.short-para {
+    margin-left: 0.5rem;
 }
 
-.make-post{
-    margin-top:30px;
+.make-post {
+    margin-top: 30px;
 }
 
-dl, ol, ul {
+dl,
+ol,
+ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-
 .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -50px;
-        margin-left: -50px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -50px;
+    margin-left: -50px;
+}
 /* End of visit content  */
 
-/* single page template   */  
-.maintext{
+/* single page template   */
+.maintext {
     display: flex;
-        flex-wrap: wrap;
-        margin-right: -50px;
-        margin-left: -50px;
-        padding-left:100px;
-        padding-right:100px;
-
+    flex-wrap: wrap;
+    margin-right: -50px;
+    margin-left: -50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 /* previous and next button for single page */
-    .page-navigation {
-        display: flex;
-        justify-content: space-between; /* Distribute items evenly along the main axis */
-        align-items: center; /* Center items vertically */
-        margin-top: 20px;
-    }
-    
-    .page-navigation .nav-previous a,
-    .page-navigation .nav-next a {
-        display: inline-flex;
-        align-items: center;
-        padding: 10px 15px;
-        background-color: transparent;
-        color: #007ac3;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size:1.5rem;
-        margin-bottom: 20px;
-        margin-top: 50px;
-    }
-    
-    .page-navigation .nav-previous a:hover,
-    .page-navigation .nav-next a:hover {
-        background-color: #007ac3;
-        color: #fff;
-    }
-    
-    .page-navigation .nav-previous i,
-    .page-navigation .nav-next i {
-        margin: 0 5px;
-    }
+.page-navigation {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px;
+}
 
-    /* Share button */
-.share-this-links{
+.page-navigation .nav-previous a,
+.page-navigation .nav-next a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #007ac3;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.page-navigation .nav-previous a:hover,
+.page-navigation .nav-next a:hover {
+    background-color: #007ac3;
+    color: #fff;
+}
+
+.page-navigation .nav-previous i,
+.page-navigation .nav-next i {
+    margin: 0 5px;
+}
+
+/* Share button */
+.share-this-links {
     content: "";
     display: block;
     width: 32.3%;
@@ -302,19 +302,17 @@ dl, ol, ul {
     background-color: #4a77bd; /* Darker shade of blue on hover */
 }
 
-
-
 /*start of page-smaller-header */
 .small-content-header-bg {
-        background-image: linear-gradient(
-              to right,
-              rgba(0, 0, 0, 0.6),
-              rgba(0, 0, 0, 0.1)
-           ),
-           url("Images/content/content-header.svg");
-        background-size: cover;
-        /* min-height: 33vh; */
-        /* Large space Class = 90px (column gutter × 3)*/
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        ),
+        url("Images/content/content-header.svg");
+    background-size: cover;
+    /* min-height: 33vh; */
+    /* Large space Class = 90px (column gutter × 3)*/
 }
 
 .small-content-header-bg::before {
@@ -331,27 +329,25 @@ dl, ol, ul {
     );
     z-index: 1;
 }
-     
+
 .small-content-header-bg div {
-        min-height: 76vh;
+    min-height: 76vh;
 }
-    
+
 /*start of page-smaller-header */
 
 /* @media for 1290px  */
 @media only screen and (min-width: 1290.98px) {
-      .header{
-        background-size:cover;
-
-      }
-
+    .header {
+        background-size: cover;
+    }
 }
-    /* @media for 767px  */
- @media only screen and (min-width: 767.20px) {
-.header{
+/* @media for 767px  */
+@media only screen and (min-width: 767.2px) {
+    .header {
         background-position: center center;
     }
-.header::before {
+    .header::before {
         content: "";
         position: absolute;
         top: 30vh;
@@ -364,9 +360,9 @@ dl, ol, ul {
             rgba(0, 0, 0, 0.1)
         );
         z-index: 1;
- }
+    }
 
-.small-content-header-bg::before {
+    .small-content-header-bg::before {
         content: "";
         position: absolute;
         top: 0;
@@ -380,66 +376,65 @@ dl, ol, ul {
             rgba(0, 0, 0, 0.1)
         );
         z-index: 1;
-}
+    }
 
-.small-content-header-bg div {
-    min-height: 60vh;
- }
+    .small-content-header-bg div {
+        min-height: 60vh;
+    }
 
-.content-btn {
-            position:absolute;
-            top:10px;
-            padding: 10px 10px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-            background-color: #007ac3; /* Example button color, change as needed */
-            color: white; /* Text color */
-            border: none; /* Removes the default border */
-            cursor: pointer; /* Changes the cursor to a pointer on hover */
-            text-align: center; /* Centers the text inside the button */
-            text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-            border-radius: 200px; /* High border-radius value to create the pill shape */
-            z-index: 10;
-        }
+    .content-btn {
+        position: absolute;
+        top: 10px;
+        padding: 10px 10px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+        background-color: #007ac3; /* Example button color, change as needed */
+        color: white; /* Text color */
+        border: none; /* Removes the default border */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+        text-align: center; /* Centers the text inside the button */
+        text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+        border-radius: 200px; /* High border-radius value to create the pill shape */
+        z-index: 10;
+    }
 
-        .postcontent{
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.2rem;
-            font-weight: 400;
-            font-style: normal;
-            color: #1a1a1a;
-        }
-}
-
-      /* @media for 576px  */
-@media only screen and (min-width: 576px) {
-
-        .card-deck {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
-        .header::before {
-            content: "";
-            position: absolute;
-            top: 30vh;
-            left: 0;
-            right: 0;
-            bottom: -2vh;
-            background-image: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.6),
-                rgba(0, 0, 0, 0.1)
-            );
-            z-index: 1;
-     }
-
-     .postcontent{
+    .postcontent {
         font-family: "Montserrat", sans-serif;
         font-size: 1.2rem;
         font-weight: 400;
         font-style: normal;
         color: #1a1a1a;
     }
+}
+
+/* @media for 576px  */
+@media only screen and (min-width: 576px) {
+    .card-deck {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        margin-right: -15px;
+        margin-left: -15px;
     }
+    .header::before {
+        content: "";
+        position: absolute;
+        top: 30vh;
+        left: 0;
+        right: 0;
+        bottom: -2vh;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        );
+        z-index: 1;
+    }
+
+    .postcontent {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-style: normal;
+        color: #1a1a1a;
+    }
+}

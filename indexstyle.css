@@ -29,142 +29,142 @@ button.navbar-toggler {
 
 /* ///////////////////////////////////// */
 /* Screen Size > 767px */
-/* @media only screen and (min-width:767.98px) */
-/* ///////////////////////////////////// */
+@media only screen and (min-width: 767.98px) {
+    /* ///////////////////////////////////// */
 
-/* Typography */
-.justify-right {
-    display: flex;
-    justify-content: end;
+    /* Typography */
+    .justify-right {
+        display: flex;
+        justify-content: end;
+    }
+
+    /* Images */
+    .chat-bubble-image {
+        width: 80%;
+    }
+
+    /* Buttons */
+    .btn {
+        position: relative;
+        display: inline-block;
+        padding: 0.75rem 4rem;
+        font-size: 1rem;
+        font-weight: 800;
+        color: white;
+        background-color: #007ac3;
+        border: none;
+        border-radius: 5rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #00649e;
+        text-decoration: none !important;
+        color: white;
+    }
+
+    /* Header */
+    /* Header background image */
+    .header-bg {
+        background-image: url("Images/header.webp");
+        background-size: cover;
+        height: 100vh;
+        padding-top: 50vh;
+    }
+
+    /* Gradient overlay on header image */
+    .header-bg::before {
+        content: "";
+        position: absolute;
+        top: 45vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            to right,
+
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        );
+        z-index: 0;
+    }
+
+    /* Spacing for social media icons on header */
+    .index-header-social-group {
+        display: block;
+        width: 100%;
+    }
+
+    .index-header-social {
+        position: relative;
+        width: 36px;
+        margin-left: 0px;
+        margin-right: 24px;
+    }
+
+    /* About */
+    .about-bg {
+        position: relative;
+        background-image: url("Images/indexbg/about.svg");
+        background-repeat: no-repeat;
+        background-position: right -50vh;
+    }
+
+    /* Opportunities */
+    .opportunities-bg {
+        position: relative;
+        background-image: url("Images/indexbg/opportunities.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 10vw;
+    }
+
+    /* News */
+    .news-bg {
+        position: relative;
+        background-image: url("Images/indexbg/news.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: calc(100% - 10vw);
+    }
+
+    /* Events */
+    .event-img {
+        position: absolute;
+        width: 70%; /* Adjust based on your needs */
+        aspect-ratio: 1/1;
+        border-radius: 50%; /* Creates the circular frame */
+        object-fit: cover; /* Ensures the image covers the frame without distortion */
+        display: flex;
+        overflow: hidden; /* Ensures no part of the image spills outside the circular frame */
+        border: 0.6vh solid #f8a918;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+    }
+
+    .event-img-frame {
+        width: 100%;
+        height: auto; /* Maintains the aspect ratio */
+        display: block; /* Removes any extra space below the image */
+        z-index: 1;
+    }
+
+    .event-img-frame-mobile {
+        display: none;
+    }
+
+    /* Content */
+    .content-bg {
+        position: relative;
+        background-image: url("Images/indexbg/content.svg");
+        background-repeat: no-repeat;
+        background-position: left 10vh;
+        padding-bottom: 100px;
+    }
 }
-
-/* Images */
-.chat-bubble-image {
-    width: 80%;
-}
-
-/* Buttons */
-.btn {
-    position: relative;
-    display: inline-block;
-    padding: 0.75rem 4rem;
-    font-size: 1rem;
-    font-weight: 800;
-    color: white;
-    background-color: #007ac3;
-    border: none;
-    border-radius: 5rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #00649e;
-    text-decoration: none !important;
-    color: white;
-}
-
-/* Header */
-/* Header background image */
-.header-bg {
-    background-image: url("Images/header.webp");
-    background-size: cover;
-    height: 100vh;
-    padding-top: 50vh;
-}
-
-/* Gradient overlay on header image */
-.header-bg::before {
-    content: "";
-    position: absolute;
-    top: 45vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-        to right,
-
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.1)
-    );
-    z-index: 0;
-}
-
-/* Spacing for social media icons on header */
-.index-header-social-group {
-    display: block;
-    width: 100%;
-}
-
-.index-header-social {
-    position: relative;
-    width: 36px;
-    margin-left: 0px;
-    margin-right: 24px;
-}
-
-/* About */
-.about-bg {
-    position: relative;
-    background-image: url("Images/indexbg/about.svg");
-    background-repeat: no-repeat;
-    background-position: right -50vh;
-}
-
-/* Opportunities */
-.opportunities-bg {
-    position: relative;
-    background-image: url("Images/indexbg/opportunities.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 10vw;
-}
-
-/* News */
-.news-bg {
-    position: relative;
-    background-image: url("Images/indexbg/news.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: calc(100% - 10vw);
-}
-
-/* Events */
-.event-img {
-    position: absolute;
-    width: 70%; /* Adjust based on your needs */
-    aspect-ratio: 1/1;
-    border-radius: 50%; /* Creates the circular frame */
-    object-fit: cover; /* Ensures the image covers the frame without distortion */
-    display: flex;
-    overflow: hidden; /* Ensures no part of the image spills outside the circular frame */
-    border: 0.6vh solid #f8a918;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-}
-
-.event-img-frame {
-    width: 100%;
-    height: auto; /* Maintains the aspect ratio */
-    display: block; /* Removes any extra space below the image */
-    z-index: 1;
-}
-
-.event-img-frame-mobile {
-    display: none;
-}
-
-/* Content */
-.content-bg {
-    position: relative;
-    background-image: url("Images/indexbg/content.svg");
-    background-repeat: no-repeat;
-    background-position: left 10vh;
-    padding-bottom: 100px;
-}
-
 /* Footer */
 
 /* ///////////////////////////////////// */
