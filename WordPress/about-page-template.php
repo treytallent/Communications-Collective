@@ -122,7 +122,7 @@ Template Name: About
                                 <p class="m-0">Marketing Officer</p>
                                 <p class="m-0">Cockburn ARC</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/k_lambert.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/k_lambert.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span>Through
@@ -144,7 +144,7 @@ Template Name: About
                                 </p>
                                 <p class="m-0">Rio Tinto Iron Ore</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_brady.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_brady.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-yellow">"</span>The
@@ -161,7 +161,7 @@ Template Name: About
                                 <p class="m-0">Senior Consultant</p>
                                 <p class="m-0">Cannings Purple</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_mclean.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_mclean.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-pink">"</span> This course
@@ -182,7 +182,7 @@ Template Name: About
                                 <p class="m-0">Digital Communications Officer</p>
                                 <p class="m-0">Public Transport Authority</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_afzaal.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_afzaal.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span> The
@@ -203,7 +203,7 @@ Template Name: About
                                 </p>
                                 <p class="m-0">Murdoch University</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_dawson.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_dawson.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-yellow">"</span>From
@@ -230,7 +230,7 @@ Template Name: About
                                     West Australian Newspaper at Seven West Media
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/a_deceglie.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/a_deceglie.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-pink">"</span> We are
@@ -252,7 +252,7 @@ Template Name: About
                                     British GQ, Vogue, Conde Nast Publications
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_holley.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_holley.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span> The
@@ -279,7 +279,7 @@ Template Name: About
                                     The West Australian and PerthNow
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_conway.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_conway.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-yellow">"</span>
@@ -297,7 +297,7 @@ Template Name: About
                                 <h3 class="sm-heading m-0">Rachel Ingram</h3>
                                 <p class="m-0">Retail Manager</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/r_ingram.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/r_ingram.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-pink">"</span> The Global
@@ -317,7 +317,7 @@ Template Name: About
                                 <p class="m-0">Digital Experience Designer</p>
                                 <p class="m-0">Murdoch University</p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/j_threfall.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/j_threfall.webp" alt="Portrait" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span> The web
