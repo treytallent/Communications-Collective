@@ -69,7 +69,13 @@
             ?>
 
         </nav>
-        <section class="container-fluid small-header-bg mt-0">
+        <section class="container-fluid small-header-bg mt-0" style="background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+         ),
+         url(<?php echo get_field('smallheaderbg'); ?>)">
+
             <div class="container">
                 <div class="row">
                     <div class="col-12 align-content-end pb-4 text-white">

@@ -271,12 +271,6 @@ h3,
 /**********************/
 
 .small-header-bg {
-   background-image: linear-gradient(
-         to right,
-         rgba(0, 0, 0, 0.6),
-         rgba(0, 0, 0, 0.1)
-      ),
-      url("Images/header.webp");
    background-size: cover;
    /* min-height: 33vh; */
    /* Large space Class = 90px (column gutter × 3)*/
