@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contents with pag
+Template Name: Study with pag
 */
 ?>
 
@@ -46,7 +46,7 @@ Template Name: Contents with pag
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'posts_per_page' => 9,
-    'category_name' => 'content', // The slug of the category
+    'category_name' => 'study', // The slug of the category
     'paged' => $paged
 );
 $query = new WP_Query($args);
@@ -69,10 +69,7 @@ if ($query->have_posts()) :
                 <?php if (has_post_thumbnail()) : ?>
                     <img class="card-img-top" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
                 <?php endif; ?>
-                <?php if ($category_slug && $category_link) : ?>
-               <a href="<?php echo $category_link; ?>" class="content-btn btn-fluid <?php echo $category_slug ? 'category-link' : ''; ?>">
-                    <?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a>
-                    <?php endif; ?>
+   
                 <div class="card-body">
                     <p class="content-author"><?php echo get_the_author(); ?></p>
                     <h5 class="article-title"><?php the_title(); ?></h5>

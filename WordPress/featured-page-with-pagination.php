@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contents with pag
+Template Name: featured with pag
 */
 ?>
 
@@ -46,7 +46,7 @@ Template Name: Contents with pag
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'posts_per_page' => 9,
-    'category_name' => 'content', // The slug of the category
+    'category_name' => 'featured', // The slug of the category
     'paged' => $paged
 );
 $query = new WP_Query($args);

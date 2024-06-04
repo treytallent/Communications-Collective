@@ -1,6 +1,6 @@
 <?php
     /*
-    Template Name: BlOG
+    Template Name: Blogs
     */
     ?>
 <?php require_once('page_header.php'); ?>

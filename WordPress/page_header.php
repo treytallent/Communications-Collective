@@ -38,17 +38,14 @@
     </title>
 </head>
 
-<header class="container-fluid smallpage-bg">   <!-- div for the main image the stretches to the edge of the page- -->
-
-
 <body>
     <header>
         <!-- Bootstrap Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="navbar-brand-container">
-                <a class="navbar-brand navbar-brand-title" href="/index.html"><img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/ccmu_logo.svg" alt="Communication Collective at Murdoch University Logo" /></a>
+                <a class="navbar-brand navbar-brand-title" href="http://170.187.231.66/~mesh20/sub/home/"><img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/ccmu_logo.svg" alt="Communication Collective at Murdoch University Logo" /></a>
                 <p class="navbar-brand-title">
-
+                the communication collective at murdoch university
                 </p>
             </div>
             <!-- Toggler/collapsibe Button -->
@@ -70,11 +67,18 @@
             ));
 
             ?>
-<div class="container smallpage-tag"><!-- div that holds the content in the middle of the page-->
-        <h1 class="smallpage-title"> Content</h1>
-              </div><!-- container-->
-
 
         </nav>
+        <section class="container-fluid small-content-header-bg small-content-header-bg-gradient mt-0" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 align-content-end pb-4 text-white">
+             <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
+            <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
+            <h4 class="authorname"><?php the_field("content-header-author"); ?></h4>
+                    </div>
+                </div>
+            </div>
+        </section>
         <?php wp_head(); ?>
     </header>

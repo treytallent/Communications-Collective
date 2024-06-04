@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contents with pag
+Template Name: Recommendation with pag
 */
 ?>
 
@@ -23,7 +23,7 @@ Template Name: Contents with pag
         <button class="dropdown content-dropdown">
                         <a
                            class="nav-link dropdown-toggle text-white"
-                           href="http://170.187.231.66/~mesh20/sub/content1/"
+                           href="#http://170.187.231.66/~mesh20/sub/content1/"
                            id="navbarDropdownMenuLink"
                            data-toggle="dropdown"
                            aria-haspopup="true"
@@ -46,7 +46,7 @@ Template Name: Contents with pag
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'posts_per_page' => 9,
-    'category_name' => 'content', // The slug of the category
+    'category_name' => 'recommendation', // The slug of the category
     'paged' => $paged
 );
 $query = new WP_Query($args);

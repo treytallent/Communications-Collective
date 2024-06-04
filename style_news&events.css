@@ -2,7 +2,6 @@
 .pink {
   color: #d91853;
 }
-
 .orange1 {
   color: #eb5120;
 }
@@ -20,55 +19,36 @@
 }
 
 /* button */
-.button {
-  width: 9.125rem;
-  height: 2.1875rem;
-  border-radius: 1.25rem;
-  align-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.btn-primary {
-  color: #ffffff;
-  background-color: #007ac3;
-  border-color: #007ac3;
-}
-
-.btn-primary:hover {
-  color: #ffffff;
-  background-color: #006eb0;
-  border-color: #006eb0;
-}
-
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 122, 195, 0.5);
-}
-
-.btn-primary.disabled,
-.btn-primary:disabled,
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-  color: #ffffff;
-  background-color: #007ac3;
-  border-color: #006eb0;
-}
-
 .readmore {
   color: #007ac3;
 }
 
+/* images */
+/* .image-height {
+  height: 100%;
+} */
+
 /* header */
+
+.btn-header {
+  position: relative;
+  display: inline-block; /* Allows the button to shrink-wrap its content */
+  margin-top: 20px;
+  padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+  background-color: #007ac3; /* Example button color, change as needed */
+  color: white; /* Text color */
+  border: none; /* Removes the default border */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  text-align: center; /* Centers the text inside the button */
+  text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+  border-radius: 500px; /* High border-radius value to create the pill shape */
+  z-index: 10;
+}
+
 .header-events-title {
   position: relative;
   color: white;
+  margin-top: 2rem;
   margin-bottom: 0.625rem;
   z-index: 5;
 }
@@ -76,13 +56,22 @@
 .header-news-title {
   position: relative;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
   z-index: 5;
 }
 
 .header-intro {
   position: relative;
   color: white;
+  margin-bottom: 0;
+  z-index: 2;
+}
+
+.news-header-intro {
+  position: relative;
+  color: white;
+  margin-top: 0.5rem;
   margin-bottom: 0;
   z-index: 2;
 }
@@ -104,6 +93,7 @@
 .header-news-date {
   position: relative;
   color: white;
+  margin-top: 1.25rem;
   margin-bottom: 0px;
   z-index: 5;
 }
