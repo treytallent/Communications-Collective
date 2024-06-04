@@ -13,9 +13,9 @@
                 <?php the_field('title_tagline'); ?>
                 </p>
                 <div class="index-header-social-group">
-                    <a href="#"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/instagram_white.svg" alt="Instagram icon link to Instagram account" /></a>
-                    <a href="#"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/facebook_white.svg" alt="Facebook icon link to Facebook account" /></a>
-                    <a href="#"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/linkedin_white.svg" alt="LinkedIn icon link to LinkedIn account" /></a>
+                    <a href="https://www.instagram.com/comm.collective/"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/instagram_white.svg" alt="Instagram icon link to Instagram account" /></a>
+                    <a href="https://www.facebook.com/commcollective"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/facebook_white.svg" alt="Facebook icon link to Facebook account" /></a>
+                    <a href="https://www.linkedin.com/groups/10440200/"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/linkedin_white.svg" alt="LinkedIn icon link to LinkedIn account" /></a>
                 </div>
             </div>
             <a class="btn row my-5">Learn More</a>

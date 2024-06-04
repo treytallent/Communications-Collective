@@ -29,7 +29,7 @@ button.navbar-toggler {
 
 /* ///////////////////////////////////// */
 /* Screen Size > 767px */
-@media only screen and (min-width: 767.98px) {
+@media only screen and (min-width: 577.98px) {
     /* ///////////////////////////////////// */
 
     /* Typography */
@@ -167,37 +167,6 @@ button.navbar-toggler {
 }
 /* Footer */
 
-/* ///////////////////////////////////// */
-/* 575px < Screen Size (576-767) < 768px */
-@media only screen and (max-width: 767.98px) /* and (min-width: 575.98px) */ {
-    /* ///////////////////////////////////// */
-
-    /* Navbar */
-
-    /* Typography */
-
-    /* Buttons */
-
-    /* Header */
-
-    /* About */
-
-    /* Opportunities */
-
-    /* News */
-
-    /* Events */
-
-    /* Content */
-    .content-bg {
-        position: relative;
-        background-image: url("Images/indexbg/content.svg");
-        background-repeat: no-repeat;
-        background-position: right 10vh;
-        padding-bottom: 100px;
-    }
-    /* Footer */
-}
 /* ///////////////////////////////////// */
 /* Screen Size < 576px */
 @media only screen and (max-width: 577.98px) {
