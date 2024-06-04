@@ -9,7 +9,7 @@ Template Name: About
     <div class="row">
         <div class="col-md-10 offset-md-1">
             <!-- History of the Communication Collective -->
-            <section class="row">
+            <section class="row body-section">
                 <div class="col-md-6 order-1">
                     <h2 class="H2-text mb-sm">
                         <?php the_field("section_1_title"); ?>
@@ -24,7 +24,7 @@ Template Name: About
             </section>
 
             <!-- What We Do -->
-            <section>
+            <section class="body-section">
                 <div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
                         <h2 class="H2-text mb-sm"><?php the_field("section_2_title"); ?></h2>
@@ -82,7 +82,7 @@ Template Name: About
             </section>
 
             <!-- Student Carousel -->
-            <section>
+            <section class="body-section">
                 <div class="row flex-column ml-0 mb-md">
                     <h2 class="H2-text mb-sm"> <?php the_field("section_3_title"); ?></h2>
                     <p class="H3-text">
@@ -336,7 +336,7 @@ Template Name: About
             </section>
 
             <!-- Learn More -->
-            <section class="row mb-lg">
+            <section class="row mb-lg body-section">
                 <div class="col-md-6 order-1">
                     <h2 class="H2-text mb-sm"><?php the_field("section_4_title"); ?></h2>
                     <p class="mb-sm">
