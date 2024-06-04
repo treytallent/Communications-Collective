@@ -34,12 +34,12 @@ $the_query = new WP_Query( $args ); ?>
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <div class="thepost">
-<div class="row section1-row">
+<div class="d-flex section1-row">
 <div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img">
 <!-- <img class="arrow-effect-image image-border-pink"  -->
 <?php
                 if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink image-height'));
+                    the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink'));
                 } ?>
                   </div>
                   <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
@@ -91,15 +91,13 @@ $the_query = new WP_Query( $args ); ?>
           <div class="col-md-6 col-sm-12 article-padding">
           <p class="article-date subheader3-text"><?php the_field("date"); ?></p>
             <h4 class="article-title yellow"><?php the_title(); ?></h4>
-            <div class="row">
-              <div class="col-md-4 col-sm-4 col-4">
-                <div class="center arrow-container-right-yellow img">
+            <div class="d-flex">
+              <div class="col-md-4 col-sm-4 col-4 center arrow-container-right-yellow img">
                   <?php
                   if ( has_post_thumbnail() ) { 
-                      the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-yellow image-height'));
+                      the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-yellow'));
                   } ?>
                 </div>
-              </div>
               <div class="col-md-8 col-sm-8 col-8 v-center">
                 <p class="date subheader3-text"><?php the_field("author_name"); ?></p>
                 <p class="article-p body-text"><?php the_excerpt(); ?></p>
