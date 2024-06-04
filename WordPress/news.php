@@ -27,28 +27,32 @@ $args = array(
 // the query
 $the_query = new WP_Query( $args ); ?>
  
- <?php if ( $the_query->have_posts() ) : ?>
+<?php if ( $the_query->have_posts() ) : ?>
+ 
     <!-- pagination here -->
+ 
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <div class="thepost">
-            <div class="d-flex section1-row">
-                <div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img">
-                    <?php
-                    if ( has_post_thumbnail() ) { 
-                        the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink'));
-                    } ?>
-                </div>
-                <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
-                    <p class="date subheader2-text"><?php the_field("date"); ?></p>
-                    <h3 class= "news-title pink"><?php the_title(); ?></h3> 
-                    <p class="date subheader3-text"><?php the_field("author_name"); ?></p>
-                    <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
-                    <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
-                </div>
-            </div>
-        </div>
-    <?php endwhile; ?>
+<div class="thepost">
+<div class="d-flex section1-row">
+<div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img">
+<!-- <img class="arrow-effect-image image-border-pink"  -->
+<?php
+                if ( has_post_thumbnail() ) { 
+                    the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink'));
+                } ?>
+                  </div>
+                  <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
+                  <p class="date subheader2-text"><?php the_field("date"); ?></p>
+
+                  <h3 class= "news-title pink"><?php the_title(); ?></h3> 
+                  <p class="date subheader3-text"><?php the_field("author_name"); ?></p>
+                  <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
+
+                  <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
+    <!-- <a class="readmore" href="<?php the_permalink(); ?>"> CONTINUE READING</a> -->
+</div>
+</div>    <?php endwhile; ?>
     <!-- end of the loop -->
  
     <!-- pagination here -->
