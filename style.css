@@ -270,9 +270,6 @@ h4 {
 
 .small-header-bg {
   background-size: cover;
-  /* min-height: 33vh; */
-  /* Large space Class = 90px (column gutter × 3)*/
-  margin-bottom: 5.625rem;
 }
 
 .small-header-bg div {

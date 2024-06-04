@@ -5,16 +5,16 @@ Template Name: About
 ?>
 
 <?php require_once('small-header.php'); ?>
-<main class="about-main container">
+<main class="container">
     <div class="row">
         <div class="col-md-10 offset-md-1">
             <!-- History of the Communication Collective -->
-            <section class="row body-section">
+            <section class="row mt-5 mb-5">
                 <div class="col-md-6 order-1">
-                    <h2 class="H2-text mb-sm">
+                    <h2 class="H2-text mb-3">
                         <?php the_field("section_1_title"); ?>
                     </h2>
-                    <p class="mb-sm">
+                    <p class="mb-3">
                         <?php the_field("section_1_paragraph"); ?>
                     </p>
                 </div>
@@ -24,27 +24,27 @@ Template Name: About
             </section>
 
             <!-- What We Do -->
-            <section class="body-section">
+            <section class="mt-5 mb-5">
                 <div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
-                        <h2 class="H2-text mb-sm"><?php the_field("section_2_title"); ?></h2>
-                        <p class="H3-text mb-md"><?php the_field("section_2_subheading"); ?></p>
-                        <p class="mb-md">
+                        <h2 class="mb-0"><?php the_field("section_2_title"); ?></h2>
+                        <p class="H3-text mb-3"><?php the_field("section_2_subheading"); ?></p>
+                        <p class="mb-3">
                             <?php the_field("section_2_paragraph"); ?>
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <!-- About Card -->
-                    <div class="col-md-6 mb-md">
+                    <div class="col-md-6 mb-3">
                         <div class="card card-pink d-flex flex-column">
-                            <h3 class="H3-text m-0 order-1 p-sm py-0">
+                            <h3 class="H3-text m-0 order-1 px-3">
                                 Valuing Children Initiative
                             </h3>
-                            <h4 class="subheader2-text order-2 p-sm py-0 mb-sm">
+                            <h4 class="subheader2-text order-2 px-3 py-0 my-0">
                                 Strategic Communications
                             </h4>
-                            <p class="order-3 p-sm py-0">
+                            <p class="order-3 p-3 py-0 my-0">
                                 The COM307 work-integrated learning unit was
                                 tasked with a project for the Valuing Children
                                 Initiative. The brief was to change the way West
@@ -58,15 +58,15 @@ Template Name: About
                         </div>
                     </div>
                     <!-- About Card -->
-                    <div class="col-md-6 mb-md">
+                    <div class="col-md-6 mb-3">
                         <div class="card-orange d-flex flex-column">
-                            <h3 class="H3-text m-0 order-1 p-sm py-0">
+                            <h3 class="H3-text m-0 order-1 px-3">
                                 Murdoch Sports
                             </h3>
-                            <h4 class="subheader2-text order-2 mb-sm p-sm py-0">
+                            <h4 class="subheader2-text order-2 px-3 py-0 my-0">
                                 Strategic Communications
                             </h4>
-                            <p class="order-3 p-sm py-0">
+                            <p class="order-3 p-3 py-0 my-0">
                                 As part of the work-integrated learning unit,
                                 COM307, students were asked to develop a campaign
                                 for the client Murdoch Sports. The brief was to
@@ -82,9 +82,9 @@ Template Name: About
             </section>
 
             <!-- Student Carousel -->
-            <section class="body-section">
-                <div class="row flex-column ml-0 mb-md">
-                    <h2 class="H2-text mb-sm"> <?php the_field("section_3_title"); ?></h2>
+            <section class="mb-5 mt-5">
+                <div class="row flex-column ml-0 mb-3">
+                    <h2 class="H2-text mb-0"> <?php the_field("section_3_title"); ?></h2>
                     <p class="H3-text">
                         <?php the_field("section_3_subheading"); ?>
                     </p>
@@ -92,7 +92,7 @@ Template Name: About
                 <!-- Testimonial Carousel -->
                 <div class="row flex-nowrap overflow-auto snap-scroll ml-0">
                     <!-- Testimonial Card 1 -->
-                    <div class="card card-pink col-8 col-md-5 p-sm">
+                    <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Georgia Earnshaw</h3>
@@ -101,9 +101,9 @@ Template Name: About
                                     Department of the Premier and Cabinet
                                 </p>
                             </div>
-                            <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/g_earnshaw.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/g_earnshaw.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-pink">"</span>I had the
                             opportunity to work with real clients right from the
                             start of this strategic communications course, which
@@ -115,7 +115,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 2 -->
-                    <div class="card card-orange col-8 col-md-5 p-sm">
+                    <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Keely Lambert</h3>
@@ -124,7 +124,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/k_lambert.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span>Through
                             incredibly supportive lecturers and academics, I was
                             equipped with the skills and confidence to take on
@@ -135,7 +135,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 3 -->
-                    <div class="card card-yellow col-8 col-md-5 p-sm">
+                    <div class="card card-yellow col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Lynsey Brady</h3>
@@ -146,7 +146,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_brady.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-yellow">"</span>The
                             strategic communications program provided me with the
                             practical skills and knowledge to confidently kick
@@ -154,7 +154,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 4 -->
-                    <div class="card card-pink col-8 col-md-5 p-sm">
+                    <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Laura McLean</h3>
@@ -163,7 +163,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_mclean.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-pink">"</span> This course
                             laid the perfect foundations for my career in
                             communications. The opportunity to understand the
@@ -175,7 +175,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 5 -->
-                    <div class="card card-orange col-8 col-md-5 p-sm">
+                    <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Sameera Afzaal</h3>
@@ -184,7 +184,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_afzaal.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span> The
                             strategic communications course provided relevant
                             foundations for tactical decision-making in the
@@ -194,7 +194,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 6 -->
-                    <div class="card card-yellow col-8 col-md-5 p-sm">
+                    <div class="card card-yellow col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Stephanie Dawson</h3>
@@ -205,7 +205,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_dawson.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-yellow">"</span>From
                             practical assessments to real-world clients to
                             internships, the strategic communications course
@@ -221,7 +221,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 7 -->
-                    <div class="card card-pink col-8 col-md-5 p-sm">
+                    <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Anthony Deceglie</h3>
@@ -232,7 +232,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/a_deceglie.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-pink">"</span> We are
                             really proud of the students that have come from
                             Murdoch University and they have quickly risen up the
@@ -243,7 +243,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 8 -->
-                    <div class="card card-orange col-8 col-md-5 p-sm">
+                    <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Eamon Holley</h3>
@@ -254,7 +254,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_holley.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span> The
                             Strategic Communications course provided the ability
                             to develop skills and the critical insights necessary
@@ -268,7 +268,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 9 -->
-                    <div class="card card-yellow col-8 col-md-5 p-sm">
+                    <div class="card card-yellow col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">
@@ -281,7 +281,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_conway.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-yellow">"</span>
                             Journalism as a career was one of the best moves I
                             ever made. If you are going to study journalism at
@@ -291,7 +291,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 10 -->
-                    <div class="card card-pink col-8 col-md-5 p-sm">
+                    <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">Rachel Ingram</h3>
@@ -299,7 +299,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/r_ingram.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-pink">"</span> The Global
                             Media and Communication course gave me an
                             understanding of audience behaviours, including how
@@ -310,7 +310,7 @@ Template Name: About
                         </p>
                     </div>
                     <!-- Testimonial Card 11 -->
-                    <div class="card card-orange col-8 col-md-5 p-sm">
+                    <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">James Threlfall</h3>
@@ -319,7 +319,7 @@ Template Name: About
                             </div>
                             <img class="order-0 mr-md align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/j_threfall.webp" alt="Portrait" />
                         </div>
-                        <p class="order-0 mb-md mt-auto">
+                        <p class="order-0 mb-3 mt-auto">
                             <span class="H3-text quote-orange">"</span> The web
                             communications major and its varied units gave me a
                             dynamic foundation applicable to many business areas.
@@ -336,10 +336,10 @@ Template Name: About
             </section>
 
             <!-- Learn More -->
-            <section class="row mb-lg body-section">
+            <section class="row mb-5 mt-5">
                 <div class="col-md-6 order-1">
-                    <h2 class="H2-text mb-sm"><?php the_field("section_4_title"); ?></h2>
-                    <p class="mb-sm">
+                    <h2 class="H2-text mb-2"><?php the_field("section_4_title"); ?></h2>
+                    <p class="mb-2">
                         <?php the_field("section_4_paragraph"); ?>
                     </p>
                     <a href="https://www.murdoch.edu.au/course/undergraduate/b1342" class="btn btn-sm mt-0 px-3">Explore your future</a>

@@ -5,21 +5,21 @@ Template Name: Opportunities
 ?>
 <?php require_once('small-header.php'); ?>
 
-<main class="about-main container">
+<main class="about-main container mt-5">
     <div class="row">
         <div class="col-md-10 offset-md-1">
             <!-- Available Opportunities -->
 
-            <section class="row">
+            <section class="row mt-5 mb-5">
                 <div class="col-md-6 order-1">
-                    <h2 class="H2-text mb-sm"><?php the_field("section_1_title"); ?></h2>
-                    <p class="mb-sm">
+                    <h2 class="H2-text mb-3"><?php the_field("section_1_title"); ?></h2>
+                    <p class="mb-3">
                         <?php the_field("section_1_paragraph"); ?>
 
                     </p>
                     <div class="d-flex justify-content-center">
-                        <a href="https://www.facebook.com/" class="btn px-3 mt-0 btn-sm mr-md">Facebook</a>
-                        <a href="https://www.instagram.com/comm.collective" class="btn px-3 mt-0 btn-sm mr-md">Instagram</a>
+                        <a href="https://www.facebook.com/" class="btn px-3 mt-0 btn-sm mr-3">Facebook</a>
+                        <a href="https://www.instagram.com/comm.collective" class="btn px-3 mt-0 btn-sm mr-3">Instagram</a>
                     </div>
                 </div>
 
@@ -29,32 +29,32 @@ Template Name: Opportunities
             </section>
 
             <!-- What We Do -->
-            <section>
+            <section class="mb-5 mt-5">
                 <div class="row">
                     <div class="col-md-6 offset-md-3 text-center spacing-md">
-                        <h2 class="mb-sm"><?php the_field("section_2_title"); ?></h2>
-                        <h3 class="mb-md"><?php the_field("section_2_subheading"); ?></h3>
-                        <p class="mb-md">
+                        <h2 class="my-0"><?php the_field("section_2_title"); ?></h2>
+                        <h3 class="mb-3"><?php the_field("section_2_subheading"); ?></h3>
+                        <p >
                             <?php the_field("section_2_paragraph"); ?>
                         </p>
                     </div>
                 </div>
                 <div class="row offset-md-1">
                     <!-- Opportunities Card 1 -->
-                    <div class="card card-pink p-0 col-10 col-lg-5 mb-md">
+                    <div class="card card-pink p-0 col-10 col-lg-5 mb-3">
                         <div class="order-1 d-flex mt-auto">
-                            <div class="p-sm pr-0">
+                            <div class="p-3 pr-0">
                                 <h3 class="subheader1-text m-0">Elli Swanson</h3>
                                 <p class="sm-heading m-0">
                                     BCW Global Copywriter
                                 </p>
                                 <p class="m-0">Strategic Communication</p>
                             </div>
-                            <a href="https://elliswanson.wixsite.com/portfolio" class="p-sm mt-auto ml-auto accent-link">See More</a>
+                            <a href="https://elliswanson.wixsite.com/portfolio" class="p-3 mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_3.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
-                            <p class="order-0 mb-md mt-auto p-sm">
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_3.webp" alt="#" class="ar-1 object-fit-cover mb-2 pos-top w-100 p-0 br-sm" />
+                            <p class="order-0 mb-3 mt-auto p-3">
                                 <span class="H3-text quote-pink">"</span>Working
                                 on behalf of MESH Consultancy, I landed the
                                 opportunity to intern for BCW - Global as a
@@ -69,9 +69,9 @@ Template Name: Opportunities
                     </div>
 
                     <!-- Opportunities Card 2 -->
-                    <div class="card card-orange p-0 col-10 col-lg-5 mb-md">
+                    <div class="card card-orange p-0 col-10 col-lg-5 mb-3">
                         <div class="order-1 d-flex mt-auto">
-                            <div class="p-sm pr-0">
+                            <div class="p-3 pr-0">
                                 <h3 class="subheader1-text m-0">
                                     Junita Nathania
                                 </h3>
@@ -83,11 +83,11 @@ Template Name: Opportunities
                                     Communication
                                 </p>
                             </div>
-                            <a href="https://www.linkedin.com/in/junita-nathania/" class="p-sm mt-auto ml-auto accent-link">See More</a>
+                            <a href="https://www.linkedin.com/in/junita-nathania/" class="p-3 mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_4.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
-                            <p class="order-0 mb-md mt-auto p-sm">
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_4.webp" alt="#" class="ar-1 object-fit-cover mb-2 pos-top w-100 p-0 br-sm" />
+                            <p class="order-0 mb-3 mt-auto p-3">
                                 <span class="H3-text quote-orange">"</span>
                                 Collaborating with MESH Consultancy. and Perth
                                 Blood Institute, I've developed two online survey
@@ -103,9 +103,9 @@ Template Name: Opportunities
                     </div>
 
                     <!-- Opportunities Card 3 -->
-                    <div class="card card-yellow p-0 col-10 col-lg-5 mb-md">
+                    <div class="card card-yellow p-0 col-10 col-lg-5 mb-3">
                         <div class="order-1 d-flex mt-auto">
-                            <div class="p-sm pr-0">
+                            <div class="p-3 pr-0">
                                 <h3 class="subheader1-text m-0">
                                     Britney Coulson
                                 </h3>
@@ -114,11 +114,11 @@ Template Name: Opportunities
                                     Journalism & Global Politics and Party
                                 </p>
                             </div>
-                            <a href="https://www.linkedin.com/in/britney-coulson-79b4161a0/" class="p-sm mt-auto ml-auto accent-link">See More</a>
+                            <a href="https://www.linkedin.com/in/britney-coulson-79b4161a0/" class="p-3 mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_5.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-top w-100 p-0 br-sm" />
-                            <p class="order-0 mb-md mt-auto p-sm">
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_5.webp" alt="#" class="ar-1 object-fit-cover mb-2 pos-top w-100 p-0 br-sm" />
+                            <p class="order-0 mb-3 mt-auto p-3">
                                 <span class="H3-text quote-yellow">"</span>
                                 Britney worked as a writer for The West Australian
                                 as an Intern and scored a full-page spread in The
@@ -131,20 +131,20 @@ Template Name: Opportunities
                     </div>
 
                     <!-- Opportunities Card 4 -->
-                    <div class="card card-pink p-0 col-10 col-lg-5 mb-md">
+                    <div class="card card-pink p-0 col-10 col-lg-5 mb-3">
                         <div class="order-1 d-flex mt-auto">
-                            <div class="p-sm pr-0">
+                            <div class="p-3 pr-0">
                                 <h3 class="subheader1-text m-0">
                                     Jaspreet Sidhu
                                 </h3>
                                 <p class="sm-heading m-0">Radio Fremantle</p>
                                 <p class="m-0">Journalism</p>
                             </div>
-                            <a href="https://www.linkedin.com/in/jaspreet-sidhu-b78718193/" class="p-sm mt-auto accent-link">See More</a>
+                            <a href="https://www.linkedin.com/in/jaspreet-sidhu-b78718193/" class="p-3 mt-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
-                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_6.webp" alt="#" class="ar-1 object-fit-cover mb-sm pos-right w-100 p-0 br-sm" />
-                            <p class="order-0 mb-md mt-auto p-sm">
+                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/opportunities_6.webp" alt="#" class="ar-1 object-fit-cover mb-2 pos-right w-100 p-0 br-sm" />
+                            <p class="order-0 mb-3 mt-auto p-3">
                                 <span class="H3-text quote-pink">"</span>
                                 Murdoch Radio's long standing relationship with
                                 Radio Fremantle allowed Jaspreet to develop and
@@ -159,33 +159,33 @@ Template Name: Opportunities
             </section>
 
             <!-- Career Paths -->
-            <section>
-                <div class="row flex-column ml-0 mb-md">
-                    <h2 class="mb-sm"><?php the_field("section_3_title"); ?></h2>
+            <section class="mt-5 mb-5">
+                <div class="row flex-column ml-0 mb-3">
+                    <h2><?php the_field("section_3_title"); ?></h2>
                     <h3><?php the_field("section_3_paragraph"); ?></h3>
                 </div>
                 <!-- Carousel -->
                 <div class="row flex-nowrap overflow-auto snap-scroll ml-0">
                     <!-- Career Card 1 -->
                     <div class="card card-pink col-8 col-md-5 border-0 p-0">
-                        <h3 class="subheader1-text mb-sm order-1 p-sm py-0 mb-0">
+                        <h3 class="subheader1-text order-1 p-3 py-0 mb-0">
                             Journalism
                         </h3>
-                        <p class="order-2 p-sm mb-0">
+                        <p class="order-2 px-3 pb-3 mb-0">
                             Through rigorous training and newsroom simulation
                             students hone critical thinking, communication,
                             research, media law and digital skills that open a
                             world of opportunity both in the media industry and
                             beyond.
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/journalism.webp" alt="Career" />
+                        <img class="order-0 about-project-img br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/journalism.webp" alt="Career" />
                     </div>
                     <!-- Career Card 2 -->
                     <div class="card card-orange col-8 col-md-5 border-0 p-0">
-                        <h3 class="subheader1-text mb-sm order-1 p-sm py-0 mb-0">
+                        <h3 class="subheader1-text mb-2 order-1 p-3 py-0 mb-0">
                             Strategic Communication
                         </h3>
-                        <p class="order-2 p-sm mb-0">
+                        <p class="order-2 px-3 pb-3 mb-0">
                             The Bachelor of Communication in Strategic
                             Communication prepares students for a career
                             developing, managing, and implementing communication
@@ -193,26 +193,26 @@ Template Name: Opportunities
                             industries. It is accredited by Public Relations
                             Institute of Australia (PRIA).
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/stratcom.webp" alt="Career" />
+                        <img class="order-0 about-project-img  br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/stratcom.webp" alt="Career" />
                     </div>
                     <!-- Career Card 3 -->
                     <div class="card card-yellow col-8 col-md-5 border-0 p-0">
-                        <h3 class="subheader1-text mb-sm order-1 p-sm py-0 mb-0">
+                        <h3 class="subheader1-text mb-2 order-1 p-3 py-0 mb-0">
                             Web Communication
                         </h3>
-                        <p class="order-2 p-sm mb-0">
+                        <p class="order-2 px-3 pb-3 mb-0">
                             The Bachelor of Communication in Web Communication
                             combines an exciting mix of web design, digital
                             marketing, and public relations.
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/webcom.webp" alt="Career" />
+                        <img class="order-0 about-project-img  br-sm career-img" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/webcom.webp" alt="Career" />
                     </div>
                     <!-- Career Card 4 -->
                     <div class="card card-pink col-8 col-md-5 border-0 p-0">
-                        <h3 class="subheader1-text mb-sm order-1 p-sm py-0 mb-0">
+                        <h3 class="subheader1-text  order-1 p-3 py-0 mb-0">
                             Master of Communication
                         </h3>
-                        <p class="order-2 p-sm mb-0">
+                        <p class="order-2 px-3 pb-3 mb-0">
                             Gain comprehensive knowledge, practical skills, and
                             industry exposure in the field of communication. With
                             its commitment to excellence, industry engagement,
@@ -221,17 +221,17 @@ Template Name: Opportunities
                             rewarding and successful career in the dynamic world
                             of communication.
                         </p>
-                        <img class="order-0 about-project-img mb-sm br-sm career-img pos-left" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/mcom.webp" alt="Career" />
+                        <img class="order-0 about-project-img  br-sm career-img pos-left" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Careers/mcom.webp" alt="Career" />
                     </div>
                     <!-- End of carousel -->
                 </div>
             </section>
 
             <!-- Join The Collective -->
-            <section class="row mb-lg">
+            <section class="row mb-5 mt-5">
                 <div class="col-md-6 order-1">
-                    <h2 class="H2-text mb-sm"><?php the_field("section_4_title"); ?></h2>
-                    <p class="mb-sm">
+                    <h2 class="H2-text mb-2"><?php the_field("section_4_title"); ?></h2>
+                    <p class="mb-2">
                         <?php the_field("section_4_paragraph"); ?>
                     </p>
                 </div>
