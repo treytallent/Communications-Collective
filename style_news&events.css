@@ -31,9 +31,26 @@
 /* header */
 
 .btn-header {
+  /* for post */
   position: relative;
   top: -100px;
   display: inline-block; /* Allows the button to shrink-wrap its content */
+  padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+  background-color: #007ac3; /* Example button color, change as needed */
+  color: white; /* Text color */
+  border: none; /* Removes the default border */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  text-align: center; /* Centers the text inside the button */
+  text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+  border-radius: 500px; /* High border-radius value to create the pill shape */
+  z-index: 10;
+}
+
+.btn-header-news-events {
+  /* for page */
+  position: relative;
+  display: inline-block; /* Allows the button to shrink-wrap its content */
+  margin-top: 20px;
   padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
   background-color: #007ac3; /* Example button color, change as needed */
   color: white; /* Text color */
@@ -233,7 +250,7 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   object-fit: cover;
-  border: 0.6vh solid #f8c718;
+  border: 0.6vh solid #f8a918;
   position: relative;
   z-index: 2;
 }

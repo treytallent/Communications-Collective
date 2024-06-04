@@ -3,16 +3,7 @@
 Template Name: News
 */
 ?>
-<?php get_header(); ?>
-<div class="container-fluid header-bg" style="background-size: cover; background-image: url(<?php the_field("news_background_image"); ?>;">
-        <div class="container">
-            <a class="btn-header body-text" href="<?php the_field("news-link"); ?>">News</a>
-            <h2 class="header-news-title"><?php the_field("title"); ?></h2>
-            <p class="news-header-intro body-text"><?php the_field("news_intro"); ?></p>
-                
-        </div><!-- container -->
-    </div><!-- containe-fluid -->
-
+<?php require_once('small-news-header.php'); ?>
 
 <div class="container-fluid section-padding">
      <div class="container">
@@ -22,7 +13,7 @@ Template Name: News
              <?php 
 $args = array(
   'category_name' =>  'Recent News',
-  // 'posts_per_page'    =>   1
+ 'posts_per_page'   =>  3
 );
 // the query
 $the_query = new WP_Query( $args ); ?>
@@ -90,12 +81,12 @@ $the_query = new WP_Query( $args ); ?>
 
           <div class="col-md-6 col-sm-12 article-padding">
           <p class="article-date subheader3-text"><?php the_field("date"); ?></p>
-            <h4 class="article-title yellow"><?php the_title(); ?></h4>
+            <h4 class="article-title orange3"><?php the_title(); ?></h4>
             <div class="d-flex">
-              <div class="col-md-4 col-sm-4 col-4 center arrow-container-right-yellow img">
+              <div class="col-md-4 col-sm-4 col-4 center arrow-container-right-orange3 img">
                   <?php
                   if ( has_post_thumbnail() ) { 
-                      the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-yellow'));
+                      the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-orange3'));
                   } ?>
                 </div>
               <div class="col-md-8 col-sm-8 col-8 v-center">

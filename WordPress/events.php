@@ -6,7 +6,7 @@ Template Name: Events
 <?php get_header(); ?>
 <div class="container-fluid header-bg" style="background-size: cover; background-image: url(<?php the_field("events_background_image"); ?>;">
         <div class="container">
-            <a class="btn-header body-text" href="<?php the_field("events-link"); ?>">Events</a>
+            <a class="btn-header-news-events body-text" href="<?php the_field("events-link"); ?>">Events</a>
             <h2 class="header-events-title"><?php the_field("title"); ?></h2>
             <p class="news-header-intro body-text"><?php the_field("events_intro"); ?></p>
                 
@@ -21,7 +21,7 @@ Template Name: Events
              <?php 
 $args = array(
   'category_name' =>  'Current Events',
-  // 'posts_per_page'    =>   1
+  'posts_per_page'  =>  3
 );
 // the query
 $the_query = new WP_Query( $args ); ?>
@@ -91,10 +91,10 @@ $the_query = new WP_Query( $args ); ?>
           <div>
           <?php
                 if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail('thumbnail', array('class' => 'img-fluid pastevents-image image-border-yellow post-image'));
+                    the_post_thumbnail('thumbnail', array('class' => 'img-fluid pastevents-image image-border-orange3 post-image'));
                 } ?>
               </div>
-            <h3 class= "post-title yellow"><?php the_title(); ?></h3> 
+            <h3 class= "post-title orange3"><?php the_title(); ?></h3> 
             <p class="post-location subheader2-text"><?php the_field("location"); ?></p>
             <p class="post-date body-text"><?php the_field("date"); ?></p>
             <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
