@@ -33,12 +33,12 @@ $the_query = new WP_Query( $args ); ?>
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <div class="thepost">
-<div class="row section1-row">
+<div class="d-flex section1-row">
 <div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img">
 <!-- <img class="arrow-effect-image image-border-pink"  -->
 <?php
                 if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink image-height'));
+                    the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink'));
                 } ?>
                   </div>
                   <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >

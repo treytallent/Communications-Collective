@@ -160,47 +160,11 @@ function wpbeginner_numeric_posts_nav($query = null) {
 
 echo '</ul></div>' . "\n";
 }
-?>
-<? function wp_custom_like_dislike() {
-    // Registering like and dislike fields
-    register_meta('post', 'post_likes', array(
-        'type' => 'number',
-        'single' => true,
-        'default' => 0,
-        'show_in_rest' => true,
-    ));
-    register_meta('post', 'post_dislikes', array(
-        'type' => 'number',
-        'single' => true,
-        'default' => 0,
-        'show_in_rest' => true,
-    ));
+
+function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
 }
-add_action('init', 'wp_custom_like_dislike');
-?>
-<?function wp_enqueue_custom_scripts() {
-    wp_enqueue_script('like-dislike-script', get_template_directory_uri() . '/js/like-dislike.js', array('jquery'), null, true);
-    wp_localize_script('like-dislike-script', 'ajax_object', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-    ));
-}
-add_action('wp_enqueue_scripts', 'wp_enqueue_custom_scripts');
-?>
-<? function handle_like_dislike() {
-    $post_id = intval($_POST['post_id']);
-    $action = sanitize_text_field($_POST['action_type']);
-    
-    if ($action == 'like') {
-        $likes = get_post_meta($post_id, 'post_likes', true);
-        update_post_meta($post_id, 'post_likes', $likes + 1);
-        echo $likes + 1;
-    } elseif ($action == 'dislike') {
-        $dislikes = get_post_meta($post_id, 'post_dislikes', true);
-        update_post_meta($post_id, 'post_dislikes', $dislikes + 1);
-        echo $dislikes + 1;
-    }
-    wp_die();
-}
-add_action('wp_ajax_nopriv_handle_like_dislike', 'handle_like_dislike');
-add_action('wp_ajax_handle_like_dislike', 'handle_like_dislike');
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+
 ?>
