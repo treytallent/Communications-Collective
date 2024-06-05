@@ -26,20 +26,6 @@
                 </a>
             </div>
 
-           <!--  Like and Dislike button  -->
-<?global $post;
-$likes = get_post_meta($post->ID, 'post_likes', true);
-$dislikes = get_post_meta($post->ID, 'post_dislikes', true);
-?>
-
-<div class="like-dislike-container">
-    <button class="like-button" data-id="<?php echo $post->ID; ?>">Like (<?php echo $likes; ?>)</button>
-    <button class="dislike-button" data-id="<?php echo $post->ID; ?>">Dislike (<?php echo $dislikes; ?>)</button>
-</div>
-
-
-
-
 
         <!-- Navigation Links -->
         <div class="page-navigation">
