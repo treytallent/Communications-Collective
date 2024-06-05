@@ -10,6 +10,44 @@ h1,
 h2.text-center {
     text-align: center;
 }
+/* Header */
+/* Header background image */
+.header-bg {
+    background-image: url("Images/header.webp");
+    background-size: cover;
+    height: 100vh;
+    padding-top: 50vh;
+}
+
+/* Gradient overlay on header image */
+.header-bg::before {
+    content: "";
+    position: absolute;
+    top: 45vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to right,
+
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.1)
+    );
+    z-index: 0;
+}
+
+/* Spacing for social media icons on header */
+.index-header-social-group {
+    display: block;
+    width: 100%;
+}
+
+.index-header-social {
+    position: relative;
+    width: 36px;
+    margin-left: 0px;
+    margin-right: 24px;
+}
 
 .about-bg,
 .opportunities-bg,
@@ -62,45 +100,6 @@ button.navbar-toggler {
         background-color: #00649e;
         text-decoration: none !important;
         color: white;
-    }
-
-    /* Header */
-    /* Header background image */
-    .header-bg {
-        background-image: url("Images/header.webp");
-        background-size: cover;
-        height: 100vh;
-        padding-top: 50vh;
-    }
-
-    /* Gradient overlay on header image */
-    .header-bg::before {
-        content: "";
-        position: absolute;
-        top: 45vh;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: linear-gradient(
-            to right,
-
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.1)
-        );
-        z-index: 0;
-    }
-
-    /* Spacing for social media icons on header */
-    .index-header-social-group {
-        display: block;
-        width: 100%;
-    }
-
-    .index-header-social {
-        position: relative;
-        width: 36px;
-        margin-left: 0px;
-        margin-right: 24px;
     }
 
     /* About */
@@ -182,11 +181,6 @@ button.navbar-toggler {
 
     h1 {
         padding-right: 5vw;
-    }
-
-    .index-header-subtitle,
-    .index-header-social-group {
-        padding-left: 5vw;
     }
 
     /* Buttons */
