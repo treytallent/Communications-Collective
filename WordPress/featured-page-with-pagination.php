@@ -7,10 +7,10 @@ Template Name: featured with pag
 <?php get_header(); ?>
 <div class="container-fluid header header-gradient" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
         <div class="container">
-            <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
+        <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
             <h4 class="authorname"><?php the_field("content-header-author"); ?>
-            <a href="<?php the_field("button_link"); ?>" class="headerbtn-2 body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a></h4>
+            <!-- <a href="<?php the_field("button_link"); ?>" class="headerbtn-2 body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a> --></h4>
             <p class="header-intro"><?php the_field("content-header-article"); ?></p>
             <a href="<?php the_field("continues-reading-featured-article"); ?>" class="headerbtn-1 body-text">Continue Reading</a>
     
@@ -23,21 +23,22 @@ Template Name: featured with pag
         <button class="dropdown content-dropdown">
                         <a
                            class="nav-link dropdown-toggle text-white"
-                           href="http://170.187.231.66/~mesh20/sub/content1/"
+                           href="#"
                            id="navbarDropdownMenuLink"
                            data-toggle="dropdown"
                            aria-haspopup="true"
                            aria-expanded="false"
                         >
-                           All Posts
+                           Featured
                         </a>
                         <div
                            class="dropdown-menu text-right"
                         >
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/featured/">Featured</a>
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/recommendation-with-pagination/">Recommended</a>
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/news-with-pagination/">News</a>
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/study-with-pagination/">Study</a>
+                        <a class="dropdown-item" href="<?php the_field("content_with_pagination"); ?>">All Post</a>
+                           <a class="dropdown-item" href="<?php the_field("featured_with_pagination"); ?>">Featured</a>
+                           <a class="dropdown-item" href="<?php the_field("recommendation_with_pagination"); ?>">Recommended</a>
+                           <a class="dropdown-item" href="<?php the_field("news_with_pagination"); ?>">News</a>
+                           <a class="dropdown-item" href="<?php the_field("study_with_pagination"); ?>">Study</a>
                         </div>
                      </button>
         <div class="row">
@@ -69,10 +70,6 @@ if ($query->have_posts()) :
                 <?php if (has_post_thumbnail()) : ?>
                     <img class="card-img-top" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
                 <?php endif; ?>
-                <?php if ($category_slug && $category_link) : ?>
-               <a href="<?php echo $category_link; ?>" class="content-btn btn-fluid <?php echo $category_slug ? 'category-link' : ''; ?>">
-                    <?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a>
-                    <?php endif; ?>
                 <div class="card-body">
                     <p class="content-author"><?php echo get_the_author(); ?></p>
                     <h5 class="article-title"><?php the_title(); ?></h5>
@@ -127,16 +124,12 @@ wp_reset_postdata(); ?>
     </div>
 </div>
 
-
-
 <section class="container-fluid make-post postbg">
 <div class="container">
-    <h3 class="text-center post-your-content">post your content</h3>
-    <p class="text-center section-pull-quote">"Now! It's your turn to post a blog!"</p>
-    <p class="text-center post-content ">Find what’s you interested and post it to us through the email provided below:<br><strong>
-        murdoch.commcollective@gmail.com</strong><br>
-       </p>
-    
+    <h3 class="text-center post-your-content"><?php the_field("post_content"); ?></h3>
+    <p class="text-center section-pull-quote"><?php the_field("post_content-quote"); ?></p>
+    <p class="text-center post-content "><?php the_field("post_email"); ?></p>
+    <p class="text-center post-content email"><?php the_field("email"); ?></p>
 </div>
 </section>
 
