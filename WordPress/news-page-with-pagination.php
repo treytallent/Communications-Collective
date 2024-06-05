@@ -63,14 +63,35 @@ if ($query->have_posts()) :
             $category_slug = $categories[0]->slug;
             $category_link = get_category_link($categories[0]->term_id);
         }
+ // Default author name
+ $author_name = get_the_author();
+
+ // Get the custom author name from the custom field
+ $custom_author_name = get_post_meta(get_the_ID(), 'content-header-author', true);
+
+ // Use the custom author name if it exists, otherwise use the default author name
+ if (!empty($custom_author_name)) {
+     $author_name = $custom_author_name;
+ }
+ if (has_category('Recommendation')){
+    $background_color = '#ffe1ea'; // Red for post ID 1
+} elseif (has_category('news')) {
+    $background_color = '#fff1e1'; // Green for post ID 2
+} elseif (has_category('study')) {
+    $background_color = '#e1f8ff'; // Blue for posts in 'special-category'
+}elseif (has_category('content')) {
+  $background_color = '#ffe1ea'; // Blue for posts in 'special-category'
+}elseif (has_category('featured')) {
+  $background_color = '#fff1e1'; // Blue for posts in 'special-category'
+}
 ?>
-        <div class="col-md-4">
-            <div class="card mb-4 card-pink">
+<div class="col-md-4">
+    <div class="card mb-4 card-pink" style="background-color: <?php echo esc_attr($background_color); ?>;">
                 <?php if (has_post_thumbnail()) : ?>
                     <img class="card-img-top" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
                 <?php endif; ?>
                 <div class="card-body">
-                    <p class="content-author"><?php echo get_the_author(); ?></p>
+                <p class="content-author"><?php echo esc_html($author_name); ?></p>
                     <h5 class="article-title"><?php the_title(); ?></h5>
                     <p class="body-text short-para"><?php the_excerpt(); ?></p>
                     <a href="<?php the_permalink(); ?>" class="continuereading">Continue Reading</a>
