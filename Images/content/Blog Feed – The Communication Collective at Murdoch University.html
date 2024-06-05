@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://murdochcommunicationcollective.com/blog-feed/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>Blog Feed – The Communication Collective at Murdoch University</title>
+<meta name="robots" content="max-image-preview:large">
+
+<!-- Async WordPress.com Remote Login -->
+<script type="text/javascript" async="" src="./Blog Feed – The Communication Collective at Murdoch University_files/ga.js.download"></script><script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=314'
+					+ '&is_singular=';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9tdXJkb2NoY29tbXVuaWNhdGlvbmNvbGxlY3RpdmUuY29t"
+		+ "&wpcomid=167590751"
+		+ "&time=1717597444";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts-api.wp.com/">
+<link rel="alternate" type="application/rss+xml" title="The Communication Collective at Murdoch University » Feed" href="https://murdochcommunicationcollective.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="The Communication Collective at Murdoch University » Comments Feed" href="https://murdochcommunicationcollective.com/comments/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1710334132i&ver=6.6-alpha-58325"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-2-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/saved_resource" type="text/css" media="all">
+<style id="wp-block-library-inline-css">
+.has-text-align-justify {
+	text-align:justify;
+}
+.wp-block-cover__image-background.has-parallax {
+	background-size: cover;
+}
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-4-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/saved_resource(1)" type="text/css" media="all">
+<style id="jetpack-sharing-buttons-style-inline-css">
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-6-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/saved_resource(2)" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-8-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/saved_resource(3)" type="text/css" media="all">
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: #897248;--wp--preset--color--secondary: #c4493f;--wp--preset--color--background: #FFFFFF;--wp--preset--color--foreground: #181818;--wp--preset--color--foreground-light: #686868;--wp--preset--color--foreground-dark: #020202;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 20px;--wp--preset--font-size--huge: 34.56px;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flow)  > :first-child{margin-block-start: 0;}:where(.is-layout-flow)  > :last-child{margin-block-end: 0;}:where(.is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(.is-layout-constrained)  > :first-child{margin-block-start: 0;}:where(.is-layout-constrained)  > :last-child{margin-block-end: 0;}:where(.is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(.is-layout-flex) {gap: 24px;}:where(.is-layout-grid) {gap: 24px;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-foreground-light-color{color: var(--wp--preset--color--foreground-light) !important;}.has-foreground-dark-color{color: var(--wp--preset--color--foreground-dark) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-foreground-light-background-color{background-color: var(--wp--preset--color--foreground-light) !important;}.has-foreground-dark-background-color{background-color: var(--wp--preset--color--foreground-dark) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-foreground-light-border-color{border-color: var(--wp--preset--color--foreground-light) !important;}.has-foreground-dark-border-color{border-color: var(--wp--preset--color--foreground-dark) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}.has-huge-font-size{font-size: var(--wp--preset--font-size--huge) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}
+:where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="print-css-11-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/print.css" type="text/css" media="print">
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-12-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/saved_resource(4)" type="text/css" media="all">
+<link rel="stylesheet" id="maywood-fonts-css" href="./Blog Feed – The Communication Collective at Murdoch University_files/css" media="all">
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-14-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/style.css" type="text/css" media="all">
+<style id="jetpack-global-styles-frontend-style-inline-css">
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-16-1" href="./Blog Feed – The Communication Collective at Murdoch University_files/global.css" type="text/css" media="all">
+<script type="text/javascript" id="media-video-jwt-bridge-js-extra">
+/* <![CDATA[ */
+var videopressAjax = {"ajaxUrl":"https:\/\/murdochcommunicationcollective.wordpress.com\/wp-admin\/admin-ajax.php","bridgeUrl":"\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/jetpack_vendor\/automattic\/jetpack-videopress\/build\/lib\/token-bridge.js","post_id":"314"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpcom-actionbar-placeholder-js-extra">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"167590751","postID":"0","siteURL":"https:\/\/murdochcommunicationcollective.com","xhrURL":"https:\/\/murdochcommunicationcollective.com\/wp-admin\/admin-ajax.php","nonce":"a3032d5b70","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","i18n":{"followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar"}};
+/* ]]> */
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Blog Feed – The Communication Collective at Murdoch University_files/saved_resource(5)"></script>
+<script type="text/javascript" id="rlt-proxy-js-after">
+/* <![CDATA[ */
+	window.addEventListener( 'DOMContentLoaded', function() {
+		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+	} );
+/* ]]> */
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://murdochcommunicationcollective.wordpress.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress.com">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Communication Collective at Murdoch University">
+<meta property="og:description" content="Meet. Network. Expand.">
+<meta property="og:url" content="https://murdochcommunicationcollective.com/blog-feed/">
+<meta property="og:site_name" content="The Communication Collective at Murdoch University">
+<meta property="og:image" content="https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=200">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:image:alt" content="">
+<meta property="og:locale" content="en_US">
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="https://murdochcommunicationcollective.com/osd.xml" title="The Communication Collective at Murdoch University">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta name="application-name" content="The Communication Collective at Murdoch University"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Meet. Network. Expand."><meta name="description" content="Meet. Network. Expand.">
+<link rel="icon" href="https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=32" sizes="32x32">
+<link rel="icon" href="https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=192" sizes="192x192">
+<link rel="apple-touch-icon" href="https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=180">
+<meta name="msapplication-TileImage" content="https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=270">
+			<link rel="stylesheet" id="custom-css-css" type="text/css" href="./Blog Feed – The Communication Collective at Murdoch University_files/saved_resource(6)">
+			<!-- Jetpack Google Analytics -->
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-157810296-1']);
+_gaq.push(['_trackPageview']);
+				(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+			<!-- End Jetpack Google Analytics -->
+<script src="./Blog Feed – The Communication Collective at Murdoch University_files/wp-emoji-release.min.js.download" defer=""></script><link rel="stylesheet" id="gravatar-card-css" href="./Blog Feed – The Communication Collective at Murdoch University_files/hovercards.min.css"><link href="./Blog Feed – The Communication Collective at Murdoch University_files/actionbar.css" type="text/css" rel="stylesheet"></head>
+
+<body class="blog wp-custom-logo wp-embed-responsive customizer-styles-applied hfeed image-filters-enabled hide-homepage-title jetpack-reblog-enabled">
+
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="https://murdochcommunicationcollective.com/blog-feed/#content">Skip to content</a>
+
+	
+<header id="masthead" class="site-header responsive-max-width has-logo has-title-and-tagline has-menu" role="banner">
+	<div class="site-branding">
+
+			<div class="site-logo"><a href="https://murdochcommunicationcollective.com/" class="custom-logo-link" rel="home"><img width="99" height="96" src="./Blog Feed – The Communication Collective at Murdoch University_files/cropped-symbol_png_rgb.png" class="custom-logo" alt="The Communication Collective at Murdoch University" decoding="async" data-attachment-id="34" data-permalink="https://murdochcommunicationcollective.com/cropped-symbol_png_rgb-png/" data-orig-file="https://murdochcommunicationcollective.com/wp-content/uploads/2019/10/cropped-symbol_png_rgb.png" data-orig-size="99,96" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cropped-symbol_png_rgb.png" data-image-description="&lt;p&gt;https://murdochcommunicationcollective.files.wordpress.com/2019/10/cropped-symbol_png_rgb.png&lt;/p&gt;
+" data-image-caption="" data-medium-file="https://murdochcommunicationcollective.com/wp-content/uploads/2019/10/cropped-symbol_png_rgb.png?w=99" data-large-file="https://murdochcommunicationcollective.com/wp-content/uploads/2019/10/cropped-symbol_png_rgb.png?w=99"></a></div>
+								<p class="site-title"><a href="https://murdochcommunicationcollective.com/" rel="home">The Communication Collective at Murdoch University</a></p>
+			
+				<p class="site-description">
+				Meet. Network. Expand.			</p>
+	</div><!-- .site-branding -->
+		<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+
+		<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+		<label for="toggle" id="toggle-menu" class="button">
+			Menu			<span class="dropdown-icon open">+</span>
+			<span class="dropdown-icon close">×</span>
+			<span class="hide-visually expanded-text">expanded</span>
+			<span class="hide-visually collapsed-text">collapsed</span>
+		</label>
+
+		<div class="menu-primary-container"><ul id="menu-primary-1" class="main-menu" aria-label="submenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-101"><a href="https://murdochcommunicationcollective.com/about/" aria-haspopup="true" aria-expanded="false">About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300"><a href="https://murdochcommunicationcollective.com/team/">Past Committees</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="https://murdochcommunicationcollective.com/alumni/">Alumni</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-486"><a href="https://murdochcommunicationcollective.com/our-work-2/" aria-haspopup="true" aria-expanded="false">Our Work</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="https://murdochcommunicationcollective.com/our-work/">Internship Experiences</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-480"><a href="https://murdochcommunicationcollective.com/class-work/">Class Work</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-367 current_page_item current_page_parent menu-item-372"><a href="https://murdochcommunicationcollective.com/blog-feed/" aria-current="page">Blog Feed</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="https://murdochcommunicationcollective.com/opportunities/">Opportunities</a></li>
+</ul></div>	</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+<article id="post-314" class="post-314 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-recommendations tag-covid19 tag-socialdistancing tag-stayhome tag-supportinglocalbusinesses entry">
+	<header class="entry-header responsive-max-width">
+		<span class="sticky-post">Featured</span><h2 class="entry-title"><a href="https://murdochcommunicationcollective.com/2020/04/06/supporting-local-businesses/" rel="bookmark">Supporting Local Businesses</a></h2>	</header><!-- .entry-header -->
+
+	
+			<figure class="post-thumbnail">
+				<a class="post-thumbnail-inner alignwide" href="https://murdochcommunicationcollective.com/2020/04/06/supporting-local-businesses/" aria-hidden="true" tabindex="-1">
+					<img width="1080" height="1080" src="./Blog Feed – The Communication Collective at Murdoch University_files/blue-and-cream-world-press-freedom-day-social-media-graphic-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" data-attachment-id="324" data-permalink="https://murdochcommunicationcollective.com/2020/04/06/supporting-local-businesses/blue-and-cream-world-press-freedom-day-social-media-graphic-1/" data-orig-file="https://murdochcommunicationcollective.com/wp-content/uploads/2020/04/blue-and-cream-world-press-freedom-day-social-media-graphic-1.png" data-orig-size="1080,1080" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Blue and Cream World Press Freedom Day Social Media Graphic (1)" data-image-description="" data-image-caption="" data-medium-file="https://murdochcommunicationcollective.com/wp-content/uploads/2020/04/blue-and-cream-world-press-freedom-day-social-media-graphic-1.png?w=300" data-large-file="https://murdochcommunicationcollective.com/wp-content/uploads/2020/04/blue-and-cream-world-press-freedom-day-social-media-graphic-1.png?w=750">				</a>
+			</figure>
+
+		
+	<div class="entry-content">
+		<p>With the spread of coronavirus around the world, the Australian Government has implemented a new restriction on businesses in the hospitality industry, of strictly take-away and no dine-in. This means many businesses, who make a majority of their income from walk-ins and bookings, have had to close their doors from their primary source of income for the greater good of slowing the virus’ spread.</p>
+
+<p>This has left businesses relying on services such as UberEats and locals or regulars to keep their businesses afloat. In order to play our part in supporting local businesses, we have compiled together a list of our favourite local business who need our support.<a class="more-link" href="https://murdochcommunicationcollective.com/2020/04/06/supporting-local-businesses/">Continue reading <span class="screen-reader-text">“Supporting Local Businesses”</span></a></p>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://murdochcommunicationcollective.com/author/jordanreincastle/">jordanreincastle</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://murdochcommunicationcollective.com/2020/04/06/supporting-local-businesses/" rel="bookmark"><time class="entry-date published" datetime="2020-04-06T10:00:00+00:00">April 6, 2020</time><time class="updated" datetime="2020-05-20T00:27:05+00:00">May 20, 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://murdochcommunicationcollective.com/category/recommendations/" rel="category tag">Recommendations</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Tags:</span><a href="https://murdochcommunicationcollective.com/tag/covid19/" rel="tag">covid19</a>, <a href="https://murdochcommunicationcollective.com/tag/socialdistancing/" rel="tag">socialdistancing</a>, <a href="https://murdochcommunicationcollective.com/tag/stayhome/" rel="tag">stayhome</a>, <a href="https://murdochcommunicationcollective.com/tag/supportinglocalbusinesses/" rel="tag">supportinglocalbusinesses</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://murdochcommunicationcollective.com/2020/04/06/supporting-local-businesses/#respond">Leave a comment<span class="screen-reader-text"> on Supporting Local Businesses</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-254" class="post-254 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-news tag-coronavirus tag-covid-19 tag-health tag-lifestyle entry">
+	<header class="entry-header responsive-max-width">
+		<span class="sticky-post">Featured</span><h2 class="entry-title"><a href="https://murdochcommunicationcollective.com/2020/03/19/coronavirus-mental-health/" rel="bookmark">Coronavirus &amp; Mental&nbsp;Health</a></h2>	</header><!-- .entry-header -->
+
+	
+			<figure class="post-thumbnail">
+				<a class="post-thumbnail-inner alignwide" href="https://murdochcommunicationcollective.com/2020/03/19/coronavirus-mental-health/" aria-hidden="true" tabindex="-1">
+					<img width="867" height="751" src="./Blog Feed – The Communication Collective at Murdoch University_files/pexels-photo-3759657-e1584430026647.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" data-attachment-id="259" data-permalink="https://murdochcommunicationcollective.com/pexels-photo-3759657/" data-orig-file="https://murdochcommunicationcollective.com/wp-content/uploads/2020/03/pexels-photo-3759657-e1584430026647.jpeg" data-orig-size="867,751" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="photo of woman meditating" data-image-description="" data-image-caption="&lt;p&gt;Photo by Natalie on &lt;a href=&quot;https://www.pexels.com/photo/photo-of-woman-meditating-3759657/&quot; rel=&quot;nofollow&quot;&gt;Pexels.com&lt;/a&gt;&lt;/p&gt;
+" data-medium-file="https://murdochcommunicationcollective.com/wp-content/uploads/2020/03/pexels-photo-3759657-e1584430026647.jpeg?w=300" data-large-file="https://murdochcommunicationcollective.com/wp-content/uploads/2020/03/pexels-photo-3759657-e1584430026647.jpeg?w=750">				</a>
+			</figure>
+
+		
+	<div class="entry-content">
+		<p>With the world in a state of emergency due to the coronavirus pandemic, journalists across the world have been releasing stories to keep everyone updated on the crisis. While it is important to follow the stories and keep up to date on the medical advice and number of cases, I can’t help but feel really overwhelmed, stressed and worried about it all. The stories we are hearing aren’t always good and it’s beginning to play on my mind.</p>
+
+<p>After waking up this morning, I went to Twitter to catch up on the latest news and found a thread, liked by someone I follow, created by Hazel Hayes (@TheHazelHayes) which really inspired me to write this article; I realised that I’m probably not the only one feeling worried and overwhelmed by it all. She shared some resources that really helped me and so I wanted to share them, as well as some other resources I have gathered through my own research and through friends, to help anyone feeling the same way.</p><p><a class="more-link" href="https://murdochcommunicationcollective.com/2020/03/19/coronavirus-mental-health/">Continue reading <span class="screen-reader-text">“Coronavirus &amp; Mental&nbsp;Health”</span></a></p>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://murdochcommunicationcollective.com/author/stephsblog26/">Steph Dawson</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://murdochcommunicationcollective.com/2020/03/19/coronavirus-mental-health/" rel="bookmark"><time class="entry-date published" datetime="2020-03-19T01:20:00+00:00">March 19, 2020</time><time class="updated" datetime="2020-05-20T00:28:14+00:00">May 20, 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://murdochcommunicationcollective.com/category/news/" rel="category tag">News</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Tags:</span><a href="https://murdochcommunicationcollective.com/tag/coronavirus/" rel="tag">coronavirus</a>, <a href="https://murdochcommunicationcollective.com/tag/covid-19/" rel="tag">covid-19</a>, <a href="https://murdochcommunicationcollective.com/tag/health/" rel="tag">health</a>, <a href="https://murdochcommunicationcollective.com/tag/lifestyle/" rel="tag">lifestyle</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://murdochcommunicationcollective.com/2020/03/19/coronavirus-mental-health/#respond">Leave a comment<span class="screen-reader-text"> on Coronavirus &amp; Mental&nbsp;Health</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-652" class="post-652 post type-post status-publish format-standard has-post-thumbnail hentry category-news entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://murdochcommunicationcollective.com/2022/04/27/the-watchlist-anime/" rel="bookmark">The Watchlist: Anime</a></h2>	</header><!-- .entry-header -->
+
+	
+			<figure class="post-thumbnail">
+				<a class="post-thumbnail-inner alignwide" href="https://murdochcommunicationcollective.com/2022/04/27/the-watchlist-anime/" aria-hidden="true" tabindex="-1">
+					<img width="1200" height="675" src="./Blog Feed – The Communication Collective at Murdoch University_files/watchlist-featured-image.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" data-attachment-id="708" data-permalink="https://murdochcommunicationcollective.com/2022/04/04/the-watchlist-dystopian/watchlist-featured-image/" data-orig-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/04/watchlist-featured-image.png" data-orig-size="1200,675" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Watchlist Featured Image" data-image-description="" data-image-caption="" data-medium-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/04/watchlist-featured-image.png?w=300" data-large-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/04/watchlist-featured-image.png?w=750">				</a>
+			</figure>
+
+		
+	<div class="entry-content">
+		
+<p>Written by <a href="https://www.linkedin.com/in/jaspreet-sidhu-b78718193/">Jaspreet Sidhu</a></p>
+
+
+
+<p>Hi everyone, I hope you had a chance to watch something on last week’s recommended list! If last week’s genre wasn’t your cup of tea, fret not, I have something completely different in store for you this week. Although anime technically refers to all animation, anime is still largely regarded as mainly japanese animated films and series. When I think of anime, I think of long-running series such as Naruto or One Piece which can be hard to get into. This series of recommendations are easy to enjoy, bite sized shows that act as a great stepping stone for anyone who might be interested in anime. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="" width="489" height="725"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>Spirited Away</strong></li></ul>
+
+
+
+<p>It would be a crime to not start a list of anime recommendations with one of Hayao Miyazaki’s works. Spirited Away is arguably one of the most iconic anime movies and it has seen much <a href="https://time.com/6081937/spirited-away-changed-animation-studio-ghibli/">success</a> worldwide. It’s set in a wonderous other dimension and filled with mystery and magic. The film follows a young girl as she finds herself in a strange, unfamiliar world and finds a way to escape and save the people important to her. I highly recommend Spirited Away for anyone who wants to escape reality for a bit. Spirited Away is also great for lifting your spirits as I think the essence of the film is one of hope. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BNmM4YTFmMmItMGE3Yy00MmRkLTlmZGEtMzZlOTQzYjk3MzA2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="" width="500" height="750"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>Howl’s Moving Castle</strong></li></ul>
+
+
+
+<p>Another masterpiece by  Hayao Miyazaki is Howl’s Moving Castle. The movie follows the adventure of Howl, a wizard who lives in a moving castle. The adventure begins when a young girl, Sophie is cursed by an evil witch and is transformed into an old woman . Sophie turns to Howl for help to undo the curse and together, they embark on a mystical journey! I highly recommend Howl’s Moving Castle, the movie is just so well-written and the graphics are gorgeous!</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_FMjpg_UX1000_.jpg" alt="" width="500" height="741"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>Your Name</strong></li></ul>
+
+
+
+<p>In this 2016 animation, 2 teenagers discover that they have a magical connection unlike any other – they are swapping bodies. They come to this realisation as both wake up in unfamiliar places and have missing memories from their own lives. They begin communicating with each other by leaving one another notes. Although this movie starts out confusing, the climax when the 2 main characters try to meet one another is absolutely mid-blowing!</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/51xksnD26SL._AC_SY1000_.jpg" alt=""></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>5 Centimetres Per Second</strong></li></ul>
+
+
+
+<p>The film begins with an image of cherry blossoms falling at 5cm per second and is a metaphor of fleeting young romance and bittersweet loss – the main themes of the movie. It follows the development of relationships throughout different time periods of the protagonist’s life. This isn’t your typical romance film with a happy ending. If anything, it’s a mirror of reality; a reflection of experiences we  can all relate to!</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BM2FkZjM5ODUtMGM0OC00ZTk2LWFjZDYtNmIzMGRhZWY0MjExXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg" alt="" width="500" height="751"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>To The Forest of Firefly Lights</strong></li></ul>
+
+
+
+<p>This follows the unlikely friendship of a young human girl and a forest spirit that will disappear if touched by a human. As the years go by their bond grows and ultimately develops into a romance. The lack of bells and whistles makes the film an extremely easy watch. This is bound to take you on an emotional journey, just make sure you have some tissues by your side for the heart-breaking ending. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/Violet-Evergarden-poster.jpg" alt=""></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>Violet Evergarden</strong></li></ul>
+
+
+
+<p>Violet Evergarden is a story that highlights the tenacity of mankind. We follow the life of a young woman, Violet Evergarden who knows nothing besides war and violence from her time serving in the Leidenschaftlich army where we was treated as a war machine. Violet is unable to process or even understand emotions and the series sees her reconnecting with her feelings as she gains employment as a ghost-writer in an attempt to understand the meaning of the words “I love you”. This is such a compelling watch as the emotional storyline is so well-balanced with pockets of humour throughout the series. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BYmFiNTU2YWUtZjVjYy00MDJmLThlNzMtYTBhNzZmMmUyN2JlXkEyXkFqcGdeQXVyMTMzNDc0Nzky._V1_.jpg" alt="" width="512" height="768"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>The Disastrous Life of Saiki k.</strong></li></ul>
+
+
+
+<p>The series follows the life of Saiki K., a high school student with amazing psychic abilities. Chaos ensues when all Saiki wants is to blend in and live life as an average teenager but gets pulled into adventures by people in his life. While being a light-hearted, easy watch, the show still manages to have you anticipating the next episode with it’s unique plot and eccentric characters. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BN2YxMTBhYTktMWM1Mi00NmQwLWI1YmUtZDkyM2U4MjZiZTA4XkEyXkFqcGdeQXVyMTMxNjUyMDkx._V1_.jpg" alt="" width="600" height="870"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>Aggretsuko</strong></li></ul>
+
+
+
+<p>Aggretsuko is a show I’m sure many of us can relate to. It follows the life of Retsuko, an average office worker who tries her best to adapt to the corporate world. In a largely hierarchical environment, she struggles to assert herself and is often taken advantage of by other co-workers and is often undermined. She takes out her frustrations in a healthy, but unique manner – singing death metal at karaoke. Aggretsuko is a timely reminder for us to be our own advocates and to find healthy coping mechanisms for the stresses we face on a daily basis.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BM2VmODMyZTUtOWFkNC00OGI5LTg5NjEtMjFiMjU0MDQxMDcyXkEyXkFqcGdeQXVyMTI2NTY3NDg5._V1_.jpg" alt="" width="530" height="768"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>The Seven Deadly Sins</strong></li></ul>
+
+
+
+<p>When a kingdom is overrun by tyrants, a deposed princess resorts to urban legend for help. She begins a quest to locate a group of warriors who were wrongly accused of a crime for help. As the group as disbanded an have been vindicated, finding them and convincing them proves to be a challenge. Fans of myths, lore and fight scenes – this one’s for you!</p>
+
+
+
+<p>With the list covering a wide range of genres, I hope you found something to add to your watch list! Let me know what you think of the above shows and if there’s anything you think I missed!</p>
+
+
+
+<p></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://murdochcommunicationcollective.com/author/heyitsjaspreet/">jaspreetsid</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://murdochcommunicationcollective.com/2022/04/27/the-watchlist-anime/" rel="bookmark"><time class="entry-date published updated" datetime="2022-04-27T11:33:52+00:00">April 27, 2022</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://murdochcommunicationcollective.com/category/news/" rel="category tag">News</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://murdochcommunicationcollective.com/2022/04/27/the-watchlist-anime/#respond">Leave a comment<span class="screen-reader-text"> on The Watchlist: Anime</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-589" class="post-589 post type-post status-publish format-standard has-post-thumbnail hentry category-recommendations tag-healthy tag-mental-health tag-movie-reccomendations tag-netflix tag-student-life tag-tv-reccomendations entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://murdochcommunicationcollective.com/2022/04/04/the-watchlist-dystopian/" rel="bookmark">The Watchlist: Dystopian</a></h2>	</header><!-- .entry-header -->
+
+	
+			<figure class="post-thumbnail">
+				<a class="post-thumbnail-inner alignwide" href="https://murdochcommunicationcollective.com/2022/04/04/the-watchlist-dystopian/" aria-hidden="true" tabindex="-1">
+					<img width="1200" height="675" src="./Blog Feed – The Communication Collective at Murdoch University_files/watchlist-featured-image.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" data-attachment-id="708" data-permalink="https://murdochcommunicationcollective.com/2022/04/04/the-watchlist-dystopian/watchlist-featured-image/" data-orig-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/04/watchlist-featured-image.png" data-orig-size="1200,675" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Watchlist Featured Image" data-image-description="" data-image-caption="" data-medium-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/04/watchlist-featured-image.png?w=300" data-large-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/04/watchlist-featured-image.png?w=750">				</a>
+			</figure>
+
+		
+	<div class="entry-content">
+		
+<p>Written by <a href="https://www.linkedin.com/in/jaspreet-sidhu-b78718193/">Jaspreet Sidhu</a></p>
+
+
+
+<p>Hi everyone! With how challenging the past 2 years have been (and continue to be), I think it’s important to be kinder to ourselves. The first step is to not set unrealistic expectations for ourselves, which is why this year I’m taking it easy on the new year resolutions. I’m simply going to let myself do what I think my mind and body need, which is often a good TV show. However, with so many options across multiple streaming websites, I often experience choice paralysis and waste a good chunk of time scrolling endlessly, struggling to decide. This series will hopefully solve that problem for you – as I share some of my favourite TV shows and help narrow down your selections!</p>
+
+
+
+<p>What better way to start this series off than with the post-apocalyptic/dystopian genre? It might feel like we’re already living in a zombie movie with infections and isolation being the norm, but the following suggestions show that it could be a lot worse. If you’re in the mood for something dark, gory and maybe even slightly confronting, the following are definitely worth a watch.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg" alt="" width="500" height="741"></figure></div>
+
+
+<ul type="1" class="has-large-font-size wp-block-list"><li><span class="uppercase"><strong>Squid Game</strong> </span></li></ul>
+
+
+
+<p>Squid game doesn’t necessarily fall into the “dystopian” genre, but it is definitely very dark. The TV drama took the world by storm in 2021,with many elements of the show going viral. The premise of the show is straight-forward enough: individuals in debt are given the opportunity to earn a large cash prize in a series of games where their lives are at risk. But the show plays out  in a way unlike any other I’ve seen in this genre. If you’ve been holding off on watching it because you weren’t sure it was worth the hype, I’d definitely recommend giving it go. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BZmUwMGI4M2QtYmRlYy00NDQ1LThjNDAtYTI4NDNiNDg5MDViXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg" alt="" width="585" height="878"></figure></div>
+
+
+<ul type="1" class="has-large-font-size wp-block-list"><li><strong>Alice In Borderland </strong></li></ul>
+
+
+
+<p>If you liked Squid Game, you’ll probably enjoy Alice In Borderland. Based off a Manga series, Alice In Borderland is also a game-based survival show. Although there are many common themes, Alice In Borderland features a more intricate, complicated plot that leaves viewers constantly on the edge of their seat. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/EnuRkePVoAA0qoH" alt="" width="692" height="1024"></figure></div>
+
+
+<ul type="1" class="has-large-font-size wp-block-list"><li><strong>Sweet Home</strong></li></ul>
+
+
+
+<p>Released in 2020, Sweet Home is a Korean apocalyptic horror TV series. With many twists and turns, the plot is very well-thought out and delivered extremely well. If you’re a fan of classic zombie movies and like a bit of blood and gore, this is something that you’ll definitely enjoy. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/zIg3SOLkSM7GlB7BMsS0tHj2ZJD.jpg" alt="" width="638" height="957"></figure></div>
+
+
+<ul type="1" class="has-large-font-size wp-block-list"><li><strong>Blood Red Sky</strong></li></ul>
+
+
+
+<p>Speaking of classic zombie movies, Blood Red Sky is definitely one to put on your list (even though it isn’t actually a zombie movie). Blood red sky doesn’t pretend to be something that it isn’t – it doesn’t have much depth but that’s the charm of it! Some days you just want an easy watch and this is just that. It does have some emotional scenes and an actual storyline, so I’d say it’s a great starting point if you’re a beginner to the genre!</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BYmJlOGY2NDUtMWYwZC00OTM0LWFkNGUtOTE5M2M4MGZmNDc1XkEyXkFqcGdeQXVyNDk3NDAzODE@._V1_.jpg" alt="" width="700" height="1003"></figure></div>
+
+
+<ul type="1" class="has-large-font-size wp-block-list"><li><strong>#ALIVE</strong></li></ul>
+
+
+
+<p>#ALIVE is Korean zombie thriller movie that was released in the height of the pandemic when we were all in quarantine. The protagonists in the movie try to survive a virus by quarantining in their high-rise apartments. The movie is such a suspenseful thriller, made even better by the eerie similarities we face in reality. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BOTk4ZDRhYzEtZWExNy00MjIyLTgyYmMtN2Y2MzA4YzZhZTZmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg" alt=""></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>Sweet Tooth</strong></li></ul>
+
+
+
+<p>I couldn’t write a list about post-apocalyptic shows and not include Sweet Tooth. Released in 2021, Sweet Tooth has many topics that we’re familiar with in our daily life – from GMOs to climate change.  Although slow at some parts, the characters are charming enough to keep you engaged till the end. I highly recommend for the next family movie night. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BMjFkNDNjYTktZjJiNi00Y2U3LWE2NDgtZDM3YjIzMWUzNGM2XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg" alt="" width="750" height="1111"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>The Silent Sea</strong></li></ul>
+
+
+
+<p>Featuring actors from Train to Busan, Squid Game and Sense 8, the star-studded cast of silent sea promises something brilliant. The premise is simple enough: a planet facing a water crisis sends experts to the moon to retrieve classified samples. The well-written plot, amazing CGI and exceptional acting make up for the slightly cheesy spacewalk and space acting. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/MV5BOTMyYTIyM2MtNjQ2ZC00MWFkLThhYjQtMjhjMGZiMjgwYjM2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="" width="540" height="800"></figure></div>
+
+
+<ul class="has-large-font-size wp-block-list"><li><strong>The Platform</strong></li></ul>
+
+
+
+<p>The Platform isn’t technically a post-apocalyptic show but I think it deserves an honourable mention. The platform is a social science fiction-horror movie filled with suspense, gore and drama. If you enjoyed shows such as Black Mirror and Parasite, this is definitely one to add to your list. </p>
+
+
+
+<p>This list is definitely not comprehensive and I tried not to include any cult classics, but hopefully this has given you something to add to your watchlist for your next movie night. Let me know what your favourite zombie/thriller shows are and if I missed something!</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://murdochcommunicationcollective.com/author/heyitsjaspreet/">jaspreetsid</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://murdochcommunicationcollective.com/2022/04/04/the-watchlist-dystopian/" rel="bookmark"><time class="entry-date published updated" datetime="2022-04-04T05:17:19+00:00">April 4, 2022</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://murdochcommunicationcollective.com/category/recommendations/" rel="category tag">Recommendations</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Tags:</span><a href="https://murdochcommunicationcollective.com/tag/healthy/" rel="tag">healthy</a>, <a href="https://murdochcommunicationcollective.com/tag/mental-health/" rel="tag">mental health</a>, <a href="https://murdochcommunicationcollective.com/tag/movie-reccomendations/" rel="tag">movie reccomendations</a>, <a href="https://murdochcommunicationcollective.com/tag/netflix/" rel="tag">netflix</a>, <a href="https://murdochcommunicationcollective.com/tag/student-life/" rel="tag">student life</a>, <a href="https://murdochcommunicationcollective.com/tag/tv-reccomendations/" rel="tag">tv reccomendations</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://murdochcommunicationcollective.com/2022/04/04/the-watchlist-dystopian/#respond">Leave a comment<span class="screen-reader-text"> on The Watchlist: Dystopian</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-583" class="post-583 post type-post status-publish format-standard hentry category-news tag-communications tag-exercise tag-health tag-lifestyle tag-wellbeing entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://murdochcommunicationcollective.com/2022/03/04/wellbeing-lets-get-moving/" rel="bookmark">Wellbeing: Let’s Get&nbsp;Moving</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<figure class="wp-block-embed is-type-wp-embed is-provider-canva wp-block-embed-canva"><div class="wp-block-embed__wrapper">
+<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" title="Nature Photography Gift Certificate" src="./Blog Feed – The Communication Collective at Murdoch University_files/view.html" data-secret="yREypmU8tC" height="432" width="576"></iframe>
+</div></figure>
+
+
+
+<p>Written by <a href="https://www.linkedin.com/in/jaspreet-sidhu-b78718193/">Jaspreet Sidhu</a></p>
+
+
+
+<p>With exams and submissions all over, it’s important to give yourself credit for your accomplishments, a pat on the back is well-deserved for finishing yet another stressful semester! The long nights spent hunched over your laptops have no doubt left you with a bad back and uncomfortable neck. In the last instalment of the mindfulness series, I look at how to get rid of residual stress!</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/529F185E-E446-4EB2-81B4-1C098074A412.jpeg" alt=""></figure>
+
+
+
+<p>When talking about wellbeing, it is impossible to ignore the role of physical health. Many studies have shown that physical health greatly influences our mental health – this comes down to the chemicals released in our brain during exercise.</p>
+
+
+
+<p>Despite being aware of the benefits of physical exercise for my mental health, exercising is often the last thing on my mind – especially not when I’m in a post-exam holiday mode! I’ve found physical activities, such as yoga, with an element of mindfulness and meditation tied in to be a nice middle ground. However, with so many types of yoga from Hatha to Yin to Vinyasa – knowing where to start can be a challenge.</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/202101.gezondnu.special.plantina.yoga_.jpg" alt=""></figure>
+
+
+
+<p>If you’re looking to begin your yoga journey, why not try a modern variation of yoga – aerial yoga? Aerial yoga originated in New York – it uses a hammock/yoga swing to allow for greater mobility as it allows students to perform postures that might not be possible on a yoga mat!</p>
+
+
+
+<p><a href="https://aerialyogaperth.com.au/">Aerial Yoga Perth</a> owner, Sharon is passionate about spreading the love and awareness of aerial yoga. Aerial yoga is thought to be particularly beneficial for students who spend a long time sitting, perfect for University students like us. Concerned about my flexibility (or lack thereof), I asked about pre-requisites when starting and Sharon assured me that aerial yoga can be performed by people with all levels of fitness!</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/ezgif.com-webp-to-png-1024x327.png" alt=""></figure>
+
+
+
+<p>Aerial yoga is a great way to treat your body and mind as it not only has physical benefits such as increasing flexibility and strengthening muscles but also has mental benefits such as improving focus and increases the release of endorphins and serotonin.</p>
+
+
+
+<p>Push away your doubts, challenge yourself and give aerial yoga a go – you’ll be pleasantly surprised at what your body can do!</p>
+
+
+
+<p>It’s been a pleasure beginning this mindfulness journey together with you! I hope this mini series has been helpful and that there were some tips you found helpful and easy to incorporate into your everyday life. Stay safe, happy &amp; healthy!</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://murdochcommunicationcollective.com/author/heyitsjaspreet/">jaspreetsid</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://murdochcommunicationcollective.com/2022/03/04/wellbeing-lets-get-moving/" rel="bookmark"><time class="entry-date published updated" datetime="2022-03-04T08:05:45+00:00">March 4, 2022</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://murdochcommunicationcollective.com/category/news/" rel="category tag">News</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Tags:</span><a href="https://murdochcommunicationcollective.com/tag/communications/" rel="tag">communications</a>, <a href="https://murdochcommunicationcollective.com/tag/exercise/" rel="tag">exercise</a>, <a href="https://murdochcommunicationcollective.com/tag/health/" rel="tag">health</a>, <a href="https://murdochcommunicationcollective.com/tag/lifestyle/" rel="tag">lifestyle</a>, <a href="https://murdochcommunicationcollective.com/tag/wellbeing/" rel="tag">wellbeing</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://murdochcommunicationcollective.com/2022/03/04/wellbeing-lets-get-moving/#respond">Leave a comment<span class="screen-reader-text"> on Wellbeing: Let’s Get&nbsp;Moving</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-568" class="post-568 post type-post status-publish format-standard has-post-thumbnail hentry category-news entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://murdochcommunicationcollective.com/2022/01/17/wellbeing-me-myself-i/" rel="bookmark">Wellbeing: Me, Myself &amp;&nbsp;I</a></h2>	</header><!-- .entry-header -->
+
+	
+			<figure class="post-thumbnail">
+				<a class="post-thumbnail-inner alignwide" href="https://murdochcommunicationcollective.com/2022/01/17/wellbeing-me-myself-i/" aria-hidden="true" tabindex="-1">
+					<img width="1568" height="1045" src="./Blog Feed – The Communication Collective at Murdoch University_files/jaz001.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" data-attachment-id="628" data-permalink="https://murdochcommunicationcollective.com/2022/01/17/wellbeing-me-myself-i/jaz001/" data-orig-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/01/jaz001.jpg" data-orig-size="1800,1200" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="JAZ001" data-image-description="" data-image-caption="" data-medium-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/01/jaz001.jpg?w=300" data-large-file="https://murdochcommunicationcollective.com/wp-content/uploads/2022/01/jaz001.jpg?w=750">				</a>
+			</figure>
+
+		
+	<div class="entry-content">
+		
+<p>Written by <a href="https://www.linkedin.com/in/jaspreet-sidhu-b78718193/">Jaspreet Sidhu</a></p>
+
+
+
+<p>As Communications students, disconnecting from the world and focusing on ourselves can be extra challenging as we’re encouraged to constantly stay connected and up to date with the happenings of the world. With so much going on in our daily lives, we rarely take the time to check in with ourselves. We might not even know how to connect with ourselves. This article will talk you through little activities you can easily incorporate into your daily life that will help you prioritize your wellbeing</p>
+
+
+
+<ol class="has-large-font-size wp-block-list"><li><strong>Meditation</strong></li></ol>
+
+
+
+<p>Numerous studies have shown that meditation has many health benefits including <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4142584/">reducing anxiety</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/28033127/">lowering blood pressure</a>, and<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6557693/"> improving sleep</a>. However, the many types of meditation: spiritual meditation, mantra meditation and focused meditation etc., can be overwhelming for beginners who don’t know where to start. A main feature of meditation is making a conscious effort to be present by focusing your attention and eliminating the stream of jumbled thoughts that may be crowding your mind. The following are great resources to get you started on your meditation journey.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="750" height="422" src="./Blog Feed – The Communication Collective at Murdoch University_files/c1Ndym-IsQg.html" allowfullscreen="true" style="border:0;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox"></iframe></span>
+</div><figcaption>Headspace Mini Meditation</figcaption></figure>
+
+
+
+<p><a href="https://www.headspace.com/headspace-meditation-app">Headspace</a> is a great starting point for those wanting to delve into the world of meditation. The short guided meditations are extremely helpful for beginners!</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="750" height="422" src="./Blog Feed – The Communication Collective at Murdoch University_files/j7d5Plai03g.html" allowfullscreen="true" style="border:0;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox"></iframe></span>
+</div><figcaption>Goodful 10 minute guided meditation</figcaption></figure>
+
+
+
+<p>Once you’ve gotten into the habit of daily meditation, challenge yourself by slowly extending your meditation sessions. With so many apps and podcasts available, don’t be afraid to try new meditation styles to find what works best for you!</p>
+
+
+
+<p class="has-large-font-size"><strong>2. Breathing Exercises</strong></p>
+
+
+
+<p>Similar to meditation, breathing exercises have many health benefits including reducing stress and improving blood pressure. Breathing exercises can be done anywhere, on your commute or even while you’re seated at your desk at uni. Breathing exercises force you to be present and aware of your own body by focusing on your breathing patterns. Similar to meditation, there are many types of breathing exercises and it’s important to find one that works for you. Square breathing is a great beginner-friendly breathing exercise you should try!</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/square-breathing.png" alt=""></figure>
+
+
+
+<p class="has-large-font-size"><strong>3. Daily Affirmations</strong></p>
+
+
+
+<p>A recent <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7174434/">review</a> found that up to 82% of people experience imposter syndrome. As young adults in a university setting, many of us have undoubtedly experienced feelings of self-doubt and inadequacy. However, it is often these negative thoughts that set us up for failure as we already have a mindset of failure. Affirmations are positive statements that can help challenge self-sabotaging thoughts and re-frame our perspective to a positive one that lends us confidence in our daily life. Hearing daily affirmations convince ourselves that we are capable, and that our negative thoughts are in fact, false and self-sabotaging. Below is a list of affirmations you can include in your daily routine – repeating these affirmations to yourself while you’re getting ready or before you start you start your day!</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/Affirmations-for-Creatives-Quotes17-scaled.jpg" alt=""></figure>
+
+
+
+<p class="has-large-font-size"><strong>4. Gratitude Journal</strong></p>
+
+
+
+<p>As busy university students, we often get caught up in our busy daily schedules and get overwhelmed with out never-ending tasks. We all know the importance of self-reflection but can never find the time to actually slow down. A gratitude journal is a simple way for us to reflect on the day and incorporate appreciation for life in our daily routines. A journal entry doesn’t have to be 1500 words long, it can be as simple as listing 3 things you were grateful for during the day. It forces you to be present and reflect on the good every day. Your daily gratitude journal could look something like this – </p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/334879252a341756eb41339cc79c7db1.png" alt=""></figure>
+
+
+
+<p>I hope you try some of these methods out! Let us know how you like to keep yourself grounded and if there are any other methods we should incorporate into our daily routine!</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://murdochcommunicationcollective.com/author/heyitsjaspreet/">jaspreetsid</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://murdochcommunicationcollective.com/2022/01/17/wellbeing-me-myself-i/" rel="bookmark"><time class="entry-date published updated" datetime="2022-01-17T08:56:14+00:00">January 17, 2022</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://murdochcommunicationcollective.com/category/news/" rel="category tag">News</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://murdochcommunicationcollective.com/2022/01/17/wellbeing-me-myself-i/#respond">Leave a comment<span class="screen-reader-text"> on Wellbeing: Me, Myself &amp;&nbsp;I</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-557" class="post-557 post type-post status-publish format-standard hentry category-news entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://murdochcommunicationcollective.com/2021/11/02/wellbeing-more-than-me/" rel="bookmark">Wellbeing: More than&nbsp;me</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>With so much attention being given to personal well-being, we tend to forget that well-being is more than just about the self. Well-being is also about being conscious of our actions, how we treat others and our environment.</p>
+
+
+
+<p>All the literature has shown that climate change is real and that it’s essential to take action now to minimise further damage to the earth. Adding ‘saving the earth’ to the list of things to do is a huge mission. Some of us are just starting our adulthood journey and are still shrinking clothes in the dryer, how are we meant to fix an issue <a href="https://www.cdp.net/en/articles/media/new-report-shows-just-100-companies-are-source-of-over-70-of-emissions">caused</a> by major international corporations? This article will talk you through little changes you can make to your daily life to reduce your carbon footprint. ‘Saving the earth’ doesn’t have to cost much and isn’t this huge daunting task. It can be quick, simple and easy!</p>
+
+
+
+<p></p>
+
+
+
+<p><strong></strong></p>
+
+
+
+<p>We all know recycling is the easiest way to contribute to the environment. Even better, its free! However, trying to understand recycling labels has always been a source of confusion. <a href="https://recyclingnearyou.com.au/arl/?icmpid=sm-tffp-sustainability-recycling-plastic">New labels</a> make things easier – explicitly telling you where to put different components of products.</p>
+
+
+
+<p>Companies have even taken it one step further with the option to return some products to the store. For instance, instead of throwing out wrappers, keep it in a bag and return it to your local grocery store on your next grocery run. It’s doesn’t add much time to your weekly routine and you’re giving back! How great!</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/image-10272-arl-description.png" alt=""></figure></div>
+
+
+
+<ul class="wp-block-list"><li><strong>Reusing</strong></li></ul>
+
+
+
+<p>Re-purposing jars and boxes is another great, cost-effective way of being conscious of your impact on the environment! Like many millennials, I have a slight plant obsession that has been further fuelled by the pandemic. I love buying plants but pots are incredibly pricy for some reason. A great way to get around this is by re-purposing used candle jars and using them as pots for your little planters! </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/20171215-recyclingcandletins-main.jpeg" alt=""></figure></div>
+
+
+
+<p></p>
+
+
+
+<p>Another way to be conscious about our impact on the environment is by considering sustainable alternatives for products we use everyday but don’t give a second thought to, much less have conversations about! As a University student, I was always under the impression that making the switch to sustainable options would be more costly but the Aussie owned companies I’ve listed below show that’s not always the case!</p>
+
+
+
+<ul class="wp-block-list"><li><strong>Toilet Paper</strong></li></ul>
+
+
+
+<p>Toilet paper was always something I just took for granted. It was only when I actually thought about how trees were literally being chopped down for me to clean my bum did I realise how wasteful non-recycled toilet paper actually is. If you’re not comfortable with the idea of a bidet, switching to recycled toilet paper or even bamboo toilet paper is a great alternative! I’ve linked 2 local companies here for you to check out.</p>
+
+
+
+<p><a href="https://au.whogivesacrap.org/">Whogivesacrap</a></p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/AboutTP_2.jpg" alt=""></figure>
+
+
+
+<p><a href="https://wipethat.com.au/">Wipethat</a></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/recycled_product.jpg" alt=""></figure></div>
+
+
+
+<p></p>
+
+
+
+<ul class="wp-block-list"><li><strong>Cleaning Products</strong></li></ul>
+
+
+
+<p>As far as cleaning products go, I always just pick the ones that are on sale or the ones that I know smell good. I just want something that’s easy to use and gets the job done. Over the years, I’m sure I’ve accumulated a fair share of plastic bottles that have ended up in a landfill somewhere. But that’s not the case any more. I’ve switched to an Aussie owned brand called <a href="https://www.zeroco.com.au/">Zeroco</a>. All their cleaning products come in sachets that get sent back to the company to be refilled when empty and can be stored in their plastic bottles made from recycled materials. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/pcsreuyg5usxkktumwzt.jpg" alt=""></figure></div>
+
+
+
+<ul class="wp-block-list"><li><strong>No-waste shops</strong></li></ul>
+
+
+
+<p>If you’re not ready to commit, a great way to get started is low waste stores! Simply bring in your empty containers and get them refilled in store with products of your choice! These shops carry more than cleaning products, find everything you need from flour to spices to beans! You simply scoop up how much you need so you don’t end up forgetting about the ingredients and save on throwing it out when you remember it exists 6 months later!</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/135165_lrg.jpg" alt=""></figure></div>
+
+
+
+<p>Here are 3 no-waste shops in the area that you should definitely pop by to start your journey to reduce single use plastics.</p>
+
+
+
+<p><a href="https://thestorehousefremantle.com.au/">The Storehouse</a></p>
+
+
+
+<p><a href="http://kakulasbros.com.au/">Kakulasbrothers</a></p>
+
+
+
+<p><a href="https://zerostore.com.au/">Zerostore</a></p>
+
+
+
+<p></p>
+
+
+
+<p>Many studies and even<a href="https://truecostmovie.com/"> documentaries</a> have showed that fast fashion continues to be a huge cause of concern. However, as University students, fast fashion seems to be the only viable option for us as our options are limited by budget constraints. However, when it comes to sustainably clothing ourselves, there are a few options. </p>
+
+
+
+<ol class="wp-block-list"><li>Thrifting</li></ol>
+
+
+
+<p>95% of all textiles have the potential to be reused or recycled, but currently they are recycled at a rate of<a href="https://www.centerforecotechnology.org/fast-fashion-textile-waste/"> only 15%</a>. Purchasing pre-loved clothes from place such as Salvos is a great way of revamping your closet without breaking the bank. Another great option is buying pre-loved clothes from Facebook Marketplace, where it’s easy to find boutiques selling fashionable and affordable second-hand clothing. </p>
+
+
+
+<p>2. Recycled Materials </p>
+
+
+
+<p>As companies grow more aware of reducing waste, many brands use Polyester fibers that have been made from the recycling  of discarded single use bottles that were destined for landfill. When shopping online, keep your eye out for sustainable, eco-friendly alternatives!</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="./Blog Feed – The Communication Collective at Murdoch University_files/vZLOuIl5wKZZ.jpg" alt=""></figure>
+
+
+
+<p>I hope you try some of these methods out! Let us know of any other quick and easy tips and tricks you use in your daily life!</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://murdochcommunicationcollective.com/author/heyitsjaspreet/">jaspreetsid</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clippath id="b"><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://murdochcommunicationcollective.com/2021/11/02/wellbeing-more-than-me/" rel="bookmark"><time class="entry-date published updated" datetime="2021-11-02T07:19:19+00:00">November 2, 2021</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://murdochcommunicationcollective.com/category/news/" rel="category tag">News</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://murdochcommunicationcollective.com/2021/11/02/wellbeing-more-than-me/#respond">Leave a comment<span class="screen-reader-text"> on Wellbeing: More than&nbsp;me</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+	<nav class="navigation pagination" aria-label="Posts">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="https://murdochcommunicationcollective.com/blog-feed/page/2/">2</a>
+<a class="page-numbers" href="https://murdochcommunicationcollective.com/blog-feed/page/3/">3</a>
+<a class="page-numbers" href="https://murdochcommunicationcollective.com/blog-feed/page/4/">4</a>
+<a class="next page-numbers" href="https://murdochcommunicationcollective.com/blog-feed/page/2/"><span class="nav-next-text">Older posts</span> <svg class="svg-icon" width="22" height="22" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></a></div>
+	</nav>
+		</main><!-- .site-main -->
+	</section><!-- .content-area -->
+
+
+	</div><!-- #content -->
+
+	
+	<footer id="colophon" class="site-footer responsive-max-width">
+				<nav class="footer-navigation" aria-label="Footer Menu">
+		<div class="menu-footer-container"><ul id="menu-footer" class="footer-menu"><li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://murdochcommunicationcollective.com/privacy-policy/">Privacy Policy</a></li>
+</ul></div>	</nav><!-- .footer-navigation -->
+
+	
+		<div class="site-info">
+		<a class="site-name" href="https://murdochcommunicationcollective.com/" rel="home">The Communication Collective at Murdoch University</a><span class="comma">,</span>
+<a href="https://wordpress.com/?ref=footer_custom_svg" title="Create a website or blog at WordPress.com" rel="nofollow"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Create a website or blog at WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill="“currentColor”" fill-rule="evenodd"></path>
+			</svg></a>	</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="./Blog Feed – The Communication Collective at Murdoch University_files/hovercards.min.js.download" id="grofiles-cards-js"></script>
+<script type="text/javascript" id="wpgroho-js-extra">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Blog Feed – The Communication Collective at Murdoch University_files/wpgroho.js.download"></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile': 'Edit your profile',
+							'View profile': 'View profile',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.': 'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.',
+							'Too Many Requests.': 'Too Many Requests.',
+							'Internal Server Error.': 'Internal Server Error.',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	</div>
+	<div id="actionbar" class="actnbr-pub-maywood actnbr-has-follow actnbr-hidden">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="https://murdochcommunicationcollective.com/blog-feed/">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z" fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="https://murdochcommunicationcollective.com/blog-feed/">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename actnbr-hidden">
+			<a href="https://murdochcommunicationcollective.com/">
+				<img alt="" src="./Blog Feed – The Communication Collective at Murdoch University_files/cropped-symbol_png_rgb-copy.png" srcset="https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=50 1x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=75 1.5x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=100 2x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=150 3x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=200 4x" class="avatar avatar-50" height="50" width="50">				The Communication Collective at Murdoch University			</a>
+		</li>
+										<div class="actnbr-message no-display"></div>
+									<form method="post" action="https://subscribe.wordpress.com/" accept-charset="utf-8" style="display: none;">
+																				<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address">
+										</div>
+										<input type="hidden" name="action" value="subscribe">
+										<input type="hidden" name="blog_id" value="167590751">
+										<input type="hidden" name="source" value="https://murdochcommunicationcollective.com/blog-feed/">
+										<input type="hidden" name="sub-type" value="actionbar-follow">
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="d6daebf870">										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge actnbr-hidden">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fmurdochcommunicationcollective.com%252F2020%252F04%252F06%252Fsupporting-local-businesses%252F">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"></path></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename actnbr-hidden">
+			<a href="https://murdochcommunicationcollective.com/">
+				<img alt="" src="./Blog Feed – The Communication Collective at Murdoch University_files/cropped-symbol_png_rgb-copy.png" srcset="https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=50 1x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=75 1.5x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=100 2x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=150 3x, https://murdochcommunicationcollective.com/wp-content/uploads/2020/02/cropped-symbol_png_rgb-copy.png?w=200 4x" class="avatar avatar-50" height="50" width="50">				The Communication Collective at Murdoch University			</a>
+		</li>
+								<li class="actnbr-folded-customize actnbr-hidden">
+								<a href="https://murdochcommunicationcollective.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fmurdochcommunicationcollective.wordpress.com%2Fblog-feed%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"></path></g></svg>									<span>Customize</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow actnbr-hidden">
+												<a class="actnbr-action actnbr-actn-follow " href="https://murdochcommunicationcollective.com/blog-feed/">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z" fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="https://murdochcommunicationcollective.com/blog-feed/">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">Sign up</a></li>
+									<li class="actnbr-login actnbr-hidden"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fmurdochcommunicationcollective.com%252F2020%252F04%252F06%252Fsupporting-local-businesses%252F">Log in</a></li>
+																	<li class="flb-report actnbr-hidden">
+										<a href="https://wordpress.com/abuse/?report_url=https://murdochcommunicationcollective.com" target="_blank" rel="noopener noreferrer">
+											Report this content										</a>
+									</li>
+																	<li class="actnbr-reader actnbr-hidden">
+										<a href="https://wordpress.com/read/feeds/103481317">
+											View site in Reader										</a>
+									</li>
+																	<li class="actnbr-subs actnbr-hidden">
+										<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+									</li>
+																		<li class="actnbr-fold actnbr-hidden"><a href="https://murdochcommunicationcollective.com/blog-feed/">Collapse this bar</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20240115";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20231122";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+	<script type="text/javascript" id="coblocks-loader-js-extra">
+/* <![CDATA[ */
+var wpcom_coblocks_js = {"coblocks_masonry_js":"https:\/\/s0.wp.com\/wp-content\/plugins\/coblocks\/2.18.1-simple-rev.4\/dist\/js\/coblocks-masonry.min.js","coblocks_lightbox_js":"https:\/\/s0.wp.com\/wp-content\/plugins\/coblocks\/2.18.1-simple-rev.4\/dist\/js\/coblocks-lightbox.min.js","jquery_core_js":"\/wp-includes\/js\/jquery\/jquery.min.js","jquery_migrate_js":"\/wp-includes\/js\/jquery\/jquery-migrate.min.js","masonry_js":"\/wp-includes\/js\/masonry.min.js","imagesloaded_js":"\/wp-includes\/js\/imagesloaded.min.js"};
+var coblocksLigthboxData = {"closeLabel":"Close Gallery","leftLabel":"Previous","rightLabel":"Next"};
+/* ]]> */
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Blog Feed – The Communication Collective at Murdoch University_files/coblocks-loader.min.js.download"></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Blog Feed – The Communication Collective at Murdoch University_files/w.js.download" defer=""></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'167590751','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'167590751','v':'wpcom','tz':'0','user_id':'0','subd':'murdochcommunicationcollective'}]);
+		_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mNzc2NTVTamdsd0xoLz9RQkM2K298TXY9bERQMXc2MjhEaVZfb2wwakRoSj0mUkp1THptM1NdbkV1WjZIcU9mVWQmPUIvMlN6Jk8wW3NYVEJ3dWZOWExuWD83c1hmZV0mZld+UW1XditkU3U3LU52NDRaMD9bN1ldUDh5YyxVfk1LamFoeG9ZOFhtLFNifGN8OTVVY21aQmx4L0U0cVF6YmIzQU5dVjYwUjRPP1M0bFErJnZFZjJvUy5+LU45UC5VS3BGZ2tGeWxHaC9UcXZ1TzhQcGJPaTZ3JXNfNEksQjZtOWExL0lWQVgxRy5KQzd0ajdqVkpjRnd+RGlMWFNQSD9YbmFxVUpDW3pFc2piZltLfkNIPw=='}]);
+_stq.push([ 'clickTrackerInit', '167590751', '0' ]);
+</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+
+<style>img#wpstats {
+			position: absolute !important;
+			clip: rect(0, 0, 0, 0);
+			padding: 0 !important;
+			border: 0 !important;
+			height: 0 !important;
+			width: 0 !important;
+			overflow: hidden;
+		}</style><img src="./Blog Feed – The Communication Collective at Murdoch University_files/g.gif" alt="" id="wpstats"><iframe scrolling="no" id="wpcom_remote_login_key" src="./Blog Feed – The Communication Collective at Murdoch University_files/remote-login.html" style="display: none;"></iframe><script src="./Blog Feed – The Communication Collective at Murdoch University_files/actionbar.js.download" defer=""></script></body></html>
