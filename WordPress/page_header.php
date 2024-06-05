@@ -73,9 +73,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 align-content-end pb-4 text-white">
-             <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
-            <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
-            <h4 class="authorname"><?php the_field("content-header-author"); ?></h4>
+             <a href="<?php the_field("feature-links"); ?>" class="btn-header body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a>
+            <h1 class="postheading"><?php the_field("content_heading"); ?></h1>
+            <h4 class="postauthorname"><?php the_field("content-header-author"); ?></h4>
                     </div>
                 </div>
             </div>
