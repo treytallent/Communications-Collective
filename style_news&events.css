@@ -33,7 +33,7 @@
 .btn-header {
   /* for post */
   position: relative;
-  top: -100px;
+  top: -90px;
   display: inline-block; /* Allows the button to shrink-wrap its content */
   padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
   background-color: #007ac3; /* Example button color, change as needed */
