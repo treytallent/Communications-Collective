@@ -50,7 +50,8 @@
   /* for page */
   position: relative;
   display: inline-block; /* Allows the button to shrink-wrap its content */
-  margin-top: 20px;
+  margin-top: 130px;
+  margin-bottom: 15px;
   padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
   background-color: #007ac3; /* Example button color, change as needed */
   color: white; /* Text color */
@@ -112,6 +113,19 @@
   color: white;
   margin-top: 1.25rem;
   margin-bottom: 0px;
+  z-index: 5;
+}
+
+.white-text-colour {
+  position: relative;
+  color: white;
+  z-index: 5;
+}
+
+.post-header-body {
+  position: relative;
+  top: -60px;
+  color: white;
   z-index: 5;
 }
 

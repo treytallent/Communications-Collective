@@ -74,14 +74,14 @@
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.1)
          ),
-         url(<?php echo get_field('smallnewsheaderbg'); ?>)">
+         url(<?php echo get_field('smalleventsheaderbg'); ?>)">
 
             <div class="container">
                 <div class="row">
                     <div class="col-12 align-content-end pb-4 text-white">
-                        <a class="btn-header-news-events body-text" href="http://170.187.231.66/~mesh20/sub/news/">News</a>
-                        <h1 class=""><?php the_field("smallnewsheadertitle"); ?></h1>
-                        <p class="body-text white-text-colour"><?php the_field("smallnewsheaderbody"); ?></p>
+                        <a class="btn-header-news-events body-text" href="http://170.187.231.66/~mesh20/sub/events/">Events</a>
+                        <h1 class=""><?php the_field("smalleventsheadertitle"); ?></h1>
+                        <p class="body-text white-text-colour"><?php the_field("smalleventsheaderbody"); ?></p>
                     </div>
                 </div>
             </div>

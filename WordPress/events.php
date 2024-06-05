@@ -3,15 +3,7 @@
 Template Name: Events
 */
 ?>
-<?php get_header(); ?>
-<div class="container-fluid header-bg" style="background-size: cover; background-image: url(<?php the_field("events_background_image"); ?>;">
-        <div class="container">
-            <a class="btn-header-news-events body-text" href="<?php the_field("events-link"); ?>">Events</a>
-            <h2 class="header-events-title"><?php the_field("title"); ?></h2>
-            <p class="news-header-intro body-text"><?php the_field("events_intro"); ?></p>
-                
-        </div><!-- container -->
-    </div><!-- containe-fluid -->
+<?php require_once('small-events-header.php'); ?>
 
 <div class="container-fluid section-padding">
      <div class="container">
@@ -42,10 +34,10 @@ $the_query = new WP_Query( $args ); ?>
                 } ?>
                   </div>
                   <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
-                  <p class="date subheader2-text"><?php the_field("date"); ?></p>
+                  <p class="date subheader2-text"><?php the_field("event-date"); ?></p>
 
                   <h3 class= "title pink"><?php the_title(); ?></h3> 
-                  <p class="location subheader3-text"><?php the_field("location"); ?></p>
+                  <p class="location subheader3-text"><?php the_field("event-location"); ?></p>
                   <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
 
                   <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
@@ -95,8 +87,8 @@ $the_query = new WP_Query( $args ); ?>
                 } ?>
               </div>
             <h3 class= "post-title orange3"><?php the_title(); ?></h3> 
-            <p class="post-location subheader2-text"><?php the_field("location"); ?></p>
-            <p class="post-date body-text"><?php the_field("date"); ?></p>
+            <p class="post-location subheader2-text"><?php the_field("event-location"); ?></p>
+            <p class="post-date body-text"><?php the_field("event-date"); ?></p>
             <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
           </div>
 
