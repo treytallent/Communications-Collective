@@ -4,8 +4,8 @@
         <div class="row">
             <section class="maintext">
                 <ul class="news-events-list-ul">
-                    <li class="news-events-list-li subheader3-text"><?php the_field("event-author"); ?> <?php the_field("news_date"); ?></li>
-                    <li class="news-events-list-li subheader3-text"><?php the_field("event-date"); ?> <?php the_field("new_author"); ?></li>
+                    <li class="news-events-list-li subheader3-text"><?php the_field("event-author"); ?> <?php the_field("new_author"); ?></li>
+                    <li class="news-events-list-li subheader3-text"><?php the_field("event-date"); ?> <?php the_field("news_date"); ?></li>
                     <li class="news-events-list-li subheader3-text"><?php the_field("event-location"); ?> <?php the_field("new_contributors"); ?></li>
                     <li class="news-events-list-li subheader3-text"><?php the_field("events_time"); ?> </li>
                 </ul>
