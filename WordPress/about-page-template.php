@@ -37,7 +37,7 @@ Template Name: About
                 <div class="row">
                     <!-- About Card -->
                     <div class="col-md-6 mb-3">
-                        <div class="card card-pink d-flex flex-column">
+                        <div class="card-pink d-flex flex-column">
                             <h3 class="H3-text m-0 order-1 px-3">
                                 Valuing Children Initiative
                             </h3>
@@ -59,7 +59,7 @@ Template Name: About
                     </div>
                     <!-- About Card -->
                     <div class="col-md-6 mb-3">
-                        <div class="card-orange d-flex flex-column">
+                        <div class="card-orange d-flex flex-column h-100">
                             <h3 class="H3-text m-0 order-1 px-3">
                                 Murdoch Sports
                             </h3>
