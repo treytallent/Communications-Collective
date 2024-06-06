@@ -23,10 +23,17 @@
   color: #007ac3;
 }
 
-/* images */
-/* .image-height {
-  height: 100%;
-} */
+/* news and event post first line */
+.news-events-list-ul {
+  padding: 0px;
+}
+.news-events-list-li {
+  display: inline-block;
+  padding-right: 40px;
+  padding-bottom: 18px;
+  width: auto;
+  list-style: outside none none;
+}
 
 /* header */
 

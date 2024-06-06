@@ -34,10 +34,10 @@ $the_query = new WP_Query( $args ); ?>
                 } ?>
                   </div>
                   <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
-                  <p class="date subheader2-text"><?php the_field("date"); ?></p>
+                  <p class="date subheader2-text"><?php the_field("news_date"); ?></p>
 
                   <h3 class= "news-title pink"><?php the_title(); ?></h3> 
-                  <p class="date subheader3-text"><?php the_field("author_name"); ?></p>
+                  <p class="date subheader3-text"><?php the_field("new_author"); ?></p>
                   <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
 
                   <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
