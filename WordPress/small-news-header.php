@@ -79,9 +79,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 align-content-end pb-4 text-white">
-                        <a class="btn-header-news-events body-text" href="http://170.187.231.66/~mesh20/sub/news/(opens in a new tab)">News</a>
+                        <a class="btn-header-news-events body-text" href="http://170.187.231.66/~mesh20/sub/news/">News</a>
                         <h1 class=""><?php the_field("smallnewsheadertitle"); ?></h1>
-                        <p class=""><?php the_field("smallnewsheaderbody"); ?></p>
+                        <p class="body-text white-text-colour"><?php the_field("smallnewsheaderbody"); ?></p>
                     </div>
                 </div>
             </div>

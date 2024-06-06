@@ -34,10 +34,10 @@ $the_query = new WP_Query( $args ); ?>
                 } ?>
                   </div>
                   <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
-                  <p class="date subheader2-text"><?php the_field("date"); ?></p>
+                  <p class="date subheader2-text"><?php the_field("news_date"); ?></p>
 
                   <h3 class= "news-title pink"><?php the_title(); ?></h3> 
-                  <p class="date subheader3-text"><?php the_field("author_name"); ?></p>
+                  <p class="date subheader3-text"><?php the_field("new_author"); ?></p>
                   <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
 
                   <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
@@ -80,7 +80,7 @@ $the_query = new WP_Query( $args ); ?>
         ?>
 
           <div class="col-md-6 col-sm-12 article-padding">
-          <p class="article-date subheader3-text"><?php the_field("date"); ?></p>
+          <p class="article-date subheader3-text"><?php the_field("news_date"); ?></p>
             <h4 class="article-title orange3"><?php the_title(); ?></h4>
             <div class="d-flex">
               <div class="col-md-4 col-sm-4 col-4 center arrow-container-right-orange3 img">
@@ -90,7 +90,7 @@ $the_query = new WP_Query( $args ); ?>
                   } ?>
                 </div>
               <div class="col-md-8 col-sm-8 col-8 v-center">
-                <p class="date subheader3-text"><?php the_field("author_name"); ?></p>
+                <p class="date subheader3-text"><?php the_field("new_author"); ?></p>
                 <p class="article-p body-text"><?php the_excerpt(); ?></p>
                 <a class="readmore body-text" href="<?php the_permalink(); ?>">CONTINUE READING</a>
                 <!-- <a class="readmore" href="<?php the_permalink(); ?>"> CONTINUE READING</a> -->

@@ -1,9 +1,14 @@
-<?php require_once('page_header.php'); 
-?>
+<?php require_once('page_header.php'); ?>
 <div class="container-fluid maincontainer">
     <div class="container">
         <div class="row">
             <section class="maintext">
+                <ul class="news-events-list-ul">
+                    <li class="news-events-list-li subheader3-text"><?php the_field("event-author"); ?> <?php the_field("news_date"); ?></li>
+                    <li class="news-events-list-li subheader3-text"><?php the_field("event-date"); ?> <?php the_field("new_author"); ?></li>
+                    <li class="news-events-list-li subheader3-text"><?php the_field("event-location"); ?> <?php the_field("new_contributors"); ?></li>
+                    <li class="news-events-list-li subheader3-text"><?php the_field("events_time"); ?> </li>
+                </ul>
 
 <article class="excerpts"> <!--we can reuse the css on the old article to restyle the new dynamic posts-->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -25,20 +30,6 @@
                     Share on Twitter
                 </a>
             </div>
-
-           <!--  Like and Dislike button  -->
-<?global $post;
-$likes = get_post_meta($post->ID, 'post_likes', true);
-$dislikes = get_post_meta($post->ID, 'post_dislikes', true);
-?>
-
-<div class="like-dislike-container">
-    <button class="like-button" data-id="<?php echo $post->ID; ?>">Like (<?php echo $likes; ?>)</button>
-    <button class="dislike-button" data-id="<?php echo $post->ID; ?>">Dislike (<?php echo $dislikes; ?>)</button>
-</div>
-
-
-
 
 
         <!-- Navigation Links -->

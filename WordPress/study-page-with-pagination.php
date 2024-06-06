@@ -7,10 +7,9 @@ Template Name: Study with pag
 <?php get_header(); ?>
 <div class="container-fluid header header-gradient" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
         <div class="container">
-            <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
+        <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a></a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
-            <h4 class="authorname"><?php the_field("content-header-author"); ?>
-            <a href="<?php the_field("button_link"); ?>" class="headerbtn-2 body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a></h4>
+            <h4 class="authorname"><?php the_field("content-header-author"); ?></h4>
             <p class="header-intro"><?php the_field("content-header-article"); ?></p>
             <a href="<?php the_field("continues-reading-featured-article"); ?>" class="headerbtn-1 body-text">Continue Reading</a>
     
@@ -23,21 +22,22 @@ Template Name: Study with pag
         <button class="dropdown content-dropdown">
                         <a
                            class="nav-link dropdown-toggle text-white"
-                           href="http://170.187.231.66/~mesh20/sub/content1/"
+                           href="#"
                            id="navbarDropdownMenuLink"
                            data-toggle="dropdown"
                            aria-haspopup="true"
                            aria-expanded="false"
                         >
-                           All Posts
+                           Study
                         </a>
                         <div
                            class="dropdown-menu text-right"
                         >
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/featured/">Featured</a>
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/recommendation-with-pagination/">Recommended</a>
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/news-with-pagination/">News</a>
-                           <a class="dropdown-item" href="http://170.187.231.66/~mesh20/sub/study-with-pagination/">Study</a>
+                        <a class="dropdown-item" href="<?php the_field("content_with_pagination"); ?>">All Post</a>
+                           <a class="dropdown-item" href="<?php the_field("featured_with_pagination"); ?>">Featured</a>
+                           <a class="dropdown-item" href="<?php the_field("recommendation_with_pagination"); ?>">Recommended</a>
+                           <a class="dropdown-item" href="<?php the_field("news_with_pagination"); ?>">News</a>
+                           <a class="dropdown-item" href="<?php the_field("study_with_pagination"); ?>">Study</a>
                         </div>
                      </button>
         <div class="row">
@@ -63,15 +63,35 @@ if ($query->have_posts()) :
             $category_slug = $categories[0]->slug;
             $category_link = get_category_link($categories[0]->term_id);
         }
+ // Default author name
+ $author_name = get_the_author();
+
+ // Get the custom author name from the custom field
+ $custom_author_name = get_post_meta(get_the_ID(), 'content-header-author', true);
+
+ // Use the custom author name if it exists, otherwise use the default author name
+ if (!empty($custom_author_name)) {
+     $author_name = $custom_author_name;
+ }
+ if (has_category('Recommendation')){
+    $background_color = '#ffe1ea'; // Red for post ID 1
+} elseif (has_category('news')) {
+    $background_color = '#fff1e1'; // Green for post ID 2
+} elseif (has_category('study')) {
+    $background_color = '#e1f8ff'; // Blue for posts in 'special-category'
+}elseif (has_category('content')) {
+  $background_color = '#ffe1ea'; // Blue for posts in 'special-category'
+}elseif (has_category('featured')) {
+  $background_color = '#fff1e1'; // Blue for posts in 'special-category'
+}
 ?>
-        <div class="col-md-4">
-            <div class="card mb-4 card-pink">
+<div class="col-md-4">
+    <div class="card mb-4 card-pink" style="background-color: <?php echo esc_attr($background_color); ?>;">
                 <?php if (has_post_thumbnail()) : ?>
                     <img class="card-img-top" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
                 <?php endif; ?>
-   
                 <div class="card-body">
-                    <p class="content-author"><?php echo get_the_author(); ?></p>
+                <p class="content-author"><?php echo esc_html($author_name); ?></p>
                     <h5 class="article-title"><?php the_title(); ?></h5>
                     <p class="body-text short-para"><?php the_excerpt(); ?></p>
                     <a href="<?php the_permalink(); ?>" class="continuereading">Continue Reading</a>
@@ -124,16 +144,12 @@ wp_reset_postdata(); ?>
     </div>
 </div>
 
-
-
 <section class="container-fluid make-post postbg">
 <div class="container">
-    <h3 class="text-center post-your-content">post your content</h3>
-    <p class="text-center section-pull-quote">"Now! It's your turn to post a blog!"</p>
-    <p class="text-center post-content ">Find what’s you interested and post it to us through the email provided below:<br><strong>
-        murdoch.commcollective@gmail.com</strong><br>
-       </p>
-    
+    <h3 class="text-center post-your-content"><?php the_field("post_content"); ?></h3>
+    <p class="text-center section-pull-quote"><?php the_field("post_content-quote"); ?></p>
+    <p class="text-center post-content "><?php the_field("post_email"); ?></p>
+    <p class="text-center post-content email"><?php the_field("email"); ?></p>
 </div>
 </section>
 

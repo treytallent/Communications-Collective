@@ -1,21 +1,35 @@
 /* Start of Header */
+.email{
+    font-weight: 400;
+}
 .contentheading {
     position: relative;
-    top: -80px;
+    top: -135px;
     color: white;
     z-index: 5;
 }
-.authorname {
+.postheading {
     position: relative;
     top: -70px;
     color: white;
     z-index: 5;
 }
-.header-intro {
+.authorname {
+    position: relative;
+    top: -137px;
+    color: white;
+    z-index: 5;
+}
+.postauthorname {
     position: relative;
     top: -60px;
     color: white;
-    padding-right: 170px;
+    z-index: 5;
+}
+.header-intro {
+    position: relative;
+    top: -130px;
+    color: white;
     z-index: 5;
 }
 
@@ -27,33 +41,43 @@
     z-index: 5;
 }
 
+.postbg {
+    position: relative;
+    background-image: url("Images/indexbg/content.svg");
+    background-repeat: no-repeat;
+    background-position: center 5vh;
+}
+
 .header {
     display: flex;
     flex-direction: row;
     background-image: url("Images/content/content-header.svg");
     background-size: cover;
     background-position: center center;
+    height: 100vh;
     padding-top: 55vh;
 }
 
 .header::before {
     content: "";
     position: absolute;
-    top: 30vh;
+    top: 0vh;
     left: 0;
     right: 0;
-    bottom: -2vh;
+    bottom: 0;
+    height: 100vh;
     background-image: linear-gradient(
         to right,
+
         rgba(0, 0, 0, 0.6),
         rgba(0, 0, 0, 0.1)
     );
-    z-index: 1;
+    z-index: 0;
 }
 
 .headerbtn {
     position: relative;
-    top: -100px;
+    top: -160px;
     display: inline-block; /* Allows the button to shrink-wrap its content */
     padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
     background-color: #007ac3; /* Example button color, change as needed */
@@ -62,13 +86,12 @@
     cursor: pointer; /* Changes the cursor to a pointer on hover */
     text-align: center; /* Centers the text inside the button */
     text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-    border-radius: 500px; /* High border-radius value to create the pill shape */
     z-index: 10;
 }
 
 .headerbtn-1 {
     position: relative;
-    top: -60px;
+    top: -112px;
     display: inline-block;
     padding: 10px 50px;
     margin-top: 15px;
@@ -85,16 +108,14 @@
 .headerbtn-2 {
     position: relative;
     display: inline-block;
-    padding: 10px 50px;
     margin-top: 15px;
-    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-    background-color: #007ac3; /* Example button color, change as needed */
-    color: white; /* Text color */
-    border: none; /* Removes the default border */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    padding: 10px 10px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: transparent; /* Example button color, change as needed */
+    color: #007ac3; /* Text color */
+    border-bottom: 2px solid #007ac3; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */ 
     text-align: center; /* Centers the text inside the button */
     text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-    border-radius: 500px; /* High border-radius value to create the pill shape */
     z-index: 10;
 }
 /* End of Header */
@@ -109,8 +130,20 @@
     color: #f8c718;
     padding-bottom: 1rem;
 }
+
+/* Ensures images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+.video-container {
+    max-width: 100%; /* Ensure the video doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+}
+/* General responsive content */
 .post-content {
     padding-bottom: 2rem;
+    margin-bottom: 0;
 }
 .postcontent {
     font-family: "Montserrat", sans-serif;
@@ -118,6 +151,9 @@
     font-weight: 400;
     font-style: normal;
     color: #1a1a1a;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 .content-dropdown {
     width: fit-content;
@@ -216,20 +252,16 @@ ul {
     margin-bottom: 1rem;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -50px;
-    margin-left: -50px;
-}
+
 /* End of visit content  */
 
 /* single page template   */
 .maintext {
-    display: flex;
+    display:inline-block;
     flex-wrap: wrap;
     margin-right: -50px;
-    margin-left: -50px;
+    width: 100%;
+    margin-top: 50px;
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -311,6 +343,7 @@ ul {
         ),
         url("Images/content/content-header.svg");
     background-size: cover;
+    height: 60vh;
     /* min-height: 33vh; */
     /* Large space Class = 90px (column gutter × 3)*/
 }
@@ -321,7 +354,8 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 24vh;
+    bottom: 10vh;
+    height: 60vh;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.6),
@@ -350,10 +384,11 @@ ul {
     .header::before {
         content: "";
         position: absolute;
-        top: 30vh;
+        top: 0;
         left: 0;
         right: 0;
-        bottom: -2vh;
+        bottom: 0;
+        height: 100vh;
         background-image: linear-gradient(
             to right,
             rgba(0, 0, 0, 0.6),
@@ -402,6 +437,16 @@ ul {
         font-weight: 400;
         font-style: normal;
         color: #1a1a1a;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Adjust fonts for smaller screens */
+@media (max-width: 600px) {
+    .postcontent {
+        font-size: 16px; /* Adjust font size as needed */
     }
 }
 
@@ -418,10 +463,11 @@ ul {
     .header::before {
         content: "";
         position: absolute;
-        top: 30vh;
+        top: 25vh;
         left: 0;
         right: 0;
-        bottom: -2vh;
+        bottom: 0;
+        height: 75vh;
         background-image: linear-gradient(
             to right,
             rgba(0, 0, 0, 0.6),
@@ -436,5 +482,8 @@ ul {
         font-weight: 400;
         font-style: normal;
         color: #1a1a1a;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
