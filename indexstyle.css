@@ -65,6 +65,12 @@ button.navbar-toggler {
     margin-left: 0px;
 }
 
+.event-img-fill {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 /* ///////////////////////////////////// */
 /* Screen Size > 767px */
 @media only screen and (min-width: 577.98px) {
@@ -230,13 +236,16 @@ button.navbar-toggler {
         padding-bottom: 10vh;
     }
 
+    .event-img-top {
+        padding-top: 6vh;
+    }
+
     .event-img-frame-mobile {
         position: absolute;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: auto; /* Maintains the aspect ratio */
-        display: block; /* Removes any extra space below the image */
         z-index: 1;
+        width: 80vw;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     img.event-img-frame {

@@ -18,7 +18,11 @@
                     <a href="https://www.linkedin.com/groups/10440200/"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/linkedin_white.svg" alt="LinkedIn icon link to LinkedIn account" /></a>
                 </div>
             </div>
-            <a class="btn row my-5">Learn More</a>
+            <?php
+$header_button_text = get_field('header_button_text');
+$header_button_link = get_field('header_button_link');
+?>
+            <a href="<?php echo esc_url($header_button_link); ?>" class="btn row my-5"><?php echo esc_html($header_button_text); ?></a>
         </div>
     </section>
 
@@ -32,7 +36,11 @@
                     </p>
                     <p class="body-text"><?php the_field('about_body'); ?>
                     </p>
-                    <a class="btn row mx-0 my-5">Learn More</a>
+                    <?php
+$about_button_text = get_field('about_button_text');
+$about_button_link = get_field('about_button_link');
+?>
+                    <a href="<?php echo esc_url($about_button_link); ?>" class="btn row mx-0 my-5"><?php echo esc_html($about_button_text); ?></a>
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 vertical-center">
                     <div class="arrow-container-left-pink">
@@ -62,7 +70,11 @@
                     <p class="body-text">
                     <?php the_field('opportunities_body'); ?>
                     </p>
-                    <a class="btn row mx-0 my-5">Learn More</a>
+                    <?php
+$opportunities_button_text = get_field('opportunities_button_text');
+$opportunities_button_link = get_field('opportunities_button_link');
+?>
+                    <a href="<?php echo esc_url($opportunities_button_link); ?>" class="btn row mx-0 my-5"><?php echo esc_html($opportunities_button_text); ?></a>
                 </div>
             </div>
         </div>
@@ -78,7 +90,11 @@
                     <p class="body-text">
                     <?php the_field('news_body'); ?>
                     </p>
-                    <a class="btn row mx-0 my-5">Learn More</a>
+                    <?php
+$news_button_text = get_field('news_button_text');
+$news_button_link = get_field('news_button_link');
+?>
+                    <a href="<?php echo esc_url($news_button_link); ?>" class="btn row mx-0 my-5"><?php echo esc_html($news_button_text); ?></a>
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 vertical-center">
                     <div class="arrow-container-left-orange2">
@@ -102,27 +118,31 @@
                 </p>
             </div>
             <div class="d-flex justify-content-center">
-                <a class="btn my-5">Learn More</a>
+            <?php
+$events_button_text = get_field('events_button_text');
+$events_button_link = get_field('events_button_link');
+?>
+                    <a href="<?php echo esc_url($events_button_link); ?>" class="btn my-5"><?php echo esc_html($events_button_text); ?></a>
             </div>
-            <div class="row event-img-row">
-                <div class="col-sm-4 vertical-center event-img-padding">
-                    <div class="border-orange3 event-img">
-                        <img src="<?php the_field('events_image_1'); ?>"/>
+            <div class="row">
+                <div class="col-sm-4 event-img-padding event-img-top">
+                    <div class="border-orange3 event-img mx-auto">
+                        <img src="<?php the_field('events_image_1'); ?>" class="event-img-fill">
                     </div>
                 </div>
-                <div class="col-sm-4 vertical-center event-img-padding">
-                    <div class="border-orange3 event-img">
-                        <img src="<?php the_field('events_image_2'); ?>"/>
+                <div class="col-sm-4 event-img-padding">
+                    <div class="border-orange3 event-img mx-auto">
+                        <img src="<?php the_field('events_image_2'); ?>" class="event-img-fill">
                     </div>
                 </div>
-                <div class="col-sm-4 vertical-center event-img-padding">
-                    <div class="border-orange3 event-img">
-                        <img src="<?php the_field('events_image_3'); ?>"/>
+                <div class="col-sm-4 event-img-padding">
+                    <div class="border-orange3 event-img mx-auto">
+                        <img src="<?php the_field('events_image_3'); ?>" class="event-img-fill">
                     </div>
                 </div>
 
                 <img class="event-img-frame" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events.svg" />
-                <img class="event-img-frame-mobile" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events_mobile.svg" />
+                <img class="event-img-frame-mobile mx-auto" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events_mobile.svg" />
             </div>
         </div>
     </section>
@@ -144,7 +164,11 @@
                     <p class="body-text">
                     <?php the_field('content_body'); ?>
                     </p>
-                    <a class="btn row mx-0 my-5">Learn More</a>
+                    <?php
+$content_button_text = get_field('content_button_text');
+$content_button_link = get_field('content_button_link');
+?>
+                    <a href="<?php echo esc_url($content_button_link); ?>" class="btn row mx-0 my-5"><?php echo esc_html($content_button_text); ?></a>
                 </div>
             </div>
         </div>
