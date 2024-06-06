@@ -18,7 +18,7 @@ Template Name: About
                         <?php the_field("section_1_paragraph"); ?>
                     </p>
                 </div>
-                <div class="col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
+                <div class="offset-lg-1 col-lg-4 col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
                     <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="Image" />
                 </div>
             </section>
@@ -39,43 +39,30 @@ Template Name: About
                     <div class="col-md-6 mb-3">
                         <div class="card-pink d-flex flex-column">
                             <h3 class="H3-text m-0 order-1 px-3">
-                                Valuing Children Initiative
+                                <?php the_field("section_2_card_1_title"); ?>
                             </h3>
                             <h4 class="subheader2-text order-2 px-3 py-0 my-0">
-                                Strategic Communications
+                                <?php the_field("section_2_card_1_major"); ?>
                             </h4>
                             <p class="order-3 p-3 py-0 my-0">
-                                The COM307 work-integrated learning unit was
-                                tasked with a project for the Valuing Children
-                                Initiative. The brief was to change the way West
-                                Australians value children using sport. Innovative
-                                ideas were developed for different target
-                                audiences, including pre-natal and newborns (0-4
-                                years old), children (5-14 years old), teenagers
-                                (15-19), and young adults (20-24 years old).
+                                <?php the_field("section_2_card_1_paragraph"); ?>
                             </p>
-                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/about_3.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-left order-0 sm-img mb-4" />
+                            <img src="<?php the_field("section_2_card_1_image"); ?>" alt="" class="br-sm ar-1 object-fit-cover pos-left order-0 sm-img mb-4" />
                         </div>
                     </div>
                     <!-- About Card -->
                     <div class="col-md-6 mb-3">
                         <div class="card-orange d-flex flex-column h-100">
                             <h3 class="H3-text m-0 order-1 px-3">
-                                Murdoch Sports
+                                <?php the_field("section_2_card_2_title"); ?>
                             </h3>
                             <h4 class="subheader2-text order-2 px-3 py-0 my-0">
-                                Strategic Communications
+                                <?php the_field("section_2_card_2_major"); ?>
                             </h4>
                             <p class="order-3 p-3 py-0 my-0">
-                                As part of the work-integrated learning unit,
-                                COM307, students were asked to develop a campaign
-                                for the client Murdoch Sports. The brief was to
-                                help the Murdoch Sports department to become
-                                accredited as a FISU Healthy Campus and establish
-                                a higher health and wellness culture on Murdoch
-                                Universities campus.
+                                <?php the_field("section_2_card_2_paragraph"); ?>
                             </p>
-                            <img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/about_4.webp" alt="#" class="br-sm ar-1 object-fit-cover pos-top order-0 sm-img mb-4" />
+                            <img src="<?php the_field("section_2_card_2_image"); ?>" alt="" class="br-sm ar-1 object-fit-cover pos-top order-0 sm-img mb-4" />
                         </div>
                     </div>
                 </div>
@@ -95,176 +82,128 @@ Template Name: About
                     <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Georgia Earnshaw</h3>
-                                <p class="m-0">Digital Media Adviser</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_1_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_1_title"); ?></p>
                                 <p class="m-0">
-                                    Department of the Premier and Cabinet
+                                    <?php the_field("section_3_card_1_employer"); ?>
                                 </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/g_earnshaw.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="<?php the_field("section_3_card_1_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-pink">"</span>I had the
-                            opportunity to work with real clients right from the
-                            start of this strategic communications course, which
-                            gave me extensive practical experience and an
-                            understanding of the job opportunities this course
-                            would lead to. The assignments are incredibly
-                            practical, and perfectly reflect the realities of
-                            strategic communications in the workforce.
+                            <span class="H3-text quote-pink">"</span><?php the_field("section_3_card_1_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 2 -->
                     <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Keely Lambert</h3>
-                                <p class="m-0">Marketing Officer</p>
-                                <p class="m-0">Cockburn ARC</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_2_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_2_title"); ?></p>
+                                <p class="m-0">
+                                    <?php the_field("section_3_card_2_employer"); ?>
+                                </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/k_lambert.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="<?php the_field("section_3_card_2_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-orange">"</span>Through
-                            incredibly supportive lecturers and academics, I was
-                            equipped with the skills and confidence to take on
-                            opportunities outside of the classroom. Working
-                            alongside real clients on real projects provided me
-                            the edge necessary to be competitive to land a dream
-                            graduate marketing role.
+                            <span class="H3-text quote-orange">"</span><?php the_field("section_3_card_2_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 3 -->
                     <div class="card card-yellow col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Lynsey Brady</h3>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_3_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_3_title"); ?></p>
                                 <p class="m-0">
-                                    Specialist Communications & Engagement
+                                    <?php the_field("section_3_card_3_employer"); ?>
                                 </p>
-                                <p class="m-0">Rio Tinto Iron Ore</p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_brady.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="<?php the_field("section_3_card_3_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-yellow">"</span>The
-                            strategic communications program provided me with the
-                            practical skills and knowledge to confidently kick
-                            start a rewarding and fulfilling career.
+                            <span class="H3-text quote-yellow">"</span><?php the_field("section_3_card_3_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 4 -->
                     <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Laura McLean</h3>
-                                <p class="m-0">Senior Consultant</p>
-                                <p class="m-0">Cannings Purple</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_4_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_4_title"); ?></p>
+                                <p class="m-0">
+                                    <?php the_field("section_3_card_4_employer"); ?>
+                                </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/l_mclean.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="<?php the_field("section_3_card_4_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-pink">"</span> This course
-                            laid the perfect foundations for my career in
-                            communications. The opportunity to understand the
-                            theory behind topics like crisis management, content
-                            creation and strategic planning, paired with the
-                            practical experience from the workplace learning
-                            program allowed me to transition from uni to the
-                            industry with ease.
+                            <span class="H3-text quote-pink">"</span><?php the_field("section_3_card_4_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 5 -->
                     <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Sameera Afzaal</h3>
-                                <p class="m-0">Digital Communications Officer</p>
-                                <p class="m-0">Public Transport Authority</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_5_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_5_title"); ?></p>
+                                <p class="m-0">
+                                    <?php the_field("section_3_card_5_employer"); ?>
+                                </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_afzaal.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="<?php the_field("section_3_card_5_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-orange">"</span> The
-                            strategic communications course provided relevant
-                            foundations for tactical decision-making in the
-                            ever-evolving field of marketing. I still apply these
-                            strategies to a diverse range of clients many years
-                            later
+                            <span class="H3-text quote-orange">"</span><?php the_field("section_3_card_5_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 6 -->
                     <div class="card card-yellow col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Stephanie Dawson</h3>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_6_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_6_title"); ?></p>
                                 <p class="m-0">
-                                    Media and Communications Officer
+                                    <?php the_field("section_3_card_6_employer"); ?>
                                 </p>
-                                <p class="m-0">Murdoch University</p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/s_dawson.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="<?php the_field("section_3_card_6_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-yellow">"</span>From
-                            practical assessments to real-world clients to
-                            internships, the strategic communications course
-                            offers so much experience and builds the essential
-                            skills you'll need in any communications job, no
-                            matter where you work. Topics like crisis
-                            communication, stakeholder consultation, media
-                            liaison and interviewing, and the importance of
-                            social media have been so incredibly helpful in my
-                            role. The course broadened my skillset and experience
-                            so I can find job opportunities in many different
-                            areas
+                            <span class="H3-text quote-yellow">"</span><?php the_field("section_3_card_6_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 7 -->
                     <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Anthony Deceglie</h3>
-                                <p class="m-0">Editor in Chief</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_7_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_7_title"); ?></p>
                                 <p class="m-0">
-                                    West Australian Newspaper at Seven West Media
+                                    <?php the_field("section_3_card_7_employer"); ?>
                                 </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/a_deceglie.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="<?php the_field("section_3_card_7_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-pink">"</span> We are
-                            really proud of the students that have come from
-                            Murdoch University and they have quickly risen up the
-                            ranks of our newsroom in senior roles. Some of them
-                            are journalists looking after entire suburban
-                            newspapers and some of them are running our website
-                            at night on their own.
+                            <span class="H3-text quote-pink">"</span><?php the_field("section_3_card_7_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 8 -->
                     <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Eamon Holley</h3>
-                                <p class="m-0">Celebrity Producer</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_8_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_8_title"); ?></p>
                                 <p class="m-0">
-                                    British GQ, Vogue, Conde Nast Publications
+                                    <?php the_field("section_3_card_8_employer"); ?>
                                 </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_holley.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="<?php the_field("section_3_card_8_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-orange">"</span> The
-                            Strategic Communications course provided the ability
-                            to develop skills and the critical insights necessary
-                            to navigate and adapt to the ever-evolving media
-                            landscape. With incredible facility support and
-                            invaluable practical experience, the versatility of
-                            the course content has allowed me to work across a
-                            range of fields including corporate agency,
-                            television, publishing and events on an international
-                            scale
+                            <span class="H3-text quote-orange">"</span><?php the_field("section_3_card_8_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 9 -->
@@ -272,62 +211,46 @@ Template Name: About
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
                                 <h3 class="sm-heading m-0">
-                                    Indigo Lemay-Conway
+                                    <h3 class="sm-heading m-0"><?php the_field("section_3_card_9_name"); ?></h3>
                                 </h3>
-                                <p class="m-0">Journalist and Music Reviewer</p>
+                                <p class="m-0"><?php the_field("section_3_card_9_title"); ?></p>
                                 <p class="m-0">
-                                    The West Australian and PerthNow
+                                    <?php the_field("section_3_card_9_employer"); ?>
                                 </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/e_conway.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-yellow" src="<?php the_field("section_3_card_9_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-yellow">"</span>
-                            Journalism as a career was one of the best moves I
-                            ever made. If you are going to study journalism at
-                            Murdoch University, just go in with an open mind,
-                            because this degree opens doors that you didn't see
-                            coming.
+                            <span class="H3-text quote-yellow">"</span><?php the_field("section_3_card_9_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 10 -->
                     <div class="card card-pink col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">Rachel Ingram</h3>
-                                <p class="m-0">Retail Manager</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_10_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_10_title"); ?></p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/r_ingram.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-pink" src="<?php the_field("section_3_card_10_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-pink">"</span> The Global
-                            Media and Communication course gave me an
-                            understanding of audience behaviours, including how
-                            the power of communication can and does impact on
-                            society. The research skills that I gained from my
-                            degree enable me to deeply analyse texts and question
-                            their authenticity.
+                            <span class="H3-text quote-pink">"</span><?php the_field("section_3_card_10_paragraph"); ?>
                         </p>
                     </div>
                     <!-- Testimonial Card 11 -->
                     <div class="card card-orange col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">James Threlfall</h3>
-                                <p class="m-0">Digital Experience Designer</p>
-                                <p class="m-0">Murdoch University</p>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_11_name"); ?></h3>
+                                <p class="m-0"><?php the_field("section_3_card_11_title"); ?></p>
+                                <p class="m-0">
+                                    <?php the_field("section_3_card_11_employer"); ?>
+                                </p>
                             </div>
-                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Testimonials/j_threfall.webp" alt="Portrait" />
+                            <img class="order-0 mr-2 align-self-center testimonial-img testimonial-img-orange" src="<?php the_field("section_3_card_11_image"); ?>" alt="" />
                         </div>
                         <p class="order-0 mb-3 mt-auto">
-                            <span class="H3-text quote-orange">"</span> The web
-                            communications major and its varied units gave me a
-                            dynamic foundation applicable to many business areas.
-                            Its broad range of electives from public relations to
-                            web strategy taught me the value of understanding
-                            different perspectives which I was able to easily
-                            apply in the workplace, impressing industry
-                            stakeholders and bringing fresh, modern ideas.
+                            <span class="H3-text quote-orange">"</span><?php the_field("section_3_card_11_paragraph"); ?>
                         </p>
                     </div>
 
@@ -342,9 +265,9 @@ Template Name: About
                     <p class="mb-2">
                         <?php the_field("section_4_paragraph"); ?>
                     </p>
-                    <a href="https://www.murdoch.edu.au/course/undergraduate/b1342" class="btn btn-sm mt-0 px-3">Explore your future</a>
+                    <a href="<?php the_field("section_4_button_link"); ?>" class="btn btn-sm mt-0 px-3"><?php the_field("section_4_button_text"); ?></a>
                 </div>
-                <div class="col-md-6 d-flex order-media order-2 sm-img arrow-container-left-orange2">
+                <div class="offset-lg-1 col-lg-4 col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-orange2">
                     <img src="<?php the_field("section_4_image"); ?>" class="ar-1 object-fit-cover pos-left" alt="Image" />
                 </div>
             </section>
