@@ -19,7 +19,7 @@ Template Name: About
                     </p>
                 </div>
                 <div class="offset-lg-1 col-lg-4 col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
-                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="Image" />
+                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt/>
                 </div>
             </section>
 
@@ -268,7 +268,7 @@ Template Name: About
                     <a href="<?php the_field("section_4_button_link"); ?>" class="btn btn-sm mt-0 px-3"><?php the_field("section_4_button_text"); ?></a>
                 </div>
                 <div class="offset-lg-1 col-lg-4 col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-orange2">
-                    <img src="<?php the_field("section_4_image"); ?>" class="ar-1 object-fit-cover pos-left" alt="Image" />
+                    <img src="<?php the_field("section_4_image"); ?>" class="ar-1 object-fit-cover pos-left" alt="" />
                 </div>
             </section>
         </div>
