@@ -44,7 +44,7 @@ $about_button_link = get_field('about_button_link');
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 vertical-center">
                     <div class="arrow-container-left-pink">
-                        <img src="<?php the_field('about_image'); ?>"/>
+                        <img src="<?php the_field('about_image'); ?>" alt/>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ $about_button_link = get_field('about_button_link');
             <div class="row">
                 <div class="col-lg-5 offset-lg-1 col-sm-6 vertical-center order-2 order-sm-1">
                     <div class="arrow-container-right-orange1">
-                        <img src="<?php the_field('opportunities_image'); ?>"/>
+                        <img src="<?php the_field('opportunities_image'); ?>" alt/>
                     </div>
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 order-1 order-sm-2">
@@ -98,7 +98,7 @@ $news_button_link = get_field('news_button_link');
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 vertical-center">
                     <div class="arrow-container-left-orange2">
-                        <img src="<?php the_field('news_image'); ?>"/>
+                        <img src="<?php the_field('news_image'); ?>" alt/>
                     </div>
                 </div>
             </div>
@@ -127,22 +127,22 @@ $events_button_link = get_field('events_button_link');
             <div class="row">
                 <div class="col-sm-4 event-img-padding event-img-top">
                     <div class="border-orange3 event-img mx-auto">
-                        <img src="<?php the_field('events_image_1'); ?>" class="event-img-fill">
+                        <img src="<?php the_field('events_image_1'); ?>" class="event-img-fill" alt>
                     </div>
                 </div>
                 <div class="col-sm-4 event-img-padding">
                     <div class="border-orange3 event-img mx-auto">
-                        <img src="<?php the_field('events_image_2'); ?>" class="event-img-fill">
+                        <img src="<?php the_field('events_image_2'); ?>" class="event-img-fill" alt>
                     </div>
                 </div>
                 <div class="col-sm-4 event-img-padding">
                     <div class="border-orange3 event-img mx-auto">
-                        <img src="<?php the_field('events_image_3'); ?>" class="event-img-fill">
+                        <img src="<?php the_field('events_image_3'); ?>" class="event-img-fill" alt>
                     </div>
                 </div>
 
-                <img class="event-img-frame" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events.svg" />
-                <img class="event-img-frame-mobile mx-auto" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events_mobile.svg" />
+                <img class="event-img-frame" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events.svg" alt/>
+                <img class="event-img-frame-mobile mx-auto" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events_mobile.svg" alt />
             </div>
         </div>
     </section>
@@ -153,7 +153,7 @@ $events_button_link = get_field('events_button_link');
             <div class="row">
                 <div class="col-lg-5 offset-lg-1 col-sm-6 vertical-center order-2 order-sm-1">
                     <div class="arrow-container-right-yellow">
-                        <img src="<?php the_field('content_image'); ?>"/>
+                        <img src="<?php the_field('content_image'); ?>" alt/>
                     </div>
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 order-1 order-sm-2">
