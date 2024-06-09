@@ -5,11 +5,11 @@ Template Name: Contents with pag
 ?>
 
 <?php get_header(); ?>
-<div class="container-fluid header" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
+<div class="container-fluid header" style='background-size: cover; background-image: url("<?php the_field("content-bg"); ?>");'>
         <div class="container">
             <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
-            <p class="H2-text authorname"><?php the_field("content-header-author"); ?></h4>
+            <h4 class="authorname"><?php the_field("content-header-author"); ?></h4>
             <p class="header-intro"><?php the_field("content-header-article"); ?></p>
             <a href="<?php the_field("continues-reading-featured-article"); ?>" class="headerbtn-1 body-text">Continue Reading</a>
     
@@ -19,7 +19,7 @@ Template Name: Contents with pag
 <div class="container-fluid maincontainer">
     <div class="container">
         <h2 class="text-center visitcontent">visit our content</h2>
-        <button class="dropdown content-dropdown">
+        <div class="dropdown content-dropdown">
                         <a
                            class="nav-link dropdown-toggle text-white"
                            href="#"
@@ -39,7 +39,7 @@ Template Name: Contents with pag
                            <a class="dropdown-item" href="<?php the_field("news_with_pagination"); ?>">News</a>
                            <a class="dropdown-item" href="<?php the_field("study_with_pagination"); ?>">Study</a>
                         </div>
-                     </button>
+</div>
         <div class="row">
         <?php
 // Query the latest posts from the 'content' category
@@ -95,8 +95,8 @@ if ($query->have_posts()) :
                 <?php endif; ?>
                 <div class="card-body">
                 <p class="content-author"><?php echo esc_html($author_name); ?></p>
-                    <h3 class="article-title"><?php the_title(); ?></h5>
-                    <p class="body-text short-para"><?php the_excerpt(); ?></p>
+                    <h5 class="article-title"><?php the_title(); ?></h5>
+                    <p class="body-text short-para"><?php echo get_the_excerpt(); ?></p>
                     <a href="<?php the_permalink(); ?>" class="continuereading">Continue Reading</a>
                 </div>
             </div>
