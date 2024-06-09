@@ -6,9 +6,9 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@1,6..12,800&family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@1,6..12,800&family=Nunito:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <title> <?php
             if (function_exists('is_tag') && is_tag()) {
                 single_tag_title("Tag Archive for &quot;");
@@ -43,7 +43,7 @@
         <!-- Bootstrap Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="navbar-brand-container">
-                <a class="navbar-brand navbar-brand-title" href="http://170.187.231.66/~mesh20/sub/home/"><img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/ccmu_logo.svg" alt="Communication Collective at Murdoch University Logo" /></a>
+                <a class="navbar-brand navbar-brand-title" href="http://170.187.231.66/~mesh20/sub/home/"><img src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/ccmu_logo.svg" alt="Communication Collective at Murdoch University Logo"></a>
                 <p class="navbar-brand-title">
                     the communication collective at murdoch university
                 </p>
