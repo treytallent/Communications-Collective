@@ -11,13 +11,13 @@ Version: 1
 /**********************************************************************/
 
 .container-fluid {
-  padding: 0;
+    padding: 0;
 }
 
 /* Centering to fix chat bubble triangle */
 .vertical-center {
-  display: flex;
-  align-self: center;
+    display: flex;
+    align-self: center;
 }
 
 /**************/
@@ -26,103 +26,103 @@ Version: 1
 
 h1,
 .H1-text {
-  font-family: "Nunito", sans-serif;
-  font-size: 4rem;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Nunito", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h2,
 .H2-text {
-  font-family: "Nunito", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Nunito", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h3,
 .H3-text {
-  font-family: "Nunito", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Nunito", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h4 {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .p-text {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .subheader1-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-style: italic;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .subheader2-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 800;
+    font-style: italic;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .subheader3-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    font-style: italic;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .section-pull-quote {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 800;
-  font-style: italic;
-  font-variation-settings: "wdth" 100, "YTLC" 500;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 800;
+    font-style: italic;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .body-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #1a1a1a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #1a1a1a;
 }
 
 /* Limits the width of a text container to 70 characters, an optimal reading length */
 .p-width {
-  max-width: 70ch;
+    max-width: 70ch;
 }
 
 @media screen and (max-width: 995px) {
-  body {
-    font-size: 0.875rem;
-  }
+    body {
+        font-size: 0.875rem;
+    }
 
-  h1,
-  .H1-text {
-    font-size: 2.5rem;
-  }
+    h1,
+    .H1-text {
+        font-size: 2.5rem;
+    }
 
-  h2,
-  .H2-text {
-    font-size: 2.25rem;
-  }
+    h2,
+    .H2-text {
+        font-size: 2.25rem;
+    }
 
-  h3,
-  .H3-text {
-    font-size: 1.5rem;
-  }
+    h3,
+    .H3-text {
+        font-size: 1.5rem;
+    }
 }
 
 /**************/
@@ -130,27 +130,27 @@ h4 {
 /**************/
 
 .text-white {
-  color: white;
+    color: white;
 }
 
 .text-pink {
-  color: #d91853;
+    color: #d91853;
 }
 
 .text-orange1 {
-  color: #eb5120;
+    color: #eb5120;
 }
 
 .text-orange2 {
-  color: #eb7e20;
+    color: #eb7e20;
 }
 
 .text-orange3 {
-  color: #f8a918;
+    color: #f8a918;
 }
 
 .text-yellow {
-  color: #f8c718;
+    color: #f8c718;
 }
 
 /**************/
@@ -158,34 +158,34 @@ h4 {
 /**************/
 
 .btn {
-  position: relative;
-  display: inline-block; /* Allows the button to shrink-wrap its content */
-  margin-top: 50px;
-  padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
-  background-color: #007ac3; /* Example button color, change as needed */
-  color: white; /* Text color */
-  border: none; /* Removes the default border */
-  cursor: pointer; /* Changes the cursor to a pointer on hover */
-  text-align: center; /* Centers the text inside the button */
-  text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
-  border-radius: 500px; /* High border-radius value to create the pill shape */
-  z-index: 10;
+    position: relative;
+    display: inline-block; /* Allows the button to shrink-wrap its content */
+    margin-top: 50px;
+    padding: 10px 50px; /* Adjust padding to suit your design, more horizontal padding for a pill shape */
+    background-color: #007ac3; /* Example button color, change as needed */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from links if you're styling an <a> tag as a button */
+    border-radius: 500px; /* High border-radius value to create the pill shape */
+    z-index: 10;
 }
 
 .btn-sm {
-  z-index: initial;
+    z-index: initial;
 }
 
 .btn:hover {
-  background-color: #00649e;
-  transition: background-color 0.3s;
-  color: white;
+    background-color: #00649e;
+    transition: background-color 0.3s;
+    color: white;
 }
 
 @media screen and (max-width: 576px) {
-  .btn {
-    width: 100%;
-  }
+    .btn {
+        width: 100%;
+    }
 }
 
 /**************/
@@ -193,36 +193,37 @@ h4 {
 /**************/
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 .nav-link {
-  color: #1a1a1a;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.1em;
-  font-style: normal;
-  font-weight: 400;
+    color: #1a1a1a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .nav-link:hover {
-  color: #007ac3 !important;
-  cursor: pointer;
-  transition: color 0.3s;
+    color: #007ac3 !important;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
 .navbar-brand-container {
-  display: flex;
+    display: flex;
 }
 .navbar-brand {
-  width: 44px;
-  aspect-ratio: 1/1;
+    width: 44px;
+    aspect-ratio: 1/1;
 }
 
 .navbar-brand-title {
-  align-self: center;
-  margin-bottom: 0;
-  max-width: 24ch;
-  font-size: 0.9375rem;
-  white-space: wrap;
+    align-self: center;
+    margin-bottom: 0;
+    max-width: 24ch;
+    font-size: 0.9375rem;
+    white-space: wrap;
+    font-family: "Nunito", sans-serif;
 }
 
 /* Social Nav Links */
@@ -269,17 +270,17 @@ h4 {
 /**********************/
 
 .small-header-bg {
-  background-size: cover;
+    background-size: cover;
 }
 
 .small-header-bg div {
-  min-height: 40vh;
+    min-height: 40vh;
 }
 
 @media screen and (max-width: 767px) {
-  .small-header-bg div {
-    min-height: 30vh;
-  }
+    .small-header-bg div {
+        min-height: 30vh;
+    }
 }
 
 /**************/
@@ -287,91 +288,91 @@ h4 {
 /**************/
 
 footer {
-  background-color: #007ac3;
+    background-color: #007ac3;
 }
 
 footer .body-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
 }
 
 footer .container {
-  padding-top: 55px;
-  padding-bottom: 55px;
+    padding-top: 55px;
+    padding-bottom: 55px;
 }
 footer img {
-  height: 55px;
+    height: 55px;
 }
 
 .footer-logo {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .index-footer-social-icon {
-  position: relative;
-  height: 36px;
-  padding-left: 24px;
-  padding-right: 24px;
+    position: relative;
+    height: 36px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 @media screen and (max-width: 767px) {
-  .index-footer-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .index-footer-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-  .footer-logo {
-    padding: 1.5rem;
-  }
+    .footer-logo {
+        padding: 1.5rem;
+    }
 }
 
 /*       css for the cards in the content page       */
 .card-img-top {
-  height: 200px;
-  object-fit: cover;
+    height: 200px;
+    object-fit: cover;
 }
 .card-title {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 .card-text {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 /*   for the pagination           */
 .navigation ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navigation ul li {
-  margin: 10px;
-  list-style-type: none;
+    margin: 10px;
+    list-style-type: none;
 }
 
 .container-fluid.maincontainer {
-  padding-top: 0;
+    padding-top: 0;
 }
 
 .smallpage-bg {
-  width: 100%;
-  background: url("images/page_header_bg.jpg") no-repeat center center;
-  background-size: cover; /*make the background image cover the whole div proportionally*/
-  height: 40vh; /*Viewport Height (vh) — This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height. */
+    width: 100%;
+    background: url("images/page_header_bg.jpg") no-repeat center center;
+    background-size: cover; /*make the background image cover the whole div proportionally*/
+    height: 40vh; /*Viewport Height (vh) — This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height. */
 }
 
 .smallpage-title {
-  font-size: 4em;
-  color: white;
-  font-weight: 800;
-  margin-top: 9%;
-  padding-bottom: 5%;
+    font-size: 4em;
+    color: white;
+    font-weight: 800;
+    margin-top: 9%;
+    padding-bottom: 5%;
 }

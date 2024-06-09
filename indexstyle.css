@@ -72,6 +72,39 @@ button.navbar-toggler {
 }
 
 /* ///////////////////////////////////// */
+@media only screen and (min-width: 1199.98px) {
+    /* ///////////////////////////////////// */
+
+    .arrow-container-right-orange1::before {
+        content: "";
+        background-image: url("Images/Arrows/Arrow-Orange1.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 25%;
+        aspect-ratio: 1/1;
+        transform: rotate(135deg);
+        top: 78%;
+        left: 60%;
+        z-index: 1;
+    }
+
+    .arrow-container-right-yellow::before {
+        content: "";
+        background-image: url("Images/Arrows/Arrow-Yellow.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 25%;
+        aspect-ratio: 1/1;
+        transform: rotate(135deg);
+        top: 78%;
+        left: 60%;
+        z-index: 1;
+    }
+}
+
+/* ///////////////////////////////////// */
 /* Screen Size > 767px */
 @media only screen and (min-width: 577.98px) {
     /* ///////////////////////////////////// */
