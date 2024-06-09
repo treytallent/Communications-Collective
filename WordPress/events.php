@@ -9,7 +9,6 @@ Template Name: Events
      <div class="container">
      <h2 class="section-title offset-md-1 pink">current events</h2>
         <div class="row">
-             <section class="maintext">             
              <?php 
 $args = array(
   'category_name' =>  'Current Events',
@@ -24,21 +23,20 @@ $the_query = new WP_Query( $args ); ?>
  
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-<div class="thepost">
-<div class="d-flex section1-row">
-<div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img">
+<div class="N-E-flex section1-row">
+<div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img news-events-image-size">
 <!-- <img class="arrow-effect-image image-border-pink"  -->
 <?php
                 if ( has_post_thumbnail() ) { 
                     the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-pink'));
                 } ?>
                   </div>
-                  <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
+                  <div class="col-md-5 offset-md-1 col-sm-6 offset-sm-1 v-center section1-padding" >
                   <p class="date subheader2-text"><?php the_field("event-date"); ?></p>
 
                   <h3 class= "title pink"><?php the_title(); ?></h3> 
                   <p class="location subheader3-text"><?php the_field("event-location"); ?></p>
-                  <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
+                  <p class="section1-intro body-text"><?php echo get_the_excerpt(); ?></p>
 
                   <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
     <!-- <a class="readmore" href="<?php the_permalink(); ?>"> CONTINUE READING</a> -->
@@ -53,8 +51,6 @@ $the_query = new WP_Query( $args ); ?>
 <?php else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-</section>
-
       </div>
      </div>
   </div>
@@ -62,7 +58,7 @@ $the_query = new WP_Query( $args ); ?>
 
   <div class="container-fluid section-padding">
      <div class="container">
-     <h2 class="section-title orange3">past events</h2>
+     <h2 class="section-title text-orange2">past events</h2>
         <div class="row">
         <?php
         // Query the latest posts from the 'content' category
@@ -83,10 +79,10 @@ $the_query = new WP_Query( $args ); ?>
           <div>
           <?php
                 if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail('thumbnail', array('class' => 'img-fluid pastevents-image image-border-orange3 post-image'));
+                    the_post_thumbnail('thumbnail', array('class' => 'img-fluid pastevents-image image-border-orange2 post-image'));
                 } ?>
               </div>
-            <h3 class= "post-title orange3"><?php the_title(); ?></h3> 
+            <h3 class= "post-title text-orange2"><?php the_title(); ?></h3> 
             <p class="post-location subheader2-text"><?php the_field("event-location"); ?></p>
             <p class="post-date body-text"><?php the_field("event-date"); ?></p>
             <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
@@ -136,6 +132,4 @@ endif;
 wp_reset_postdata(); ?>
     </div>
 </div>
-
-</section>
 <?php get_footer(); ?>
