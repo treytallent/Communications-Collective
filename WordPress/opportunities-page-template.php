@@ -24,7 +24,7 @@ Template Name: Opportunities
                 </div>
 
                 <div class="offset-lg-1 col-lg-4 col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
-                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="Image" />
+                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="" />
                 </div>
             </section>
 
@@ -50,7 +50,7 @@ Template Name: Opportunities
                                 </p>
                                 <p class="m-0"><?php the_field("section_2_card_1_major"); ?></p>
                             </div>
-                            <a href="</span><?php the_field("section_2_card_1_link"); ?>" class="p-3 mt-auto ml-auto accent-link">See More</a>
+                            <a href="<?php the_field("section_2_card_1_link"); ?>" class="p-3 mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
                             <img src="<?php the_field("section_2_card_1_image"); ?>" alt="" class="ar-1 object-fit-cover mb-2 pos-top w-100 p-0 br-sm" />
