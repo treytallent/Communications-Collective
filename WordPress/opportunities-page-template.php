@@ -24,7 +24,7 @@ Template Name: Opportunities
                 </div>
 
                 <div class="offset-lg-1 col-lg-4 col-md-6 col-xs-4 sm-img d-flex order-media order-2 arrow-container-left-pink align-self-center">
-                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="Image" />
+                    <img src="<?php the_field("section_1_image"); ?>" class="ar-1 object-fit-cover" alt="" />
                 </div>
             </section>
 
