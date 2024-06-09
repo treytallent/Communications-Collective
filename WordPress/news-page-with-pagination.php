@@ -11,14 +11,14 @@ Template Name: News with pag
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
             <h4 class="authorname"><?php the_field("content-header-author"); ?></h4>
             <p class="header-intro"><?php the_field("content-header-article"); ?></p>
-            <a href="<?php the_field("continues-reading-featured-article"); ?>" class="headerbtn-1 body-text">Continue Reading</a>
+            <a href="<?php the_field("continues-reading-featured-article"); ?>" class="headerbtn-1 body-text"><?php the_field("header-button-text"); ?></a>
     
         </div><!-- container -->
     </div><!-- containe-fluid -->
 
 <div class="container-fluid maincontainer">
     <div class="container">
-        <h2 class="text-center visitcontent">visit our content</h2>
+    <h2 class="text-center visitcontent"><?php the_field("section_2_title"); ?></h2>
         <button class="dropdown content-dropdown">
                         <a
                            class="nav-link dropdown-toggle text-white"
@@ -28,16 +28,16 @@ Template Name: News with pag
                            aria-haspopup="true"
                            aria-expanded="false"
                         >
-                           News
+                        <?php the_field("news_with_pag_dropdown_text"); ?>
                         </a>
                         <div
                            class="dropdown-menu text-right"
                         >
-                        <a class="dropdown-item" href="<?php the_field("content_with_pagination"); ?>">All Post</a>
-                           <a class="dropdown-item" href="<?php the_field("featured_with_pagination"); ?>">Featured</a>
-                           <a class="dropdown-item" href="<?php the_field("recommendation_with_pagination"); ?>">Recommended</a>
-                           <a class="dropdown-item" href="<?php the_field("news_with_pagination"); ?>">News</a>
-                           <a class="dropdown-item" href="<?php the_field("study_with_pagination"); ?>">Study</a>
+                           <a class="dropdown-item" href="<?php the_field("content_with_pagination"); ?>"><?php the_field("content_with_pag_dropdown_text"); ?></a>
+                           <a class="dropdown-item" href="<?php the_field("featured_with_pagination"); ?>"><?php the_field("featured_with_pag_dropdown_text"); ?></a>
+                           <a class="dropdown-item" href="<?php the_field("recommendation_with_pagination"); ?>"><?php the_field("recommendation_with_pag_dropdown_text"); ?></a>
+                           <a class="dropdown-item" href="<?php the_field("news_with_pagination"); ?>"><?php the_field("news_with_pag_dropdown_text"); ?></a>
+                           <a class="dropdown-item" href="<?php the_field("study_with_pagination"); ?>"><?php the_field("study_with_pag_dropdown_text"); ?></a>
                         </div>
                      </button>
         <div class="row">
@@ -94,7 +94,7 @@ if ($query->have_posts()) :
                 <p class="content-author"><?php echo esc_html($author_name); ?></p>
                     <h5 class="article-title"><?php the_title(); ?></h5>
                     <p class="body-text short-para"><?php the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="continuereading">Continue Reading</a>
+                    <a href="<?php the_permalink(); ?>" class="continuereading"><?php echo get_post_meta(get_the_ID(), 'body-button-text', true) ?: 'Continues Reading'; ?></a>
                 </div>
             </div>
         </div>
