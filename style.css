@@ -142,7 +142,7 @@ h4 {
 }
 
 .text-orange2 {
-  color: #eb7e20;
+  color: #E67614;
 }
 
 .text-orange3 {
@@ -346,6 +346,9 @@ footer img {
   border-color: #007bff;
 }
 /*   for the pagination           */
+a {
+  color: #0B69A3;
+}
 .navigation ul {
   display: flex;
   align-items: center;
