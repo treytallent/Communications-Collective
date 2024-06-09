@@ -9,7 +9,7 @@ Template Name: Contents with pag
         <div class="container">
             <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text">Featured</a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
-            <h4 class="authorname"><?php the_field("content-header-author"); ?></h4>
+            <p class="H2-text authorname"><?php the_field("content-header-author"); ?></h4>
             <p class="header-intro"><?php the_field("content-header-article"); ?></p>
             <a href="<?php the_field("continues-reading-featured-article"); ?>" class="headerbtn-1 body-text">Continue Reading</a>
     
@@ -95,7 +95,7 @@ if ($query->have_posts()) :
                 <?php endif; ?>
                 <div class="card-body">
                 <p class="content-author"><?php echo esc_html($author_name); ?></p>
-                    <h5 class="article-title"><?php the_title(); ?></h5>
+                    <h3 class="article-title"><?php the_title(); ?></h5>
                     <p class="body-text short-para"><?php the_excerpt(); ?></p>
                     <a href="<?php the_permalink(); ?>" class="continuereading">Continue Reading</a>
                 </div>
