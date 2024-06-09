@@ -50,7 +50,7 @@ Template Name: Opportunities
                                 </p>
                                 <p class="m-0"><?php the_field("section_2_card_1_major"); ?></p>
                             </div>
-                            <a href="</span><?php the_field("section_2_card_1_link"); ?>" class="p-3 mt-auto ml-auto accent-link">See More</a>
+                            <a href="<?php the_field("section_2_card_1_link"); ?>" class="p-3 mt-auto ml-auto accent-link">See More</a>
                         </div>
                         <div class="p-0">
                             <img src="<?php the_field("section_2_card_1_image"); ?>" alt="" class="ar-1 object-fit-cover mb-2 pos-top w-100 p-0 br-sm" />
