@@ -5,7 +5,7 @@ Template Name: Contents with pag
 ?>
 
 <?php get_header(); ?>
-<div class="container-fluid header" style='background-size: cover; background-image: url("<?php the_field("content-bg"); ?>");'>
+<div class="container-fluid header" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
         <div class="container">
         <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
@@ -39,7 +39,7 @@ Template Name: Contents with pag
                            <a class="dropdown-item" href="<?php the_field("news_with_pagination"); ?>"><?php the_field("news_with_pag_dropdown_text"); ?></a>
                            <a class="dropdown-item" href="<?php the_field("study_with_pagination"); ?>"><?php the_field("study_with_pag_dropdown_text"); ?></a>
                         </div>
-</div>
+                     </button>
         <div class="row">
         <?php
 // Query the latest posts from the 'content' category
