@@ -13,9 +13,9 @@
                 <?php the_field('title_tagline'); ?>
                 </p>
                 <div class="index-header-social-group">
-                    <a href="https://www.instagram.com/comm.collective/"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/instagram_white.svg" alt="Instagram icon link to Instagram account" /></a>
-                    <a href="https://www.facebook.com/commcollective"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/facebook_white.svg" alt="Facebook icon link to Facebook account" /></a>
-                    <a href="https://www.linkedin.com/groups/10440200/"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/linkedin_white.svg" alt="LinkedIn icon link to LinkedIn account" /></a>
+                    <a href="https://www.instagram.com/comm.collective/"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/instagram_white.svg" alt="Instagram icon link to Instagram account" ></a>
+                    <a href="https://www.facebook.com/commcollective"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/facebook_white.svg" alt="Facebook icon link to Facebook account" ></a>
+                    <a href="https://www.linkedin.com/groups/10440200/"><img class="index-header-social" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/Socials/linkedin_white.svg" alt="LinkedIn icon link to LinkedIn account"></a>
                 </div>
             </div>
             <?php
@@ -44,7 +44,7 @@ $about_button_link = get_field('about_button_link');
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 vertical-center">
                     <div class="arrow-container-left-pink">
-                        <img src="<?php the_field('about_image'); ?>" alt/>
+                        <img src="<?php the_field('about_image'); ?>" alt>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ $about_button_link = get_field('about_button_link');
             <div class="row">
                 <div class="col-lg-5 offset-lg-1 col-sm-6 vertical-center order-2 order-sm-1">
                     <div class="arrow-container-right-orange1">
-                        <img src="<?php the_field('opportunities_image'); ?>" alt/>
+                        <img src="<?php the_field('opportunities_image'); ?>" alt>
                     </div>
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 order-1 order-sm-2">
@@ -98,7 +98,7 @@ $news_button_link = get_field('news_button_link');
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 vertical-center">
                     <div class="arrow-container-left-orange2">
-                        <img src="<?php the_field('news_image'); ?>" alt/>
+                        <img src="<?php the_field('news_image'); ?>" alt>
                     </div>
                 </div>
             </div>
@@ -141,8 +141,8 @@ $events_button_link = get_field('events_button_link');
                     </div>
                 </div>
 
-                <img class="event-img-frame" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events.svg" alt/>
-                <img class="event-img-frame-mobile mx-auto" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events_mobile.svg" alt />
+                <img class="event-img-frame" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events.svg" alt>
+                <img class="event-img-frame-mobile mx-auto" src="http://170.187.231.66/~mesh20/sub/wp-content/themes/Communications-Collective/Images/indexbg/events_mobile.svg" alt>
             </div>
         </div>
     </section>
@@ -153,7 +153,7 @@ $events_button_link = get_field('events_button_link');
             <div class="row">
                 <div class="col-lg-5 offset-lg-1 col-sm-6 vertical-center order-2 order-sm-1">
                     <div class="arrow-container-right-yellow">
-                        <img src="<?php the_field('content_image'); ?>" alt/>
+                        <img src="<?php the_field('content_image'); ?>" alt>
                     </div>
                 </div>
                 <div class="col-lg-5 col-lg-pull-1 col-sm-6 order-1 order-sm-2">
