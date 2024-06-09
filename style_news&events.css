@@ -319,7 +319,7 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   object-fit: cover;
-  border: 0.6vh solid #f8a918;
+  border: 0.6vh solid #E67614;
   position: relative;
   z-index: 2;
 }

@@ -62,7 +62,7 @@ $the_query = new WP_Query( $args ); ?>
 
   <div class="container-fluid section-padding">
      <div class="container">
-     <h2 class="section-title orange3">past events</h2>
+     <h2 class="section-title text-orange2">past events</h2>
         <div class="row">
         <?php
         // Query the latest posts from the 'content' category
@@ -83,10 +83,10 @@ $the_query = new WP_Query( $args ); ?>
           <div>
           <?php
                 if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail('thumbnail', array('class' => 'img-fluid pastevents-image image-border-orange3 post-image'));
+                    the_post_thumbnail('thumbnail', array('class' => 'img-fluid pastevents-image image-border-orange2 post-image'));
                 } ?>
               </div>
-            <h3 class= "post-title orange3"><?php the_title(); ?></h3> 
+            <h3 class= "post-title text-orange2"><?php the_title(); ?></h3> 
             <p class="post-location subheader2-text"><?php the_field("event-location"); ?></p>
             <p class="post-date body-text"><?php the_field("event-date"); ?></p>
             <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
