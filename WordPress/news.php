@@ -62,7 +62,7 @@ $the_query = new WP_Query( $args ); ?>
 
   <div class="container-fluid section-padding">
      <div class="container">
-     <h2 class="section-title orange3">more news</h2>
+     <h2 class="section-title text-orange2">more news</h2>
         <div class="row">
         <?php
         // Query the latest posts from the 'content' category
@@ -81,12 +81,12 @@ $the_query = new WP_Query( $args ); ?>
 
           <div class="col-md-6 col-sm-12 article-padding">
           <p class="article-date subheader3-text"><?php the_field("news_date"); ?></p>
-            <h4 class="article-title orange3"><?php the_title(); ?></h4>
+            <h3 class="article-title text-orange2"><?php the_title(); ?></h4>
             <div class="d-flex">
-              <div class="col-md-4 col-sm-4 col-4 center arrow-container-right-orange3 img">
+              <div class="col-md-4 col-sm-4 col-4 center arrow-container-right-orange2 img">
                   <?php
                   if ( has_post_thumbnail() ) { 
-                      the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-orange3'));
+                      the_post_thumbnail('thumbnail', array('class' => 'arrow-effect-image image-border-orange2'));
                   } ?>
                 </div>
               <div class="col-md-8 col-sm-8 col-8 v-center">
