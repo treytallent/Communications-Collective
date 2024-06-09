@@ -9,7 +9,6 @@ Template Name: Events
      <div class="container">
      <h2 class="section-title offset-md-1 pink">current events</h2>
         <div class="row">
-             <section>             
              <?php 
 $args = array(
   'category_name' =>  'Current Events',
@@ -24,7 +23,6 @@ $the_query = new WP_Query( $args ); ?>
  
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-<div class="thepost">
 <div class="N-E-flex section1-row">
 <div class="col-md-4 offset-md-1 col-sm-5 center arrow-container-right-pink img news-events-image-size">
 <!-- <img class="arrow-effect-image image-border-pink"  -->
@@ -38,7 +36,7 @@ $the_query = new WP_Query( $args ); ?>
 
                   <h3 class= "title pink"><?php the_title(); ?></h3> 
                   <p class="location subheader3-text"><?php the_field("event-location"); ?></p>
-                  <p class="section1-intro body-text"><?php the_excerpt(); ?></p>
+                  <p class="section1-intro body-text"><?php echo get_the_excerpt(); ?></p>
 
                   <a class="btn body-text" href="<?php the_permalink(); ?>">Learn More</a>
     <!-- <a class="readmore" href="<?php the_permalink(); ?>"> CONTINUE READING</a> -->
@@ -53,8 +51,6 @@ $the_query = new WP_Query( $args ); ?>
 <?php else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-</section>
-
       </div>
      </div>
   </div>
@@ -136,6 +132,4 @@ endif;
 wp_reset_postdata(); ?>
     </div>
 </div>
-
-</section>
 <?php get_footer(); ?>
