@@ -5,7 +5,7 @@ Template Name: Contents with pag
 ?>
 
 <?php get_header(); ?>
-<div class="container-fluid header" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
+<div class="container-fluid header" style='background-size: cover; background-image: url("<?php the_field("content-bg"); ?>");'>
         <div class="container">
         <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
@@ -18,8 +18,13 @@ Template Name: Contents with pag
 
 <div class="container-fluid maincontainer">
     <div class="container">
+<<<<<<< HEAD
         <h2 class="text-center visitcontent"><?php the_field("section_2_title"); ?></h2>
         <button class="dropdown content-dropdown">
+=======
+        <h2 class="text-center visitcontent">visit our content</h2>
+        <div class="dropdown content-dropdown">
+>>>>>>> eaa9fbb49cd57a287776bcfc9d2759c0e04d7197
                         <a
                            class="nav-link dropdown-toggle text-white"
                            href="#"
@@ -39,7 +44,7 @@ Template Name: Contents with pag
                            <a class="dropdown-item" href="<?php the_field("news_with_pagination"); ?>"><?php the_field("news_with_pag_dropdown_text"); ?></a>
                            <a class="dropdown-item" href="<?php the_field("study_with_pagination"); ?>"><?php the_field("study_with_pag_dropdown_text"); ?></a>
                         </div>
-                     </button>
+</div>
         <div class="row">
         <?php
 // Query the latest posts from the 'content' category
@@ -96,8 +101,13 @@ if ($query->have_posts()) :
                 <div class="card-body">
                 <p class="content-author"><?php echo esc_html($author_name); ?></p>
                     <h5 class="article-title"><?php the_title(); ?></h5>
+<<<<<<< HEAD
                     <p class="body-text short-para"><?php the_excerpt(); ?></p>
                     <a href="<?php the_permalink(); ?>" class="continuereading"><?php echo get_post_meta(get_the_ID(), 'body-button-text', true) ?: 'Continues Reading'; ?></a>
+=======
+                    <p class="body-text short-para"><?php echo get_the_excerpt(); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="continuereading">Continue Reading</a>
+>>>>>>> eaa9fbb49cd57a287776bcfc9d2759c0e04d7197
                 </div>
             </div>
         </div>
