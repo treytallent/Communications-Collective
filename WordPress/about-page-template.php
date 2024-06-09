@@ -210,9 +210,7 @@ Template Name: About
                     <div class="card card-yellow col-8 col-md-5 p-3">
                         <div class="order-1 d-flex mt-auto">
                             <div class="order-1">
-                                <h3 class="sm-heading m-0">
-                                    <h3 class="sm-heading m-0"><?php the_field("section_3_card_9_name"); ?></h3>
-                                </h3>
+                                <h3 class="sm-heading m-0"><?php the_field("section_3_card_9_name"); ?></h3>
                                 <p class="m-0"><?php the_field("section_3_card_9_title"); ?></p>
                                 <p class="m-0">
                                     <?php the_field("section_3_card_9_employer"); ?>
