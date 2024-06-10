@@ -5,7 +5,7 @@ Template Name: News with pag
 ?>
 
 <?php get_header(); ?>
-<div class="container-fluid header header-gradient" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
+<div class="container-fluid header" style="background-size: cover; background-image: url('<?php the_field("content-bg"); ?>');">
         <div class="container">
             <a href="<?php the_field("feature-links"); ?>" class="headerbtn body-text"><?php echo get_post_meta(get_the_ID(), 'button_text', true) ?: 'Default Button Text'; ?></a></a>
             <h1 class="contentheading"><?php the_field("content_heading"); ?></h1>
