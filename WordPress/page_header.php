@@ -69,7 +69,7 @@
             ?>
 
         </nav>
-        <section class="container-fluid page-header-header-bg mt-0" style="background-size: cover; background-image: url(<?php the_field("content-bg"); ?>;">
+        <section class="container-fluid page-header-header-bg mt-0" style="background-size: cover; background-image: url('<?php the_field("content-bg"); ?>');">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-white page-header-content-alignment">
