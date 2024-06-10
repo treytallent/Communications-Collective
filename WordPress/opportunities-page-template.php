@@ -19,7 +19,7 @@ Template Name: Opportunities
                     </p>
                     <div class="d-flex justify-content-start">
                         <a href="<?php the_field("section_1_button_1_link"); ?>" class="btn px-3 mt-0 btn-sm mr-3"><?php the_field("section_1_button_1_text"); ?></a>
-                        <a href="<?php the_field("section_1_button_2_link"); ?>" class="btn px-3 mt-0 btn-sm mr-3"><?php the_field("section_1_button_1_text"); ?></a>
+                        <a href="<?php the_field("section_1_button_2_link"); ?>" class="btn px-3 mt-0 btn-sm mr-3"><?php the_field("section_1_button_2_text"); ?></a>
                     </div>
                 </div>
 
