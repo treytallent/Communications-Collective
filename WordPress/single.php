@@ -13,7 +13,7 @@
 <article class="excerpts"> <!--we can reuse the css on the old article to restyle the new dynamic posts-->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     
-    <div <?php post_class(); ?>>
+<div <?php post_class(); ?>>
 
         <div class="postcontent">
             <?php /*?><?php the_post_thumbnail(array(150,150), array ('class' => 'alignright')); ?><?php */?>
@@ -29,7 +29,7 @@
                 <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" target="_blank" class="share-button twitter">
                     Share on Twitter
                 </a>
-            </div>
+            </div><!--Share buttons-->  
 
 
         <!-- Navigation Links -->
@@ -40,13 +40,15 @@
             <div class="nav-next">
                 <?php next_post_link('%link', '%title <i class="fas fa-arrow-right"></i>', TRUE); ?>
             </div>
-        
+        </div>  <!-- Navigation Links -->
     <?php endwhile; ?>
     <?php else: ?>
+
     <div class="post">
         <p>Sorry, no posts found.</p>
     </div><!--post-->
     <?php endif; ?>
+    </div>
 </article>
 </section>
 
